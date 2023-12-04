@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+.env
+err.out
+std.out
+validation_results.txt
+dist/
+tmp/

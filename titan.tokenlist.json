@@ -1,0 +1,23 @@
+{
+  "name": "Superchain Token List",
+  "logoURI": "https://titan.github.io/optimism.svg",
+  "keywords": [
+    "scaling",
+    "layer2",
+    "infrastructure"
+  ],
+  "timestamp": "2023-12-04T09:10:43.060Z",
+  "tokens": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}

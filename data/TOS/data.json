@@ -1,0 +1,13 @@
+{
+  "name": "dForce USD",
+  "symbol": "USX",
+  "decimals": 18,
+  "tokens": {
+    "ethereum": {
+      "address": "0x0a5e677a6a24b2f1a2bf4f3bffc443231d2fdec8",
+      "overrides": {
+        "bridge": {}
+      }
+    }
+  }
+}
