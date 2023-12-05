@@ -29,41 +29,37 @@ export const generate = (datadir: string) => {
       return a.toLowerCase().localeCompare(b.toLowerCase());
     })
     .map((folder) => {
-      console.log("-gogo");
-      console.log("datadir", datadir, folder);
       const data: TokenData = JSON.parse(
         fs.readFileSync(path.join(datadir, folder, "data.json"), "utf8")
       );
 
-      try {
-        const logofiles = glob.sync(
-          `${path.join(datadir, folder)}/logo.{png,svg}`
-        );
+      const logofiles = glob.sync(
+        `${path.join(datadir, folder)}/logo.{png,svg}`
+      );
+      const logoext = logofiles[0]?.endsWith("png") ? "png" : "svg";
+      return Object.entries(data.tokens).map(([chain, token]) => {
+        const bridges = !data.nobridge
+          ? Object.assign({}, ...getBridges(data, chain, token))
+          : {};
+        const out = {
+          chainId: NETWORK_DATA[chain].id,
+          address: token.address,
+          name: token.overrides?.name ?? data.name,
+          symbol: token.overrides?.symbol ?? data.symbol,
+          decimals: token.overrides?.decimals ?? data.decimals,
+          logoURI: `${BASE_URL}/data/${folder}/logo.${logoext}`,
+          // logoURI: ``,
+          extensions: {
+            ...bridges,
+            opListId: defaultTokenDataFolders.has(folder.toUpperCase())
+              ? "default"
+              : "extended",
+            opTokenId: folder,
+          },
+        };
 
-        const logoext = logofiles[0].endsWith("png") ? "png" : "svg";
-        return Object.entries(data.tokens).map(([chain, token]) => {
-          const bridges = !data.nobridge
-            ? Object.assign({}, ...getBridges(data, chain, token))
-            : {};
-          const out = {
-            chainId: NETWORK_DATA[chain].id,
-            address: token.address,
-            name: token.overrides?.name ?? data.name,
-            symbol: token.overrides?.symbol ?? data.symbol,
-            decimals: token.overrides?.decimals ?? data.decimals,
-            logoURI: `${BASE_URL}/data/${folder}/logo.${logoext}`,
-            extensions: {
-              ...bridges,
-              opListId: defaultTokenDataFolders.has(folder.toUpperCase())
-                ? "default"
-                : "extended",
-              opTokenId: folder,
-            },
-          };
-
-          return out;
-        });
-      } catch (e) {}
+        return out;
+      });
     })
     .reduce(
       (list, tokens) => {
@@ -72,7 +68,7 @@ export const generate = (datadir: string) => {
       },
       {
         name: "Superchain Token List",
-        logoURI: `${BASE_URL}/optimism.svg`,
+        logoURI: `${BASE_URL}/titan.svg`,
         keywords: ["scaling", "layer2", "infrastructure"],
         timestamp: new Date().toISOString(),
         tokens: [],
@@ -93,9 +89,9 @@ const getBridges = (tokenData: TokenData, chain: string, token: Token) => {
     }
     return [
       {
-        [chain === "optimism" ||
-        chain === "optimism-goerli" ||
-        chain === "optimism-sepolia"
+        [chain === "titan" ||
+        chain === "titan-goerli" ||
+        chain === "titan-sepolia"
           ? "optimismBridgeAddress"
           : "baseBridgeAddress"]:
           tokenBridgeOverride ??
@@ -124,9 +120,9 @@ const getBridges = (tokenData: TokenData, chain: string, token: Token) => {
         );
       }
       return {
-        [l2Chain === "optimism" ||
-        l2Chain === "optimism-goerli" ||
-        l2Chain === "optimism-sepolia"
+        [l2Chain === "titan" ||
+        l2Chain === "titan-goerli" ||
+        l2Chain === "titan-sepolia"
           ? "optimismBridgeAddress"
           : "baseBridgeAddress"]:
           tokenBridgeOverride?.[l2Chain] ??

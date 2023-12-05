@@ -37,7 +37,7 @@ export const NETWORK_DATA: Record<Chain, Network> = {
   },
   "titan-goerli": {
     id: 5050,
-    name: "Titan",
+    name: "Titan-goerli",
     provider: new ethers.providers.StaticJsonRpcProvider(
       "https://rpc.titan-goerli.tokamak.network"
     ),
@@ -66,37 +66,21 @@ export const L2_STANDARD_BRIDGE_INFORMATION: Record<
   L2Chain,
   L2BridgeInformation
 > = {
-  optimism: {
+  titan: {
     l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
   },
-  base: {
+  "titan-sepolia": {
     l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
   },
-  pgn: {
-    l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
-  },
-  "optimism-goerli": {
-    l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
-  },
-  "optimism-sepolia": {
-    l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
-  },
-  "base-goerli": {
-    l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
-  },
-  "pgn-sepolia": {
+  "titan-goerli": {
     l2StandardBridgeAddress: "0x4200000000000000000000000000000000000010",
   },
 };
 
 export const L2_TO_L1_PAIR: Partial<Record<L2Chain, L1Chain>> = {
-  optimism: "ethereum",
-  base: "ethereum",
-  pgn: "ethereum",
-  "optimism-goerli": "goerli",
-  "optimism-sepolia": "sepolia",
-  "base-goerli": "goerli",
-  "pgn-sepolia": "sepolia",
+  titan: "ethereum",
+  "titan-goerli": "goerli",
+  "titan-sepolia": "sepolia",
 };
 
 export const L1_STANDARD_BRIDGE_INFORMATION: Record<
@@ -105,36 +89,20 @@ export const L1_STANDARD_BRIDGE_INFORMATION: Record<
 > = {
   ethereum: [
     {
-      l2Chain: "optimism",
+      l2Chain: "titan",
       l1StandardBridgeAddress: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
-    },
-    {
-      l2Chain: "base",
-      l1StandardBridgeAddress: "0x3154Cf16ccdb4C6d922629664174b904d80F2C35",
-    },
-    {
-      l2Chain: "pgn",
-      l1StandardBridgeAddress: "0xD0204B9527C1bA7bD765Fa5CCD9355d38338272b",
     },
   ],
   goerli: [
     {
-      l2Chain: "optimism-goerli",
+      l2Chain: "titan-goerli",
       l1StandardBridgeAddress: "0x636Af16bf2f682dD3109e60102b8E1A089FedAa8",
-    },
-    {
-      l2Chain: "base-goerli",
-      l1StandardBridgeAddress: "0xfa6d8ee5be770f84fc001d098c4bd604fe01284a",
     },
   ],
   sepolia: [
     {
-      l2Chain: "optimism-sepolia",
+      l2Chain: "titan-sepolia",
       l1StandardBridgeAddress: "0xFBb0621E0B23b5478B630BD55a5f21f67730B0F1",
-    },
-    {
-      l2Chain: "pgn-sepolia",
-      l1StandardBridgeAddress: "0xFaE6abCAF30D23e233AC7faF747F2fC3a5a6Bfa3",
     },
   ],
 };
