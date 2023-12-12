@@ -90,19 +90,19 @@ export const L1_STANDARD_BRIDGE_INFORMATION: Record<
   ethereum: [
     {
       l2Chain: "titan",
-      l1StandardBridgeAddress: "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+      l1StandardBridgeAddress: "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
     },
   ],
   goerli: [
     {
       l2Chain: "titan-goerli",
-      l1StandardBridgeAddress: "0x636Af16bf2f682dD3109e60102b8E1A089FedAa8",
+      l1StandardBridgeAddress: "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
     },
   ],
   sepolia: [
     {
       l2Chain: "titan-sepolia",
-      l1StandardBridgeAddress: "0xFBb0621E0B23b5478B630BD55a5f21f67730B0F1",
+      l1StandardBridgeAddress: "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
     },
   ],
 };

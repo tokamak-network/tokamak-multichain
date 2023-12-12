@@ -1,10 +1,16 @@
 {
-  "name": "UST (Wormhole)",
-  "symbol": "UST",
+  "name": "Tokamak Network Token",
+  "symbol": "TON",
   "decimals": 6,
   "tokens": {
     "ethereum": {
       "address": "0xa693b19d2931d498c5b318df961919bb4aee87a5"
+    },
+    "titan": {
+      "address": "0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2"
+    },
+    "titan-goerli": {
+      "address": "0xFa956eB0c4b3E692aD5a6B2f08170aDE55999ACa"
     }
   }
 }

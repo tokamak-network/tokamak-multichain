@@ -51,10 +51,10 @@ export const generate = (datadir: string) => {
           // logoURI: ``,
           extensions: {
             ...bridges,
-            opListId: defaultTokenDataFolders.has(folder.toUpperCase())
+            titanListId: defaultTokenDataFolders.has(folder.toUpperCase())
               ? "default"
               : "extended",
-            opTokenId: folder,
+            titanTokenId: folder,
           },
         };
 
@@ -92,7 +92,7 @@ const getBridges = (tokenData: TokenData, chain: string, token: Token) => {
         [chain === "titan" ||
         chain === "titan-goerli" ||
         chain === "titan-sepolia"
-          ? "optimismBridgeAddress"
+          ? "bridgeAddress"
           : "baseBridgeAddress"]:
           tokenBridgeOverride ??
           L2_STANDARD_BRIDGE_INFORMATION[chain].l2StandardBridgeAddress,
@@ -123,7 +123,7 @@ const getBridges = (tokenData: TokenData, chain: string, token: Token) => {
         [l2Chain === "titan" ||
         l2Chain === "titan-goerli" ||
         l2Chain === "titan-sepolia"
-          ? "optimismBridgeAddress"
+          ? "bridgeAddress"
           : "baseBridgeAddress"]:
           tokenBridgeOverride?.[l2Chain] ??
           l1StandardBridgeInfoForL2.l1StandardBridgeAddress,

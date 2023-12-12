@@ -6,7 +6,7 @@
     "layer2",
     "infrastructure"
   ],
-  "timestamp": "2023-12-05T01:23:12.016Z",
+  "timestamp": "2023-12-06T01:49:37.255Z",
   "tokens": [
     {
       "chainId": 1,
@@ -16,9 +16,9 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/ETH/logo.svg",
       "extensions": {
-        "optimismBridgeAddress": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
-        "opListId": "default",
-        "opTokenId": "ETH"
+        "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
+        "titanListId": "default",
+        "titanTokenId": "ETH"
       }
     },
     {
@@ -29,8 +29,8 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/ETH/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "ETH"
+        "titanListId": "default",
+        "titanTokenId": "ETH"
       }
     },
     {
@@ -41,8 +41,8 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/ETH/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "ETH"
+        "titanListId": "default",
+        "titanTokenId": "ETH"
       }
     },
     {
@@ -53,21 +53,48 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/ETH/logo.svg",
       "extensions": {
-        "optimismBridgeAddress": "0x4200000000000000000000000000000000000010",
-        "opListId": "default",
-        "opTokenId": "ETH"
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "titanListId": "default",
+        "titanTokenId": "ETH"
       }
     },
     {
       "chainId": 1,
       "address": "0xa693b19d2931d498c5b318df961919bb4aee87a5",
-      "name": "UST (Wormhole)",
-      "symbol": "UST",
+      "name": "Tokamak Network Token",
+      "symbol": "TON",
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/TON/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "TON"
+        "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
+        "titanListId": "default",
+        "titanTokenId": "TON"
+      }
+    },
+    {
+      "chainId": 55004,
+      "address": "0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2",
+      "name": "Tokamak Network Token",
+      "symbol": "TON",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "titanListId": "default",
+        "titanTokenId": "TON"
+      }
+    },
+    {
+      "chainId": 5050,
+      "address": "0xFa956eB0c4b3E692aD5a6B2f08170aDE55999ACa",
+      "name": "Tokamak Network Token",
+      "symbol": "TON",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "titanListId": "default",
+        "titanTokenId": "TON"
       }
     },
     {
@@ -78,8 +105,8 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/TOS/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "TOS"
+        "titanListId": "default",
+        "titanTokenId": "TOS"
       }
     },
     {
@@ -90,8 +117,8 @@
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/USDC/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "USDC"
+        "titanListId": "default",
+        "titanTokenId": "USDC"
       }
     },
     {
@@ -102,8 +129,8 @@
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/USDC/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "USDC"
+        "titanListId": "default",
+        "titanTokenId": "USDC"
       }
     },
     {
@@ -114,8 +141,8 @@
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/USDT/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "USDT"
+        "titanListId": "default",
+        "titanTokenId": "USDT"
       }
     },
     {
@@ -126,8 +153,8 @@
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/USDT/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "USDT"
+        "titanListId": "default",
+        "titanTokenId": "USDT"
       }
     },
     {
@@ -138,8 +165,8 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/WETH/logo.svg",
       "extensions": {
-        "opListId": "default",
-        "opTokenId": "WETH"
+        "titanListId": "default",
+        "titanTokenId": "WETH"
       }
     }
   ],
