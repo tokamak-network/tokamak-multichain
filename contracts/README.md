@@ -1,6 +1,6 @@
-# Multichain Tokmak Contract List
+# Multi Chain Tokmak Contract List
 
-The Multichain Tokamak contract list is a list of contracts managed by Tokamak Network and the maintainers of this repo. These contracts have been deployed on Titan, Ethereum and Testnets.
+The Multi Chain Tokamak contract list is a list of contracts managed by Tokamak Network and the maintainers of this repo. These contracts have been deployed on Titan, Ethereum and Testnets.
 
 # Review and Merge Process
 
