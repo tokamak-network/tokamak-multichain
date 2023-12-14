@@ -6,11 +6,11 @@ import { L2Chain } from "../src/types";
 import { CONTRACT_EXPORT } from ".";
 
 /**
- * Generates a token list from the data in the data folder.
+ * Generates a contract list from the data in the data folder.
  *
- * @param datadir Directory containing data files.
+ * @property basePath Directory containing data files.
  *
- * @returns Generated token list JSON object.
+ * @returns Generated contract list JSON object.
  */
 const basePath = "./contracts/data";
 
@@ -22,27 +22,23 @@ export const generate = () => {
     // Read the contracts directory
     const contractNames = fs.readdirSync(basePath);
 
-    console.log("contractNames", contractNames);
-
     contractNames.forEach((contractName) => {
       const contractPath = path.join(basePath, contractName);
-      const testnetNames = fs.readdirSync(contractPath);
+      const networkNames = fs.readdirSync(contractPath);
 
       contracts[contractName] = {};
 
-      console.log("testnetNames", testnetNames);
-
-      testnetNames.forEach((testnetName) => {
-        const networkNamePath = path.join(contractPath, testnetName);
+      networkNames.forEach((networkName) => {
+        const networkNamePath = path.join(contractPath, networkName);
         const data = JSON.parse(
           fs.readFileSync(path.join(networkNamePath, "address.json"), "utf8")
         );
 
         try {
           // Read the JSON file directly
-          contracts[contractName][testnetName] = data;
+          contracts[contractName][networkName] = data;
         } catch (err) {
-          console.error(`Error reading file ${testnetName}: ${err}`);
+          console.error(`Error reading file ${networkName}: ${err}`);
         }
       });
     });
@@ -52,8 +48,6 @@ export const generate = () => {
 
   // Collect addresses based on provided directory path
   const collectedAddresses = collectAddresses();
-
-  console.log("*result**", collectedAddresses);
 
   // Convert to JSON
   const jsonData = JSON.stringify(collectedAddresses, null, 2);
