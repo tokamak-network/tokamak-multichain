@@ -1,2 +1,4 @@
-import * as list from "./titan.tokenlist.json";
-export default {tokens: list};
+import * as tokenList from "./titan.tokenlist.json";
+import * as contractList from "./tokamak.contractlist.json";
+
+export default { tokens: tokenList, contracts: contractList };

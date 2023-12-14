@@ -19,6 +19,7 @@
   "include": [
     "index.ts",
     "titan.tokenlist.json",
+    "tokamak.contractlist.json",
     "package.json",
     "src/**/*",
     "bin/**/*"
