@@ -6,6 +6,12 @@
     "ethereum": {
       "address": "0xa693b19d2931d498c5b318df961919bb4aee87a5"
     },
+    "goerli": {
+      "address": "0x68c1F9620aeC7F2913430aD6daC1bb16D8444F00"
+    },
+    "sepolia": {
+      "address": "0xa30fe40285b8f5c0457dbc3b7c8a280373c40044"
+    },
     "titan": {
       "address": "0x7c6b91D9Be155A6Db01f749217d76fF02A7227F2"
     },

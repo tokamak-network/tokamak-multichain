@@ -11,6 +11,15 @@
     },
     "goerli": {
       "address": "0xC2C527C0CACF457746Bd31B2a698Fe89de2b6d49"
+    },
+    "sepolia": {
+      "address": "0x42d3b260c761cD5da022dB56Fe2F89c4A909b04A"
+    },
+    "titan": {
+      "address": "0x2aCC8EFEd68f07DEAaD37f57A189677fB5655B46"
+    },
+    "titan-goerli": {
+      "address": "0xd1e405F1154BE88aC84f748C1BcE22442B12309F"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "titan.github.io",
   "description": "Unified token and contract list for Titan Mainnet and other Titan Chains.",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "exports": {

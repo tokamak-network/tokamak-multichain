@@ -1,13 +1,25 @@
 {
-  "name": "dForce USD",
-  "symbol": "USX",
+  "name": "TON Starter",
+  "symbol": "TOS",
   "decimals": 18,
   "tokens": {
     "ethereum": {
-      "address": "0x0a5e677a6a24b2f1a2bf4f3bffc443231d2fdec8",
+      "address": "0x409c4D8cd5d2924b9bc5509230d16a61289c8153",
       "overrides": {
         "bridge": {}
       }
+    },
+    "goerli": {
+      "address": "0x67F3bE272b1913602B191B3A68F7C238A2D81Bb9"
+    },
+    "sepolia": {
+      "address": "0xff3ef745d9878afe5934ff0b130868afddbc58e8"
+    },
+    "titan": {
+      "address": "0xd08a2917653d4e460893203471f0000826fb4034"
+    },
+    "titan-goerli": {
+      "address": "0x6AF3cb766D6cd37449bfD321D961A61B0515c1BC"
     }
   }
 }
