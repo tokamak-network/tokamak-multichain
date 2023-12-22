@@ -1,0 +1,10 @@
+{
+  "address": {
+    "ethereum": {
+      "SwapperV2Proxy": "0x580d3159adE0e95558d10A0Dc9d55A9Ee84F3E27"
+    },
+    "goerli": {
+      "SwapperV2Proxy": "0xb99300e6650f2b40a5359D00396a6Ae17Bf1bc97"
+    }
+  }
+}

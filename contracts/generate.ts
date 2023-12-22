@@ -24,23 +24,30 @@ export const generate = () => {
 
     contractNames.forEach((contractName) => {
       const contractPath = path.join(basePath, contractName);
-      const networkNames = fs.readdirSync(contractPath);
 
-      contracts[contractName] = {};
+      console.log("contractPath", contractPath);
 
-      networkNames.forEach((networkName) => {
-        const networkNamePath = path.join(contractPath, networkName);
-        const data = JSON.parse(
-          fs.readFileSync(path.join(networkNamePath, "address.json"), "utf8")
-        );
+      const data = JSON.parse(
+        fs.readFileSync(path.join(contractPath, "data.json"), "utf8")
+      );
 
-        try {
-          // Read the JSON file directly
-          contracts[contractName][networkName] = data;
-        } catch (err) {
-          console.error(`Error reading file ${networkName}: ${err}`);
-        }
-      });
+      if (!data) return;
+
+      contracts[contractName] = data.address;
+
+      // networkNames.forEach((networkName) => {
+      //   const networkNamePath = path.join(contractPath, networkName);
+      //   const data = JSON.parse(
+      //     fs.readFileSync(path.join(networkNamePath, "address.json"), "utf8")
+      //   );
+
+      //   try {
+      //     // Read the JSON file directly
+      //     contracts[contractName][networkName] = data;
+      //   } catch (err) {
+      //     console.error(`Error reading file ${networkName}: ${err}`);
+      //   }
+      // });
     });
 
     return contracts;
