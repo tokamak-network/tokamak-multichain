@@ -5,6 +5,22 @@ import { version } from "../package.json";
 import { L2Chain } from "../src/types";
 import { CONTRACT_EXPORT } from ".";
 
+function removeQuotes(obj) {
+  if (typeof obj === "object") {
+    if (Array.isArray(obj)) {
+      return obj.map(removeQuotes);
+    } else {
+      const newObj = {};
+      for (const key in obj) {
+        const newKey = key.replace(/"/g, ""); // Removing double quotes from keys
+        newObj[newKey] = removeQuotes(obj[key]);
+      }
+      return newObj;
+    }
+  }
+  return obj;
+}
+
 /**
  * Generates a contract list from the data in the data folder.
  *
@@ -12,7 +28,7 @@ import { CONTRACT_EXPORT } from ".";
  *
  * @returns Generated contract list JSON object.
  */
-const basePath = "./contracts/data";
+const basePath = "./data";
 
 export const generate = () => {
   // Function to traverse directories recursively
@@ -24,8 +40,6 @@ export const generate = () => {
 
     contractNames.forEach((contractName) => {
       const contractPath = path.join(basePath, contractName);
-
-      console.log("contractPath", contractPath);
 
       const data = JSON.parse(
         fs.readFileSync(path.join(contractPath, "data.json"), "utf8")
@@ -69,6 +83,18 @@ export const generate = () => {
       console.log(`JSON data has been written to ${outputFile}`);
     }
   });
+  fs.writeFile(
+    "./index.d.ts",
+    `export type TokamakContracts = ${removeQuotes(jsonData)}`,
+    "utf8",
+    (err) => {
+      if (err) {
+        console.error("Error writing JSON file:", err);
+      } else {
+        console.log(`JSON data has been written to ${outputFile}`);
+      }
+    }
+  );
 };
 
 generate();
