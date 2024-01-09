@@ -29,16 +29,12 @@ function generateTypingsForFolders(folderPath) {
     if (stats.isDirectory()) {
       const jsonFilePath = path.join(filePath, `data.json`);
 
-      console.log("jsonFilePath", jsonFilePath);
-
       // Check if the folder contains a JSON file
       if (fs.existsSync(jsonFilePath)) {
         const jsonData = JSON.parse(fs.readFileSync(jsonFilePath, "utf8"));
         const typeFileContent = generateTypeFile(jsonData);
 
         const typeFile = `type TokamakContracts = ${jsonData}`;
-
-        console.log("typeFile", typeFile);
 
         // Write the generated types to a TypeScript file
         fs.writeFileSync(`ExtractedKeys.d.ts`, typeFileContent);
