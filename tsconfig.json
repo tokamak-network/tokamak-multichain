@@ -22,6 +22,7 @@
     "tokamak.contractlist.json",
     "package.json",
     "src/**/*",
-    "bin/**/*"
+    "bin/**/*",
+    "contract/**/*"
   ]
 }

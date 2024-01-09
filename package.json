@@ -1,10 +1,9 @@
 {
   "name": "titan.github.io",
   "description": "Unified token and contract list for Titan Mainnet and other Titan Chains.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "type": "module",
   "exports": {
     ".": {
       "require": "./dist/index.js",
@@ -23,7 +22,8 @@
   "tsup": {
     "entry": [
       "index.ts",
-      "titan.tokenlist.json"
+      "titan.tokenlist.json",
+      "tokamak.contractlist.json"
     ],
     "outDir": "dist",
     "format": [

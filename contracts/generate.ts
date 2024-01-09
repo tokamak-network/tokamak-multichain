@@ -74,7 +74,7 @@ export const generate = () => {
   const jsonData = JSON.stringify(collectedAddresses, null, 2);
 
   // Write the JSON data to a file
-  const outputFile = "./tokamak.contractlist.json"; // Replace with the desired output file path
+  const outputFile = "../tokamak.contractlist.json"; // Replace with the desired output file path
 
   fs.writeFile(outputFile, jsonData, "utf8", (err) => {
     if (err) {
@@ -83,18 +83,18 @@ export const generate = () => {
       console.log(`JSON data has been written to ${outputFile}`);
     }
   });
-  fs.writeFile(
-    "./index.d.ts",
-    `export type TokamakContracts = ${removeQuotes(jsonData)}`,
-    "utf8",
-    (err) => {
-      if (err) {
-        console.error("Error writing JSON file:", err);
-      } else {
-        console.log(`JSON data has been written to ${outputFile}`);
-      }
-    }
-  );
+  // fs.writeFile(
+  //   "./index.d.ts",
+  //   `export type TokamakContracts = ${removeQuotes(jsonData)}`,
+  //   "utf8",
+  //   (err) => {
+  //     if (err) {
+  //       console.error("Error writing JSON file:", err);
+  //     } else {
+  //       console.log(`JSON data has been written to ${outputFile}`);
+  //     }
+  //   }
+  // );
 };
 
 generate();

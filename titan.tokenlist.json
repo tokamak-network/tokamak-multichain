@@ -1,12 +1,12 @@
 {
-  "name": "Superchain Token List",
+  "name": "Multi chain Token List",
   "logoURI": "https://titan.github.io/titan.svg",
   "keywords": [
     "scaling",
     "layer2",
     "infrastructure"
   ],
-  "timestamp": "2023-12-06T01:49:37.255Z",
+  "timestamp": "2024-01-09T02:53:37.047Z",
   "tokens": [
     {
       "chainId": 1,
@@ -29,6 +29,7 @@
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/ETH/logo.svg",
       "extensions": {
+        "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
         "titanListId": "default",
         "titanTokenId": "ETH"
       }
@@ -59,6 +60,19 @@
       }
     },
     {
+      "chainId": 5050,
+      "address": "0x0000000000000000000000000000000000000000",
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/ETH/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "titanListId": "default",
+        "titanTokenId": "ETH"
+      }
+    },
+    {
       "chainId": 1,
       "address": "0xa693b19d2931d498c5b318df961919bb4aee87a5",
       "name": "Tokamak Network Token",
@@ -67,6 +81,31 @@
       "logoURI": "https://titan.github.io/data/TON/logo.svg",
       "extensions": {
         "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
+        "titanListId": "default",
+        "titanTokenId": "TON"
+      }
+    },
+    {
+      "chainId": 5,
+      "address": "0x68c1F9620aeC7F2913430aD6daC1bb16D8444F00",
+      "name": "Tokamak Network Token",
+      "symbol": "TON",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
+        "titanListId": "default",
+        "titanTokenId": "TON"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xa30fe40285b8f5c0457dbc3b7c8a280373c40044",
+      "name": "Tokamak Network Token",
+      "symbol": "TON",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "extensions": {
         "titanListId": "default",
         "titanTokenId": "TON"
       }
@@ -99,12 +138,64 @@
     },
     {
       "chainId": 1,
-      "address": "0x0a5e677a6a24b2f1a2bf4f3bffc443231d2fdec8",
-      "name": "dForce USD",
-      "symbol": "USX",
+      "address": "0x409c4D8cd5d2924b9bc5509230d16a61289c8153",
+      "name": "TON Starter",
+      "symbol": "TOS",
       "decimals": 18,
       "logoURI": "https://titan.github.io/data/TOS/logo.svg",
       "extensions": {
+        "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
+        "titanListId": "default",
+        "titanTokenId": "TOS"
+      }
+    },
+    {
+      "chainId": 5,
+      "address": "0x67F3bE272b1913602B191B3A68F7C238A2D81Bb9",
+      "name": "TON Starter",
+      "symbol": "TOS",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
+        "titanListId": "default",
+        "titanTokenId": "TOS"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xff3ef745d9878afe5934ff0b130868afddbc58e8",
+      "name": "TON Starter",
+      "symbol": "TOS",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "TOS"
+      }
+    },
+    {
+      "chainId": 55004,
+      "address": "0xd08a2917653d4e460893203471f0000826fb4034",
+      "name": "TON Starter",
+      "symbol": "TOS",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "titanListId": "default",
+        "titanTokenId": "TOS"
+      }
+    },
+    {
+      "chainId": 5050,
+      "address": "0x6AF3cb766D6cd37449bfD321D961A61B0515c1BC",
+      "name": "TON Starter",
+      "symbol": "TOS",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
         "titanTokenId": "TOS"
       }
@@ -134,6 +225,42 @@
       }
     },
     {
+      "chainId": 11155111,
+      "address": "0x693a591A27750eED2A0e14BC73bB1F313116a1cb",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "USDC"
+      }
+    },
+    {
+      "chainId": 55004,
+      "address": "0x46BbbC5f20093cB53952127c84F1Fbc9503bD6D9",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "USDC"
+      }
+    },
+    {
+      "chainId": 5050,
+      "address": "0x9c53338c48181035D96884946C34ea81818F743C",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "USDC"
+      }
+    },
+    {
       "chainId": 1,
       "address": "0xdac17f958d2ee523a2206206994597c13d831ec7",
       "name": "Tether USD",
@@ -141,6 +268,7 @@
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/USDT/logo.svg",
       "extensions": {
+        "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
         "titanListId": "default",
         "titanTokenId": "USDT"
       }
@@ -153,6 +281,45 @@
       "decimals": 6,
       "logoURI": "https://titan.github.io/data/USDT/logo.svg",
       "extensions": {
+        "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
+        "titanListId": "default",
+        "titanTokenId": "USDT"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0x42d3b260c761cD5da022dB56Fe2F89c4A909b04A",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "USDT"
+      }
+    },
+    {
+      "chainId": 55004,
+      "address": "0x2aCC8EFEd68f07DEAaD37f57A189677fB5655B46",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
+        "titanListId": "default",
+        "titanTokenId": "USDT"
+      }
+    },
+    {
+      "chainId": 5050,
+      "address": "0xd1e405F1154BE88aC84f748C1BcE22442B12309F",
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "extensions": {
+        "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
         "titanTokenId": "USDT"
       }
@@ -168,11 +335,58 @@
         "titanListId": "default",
         "titanTokenId": "WETH"
       }
+    },
+    {
+      "chainId": 5,
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "WETH"
+      }
+    },
+    {
+      "chainId": 11155111,
+      "address": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "WETH"
+      }
+    },
+    {
+      "chainId": 55004,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "WETH"
+      }
+    },
+    {
+      "chainId": 5050,
+      "address": "0x4200000000000000000000000000000000000006",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "extensions": {
+        "titanListId": "default",
+        "titanTokenId": "WETH"
+      }
     }
   ],
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 0
+    "patch": 7
   }
 }

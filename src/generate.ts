@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { glob } from "glob";
+import glob from "glob";
 import { version } from "../package.json";
 import {
   L1_STANDARD_BRIDGE_INFORMATION,
@@ -67,7 +67,7 @@ export const generate = (datadir: string) => {
         return list;
       },
       {
-        name: "Superchain Token List",
+        name: "Multi chain Token List",
         logoURI: `${BASE_URL}/titan.svg`,
         keywords: ["scaling", "layer2", "infrastructure"],
         timestamp: new Date().toISOString(),
