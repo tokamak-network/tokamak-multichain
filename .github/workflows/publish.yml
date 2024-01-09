@@ -5,7 +5,7 @@ on:
     workflows:
       - Generate Token List
     types: [completed]
-    branches: [master]
+    branches: [main]
 
 jobs:
   publish-bot:

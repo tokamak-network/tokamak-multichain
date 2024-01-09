@@ -1,7 +1,8 @@
 import titanGithub from "../dist/index"
 
+
 const init = () => {
-    console.log(titanGithub)
+    console.log(titanGithub.tokens.tokens)
 
 }
 
