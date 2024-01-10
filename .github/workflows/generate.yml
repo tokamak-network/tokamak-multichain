@@ -3,14 +3,14 @@ name: Generate Token List
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   generate:
     name: generate
     if: |
       github.event.head_commit.committer.username != 'github-actions[bot]'
-        && github.repository == 'ethereum-optimism/ethereum-optimism.github.io'
+        && github.repository == 'tokamak-network/titan.github.io'
 
     runs-on: ubuntu-latest
 
@@ -47,4 +47,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'bot(ci): generate token list'
-          file_pattern: optimism.tokenlist.json
+          file_pattern: titan.tokenlist.json

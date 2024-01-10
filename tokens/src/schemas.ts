@@ -1,85 +1,85 @@
 export const ADDRESS_TYPE = {
-  type: "string",
+  type: 'string',
   minLength: 42,
   maxLength: 42,
-};
+}
 
 export const TOKEN_SCHEMA = {
-  type: "object",
+  type: 'object',
   properties: {
     address: ADDRESS_TYPE,
     overrides: {
       bridge: ADDRESS_TYPE,
       name: {
-        type: "string",
+        type: 'string',
       },
       symbol: {
-        type: "string",
+        type: 'string',
       },
       decimals: {
-        type: "integer",
+        type: 'integer',
       },
     },
   },
   additionalProperties: false,
-  required: ["address"],
-};
+  required: ['address'],
+}
 
 export const TOKEN_DATA_SCHEMA = {
-  type: "object",
+  type: 'object',
   properties: {
     nonstandard: {
-      type: "boolean",
+      type: 'boolean',
     },
     nobridge: {
-      type: "boolean",
+      type: 'boolean',
     },
     name: {
-      type: "string",
+      type: 'string',
     },
     symbol: {
-      type: "string",
+      type: 'string',
     },
     decimals: {
-      type: "integer",
+      type: 'integer',
     },
     description: {
-      type: "string",
+      type: 'string',
       minLength: 1,
       maxLength: 1000,
     },
     website: {
-      type: "string",
-      format: "uri",
+      type: 'string',
+      format: 'uri',
     },
     twitter: {
-      type: "string",
+      type: 'string',
     },
     tokens: {
-      type: "object",
+      type: 'object',
       properties: {
         ethereum: TOKEN_SCHEMA,
         goerli: TOKEN_SCHEMA,
         sepolia: TOKEN_SCHEMA,
         titan: TOKEN_SCHEMA,
-        "titan-goerli": TOKEN_SCHEMA,
-        "titan-sepolia": TOKEN_SCHEMA,
+        'titan-goerli': TOKEN_SCHEMA,
+        'titan-sepolia': TOKEN_SCHEMA,
       },
       additionalProperties: false,
       anyOf: [
-        { required: ["ethereum"] },
-        { required: ["goerli"] },
-        { required: ["sepolia"] },
-        { required: ["titan"] },
-        { required: ["titan-goerli"] },
-        { required: ["titan-sepolia"] },
+        { required: ['ethereum'] },
+        { required: ['goerli'] },
+        { required: ['sepolia'] },
+        { required: ['titan'] },
+        { required: ['titan-goerli'] },
+        { required: ['titan-sepolia'] },
       ],
     },
   },
   additionalProperties: false,
-  required: ["name", "symbol", "decimals", "tokens"],
-};
+  required: ['name', 'symbol', 'decimals', 'tokens'],
+}
 
 export default {
   TOKEN_DATA_SCHEMA,
-};
+}

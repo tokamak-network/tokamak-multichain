@@ -1,32 +1,32 @@
-import fs from "fs";
+import fs from 'fs'
 
-import { Command } from "commander";
+import { Command } from 'commander'
 
-import { generate } from "../src/generate";
-import { validate } from "../src/validate";
-import { version } from "../package.json";
+import { generate } from '../tokens/src/generate'
+import { validate } from '../tokens/src/validate'
+import { version } from '../package.json'
 
-const program = new Command();
-
-program
-  .name("optl")
-  .description("CLI for generating and validating tokenlists")
-  .version(version);
+const program = new Command()
 
 program
-  .command("validate")
-  .description("Validate tokenlist data files")
-  .requiredOption("--datadir <datadir>", "Directory containing data files")
+  .name('optl')
+  .description('CLI for generating and validating tokenlists')
+  .version(version)
+
+program
+  .command('validate')
+  .description('Validate tokenlist data files')
+  .requiredOption('--datadir <datadir>', 'Directory containing data files')
   .option(
-    "--tokens <tokens>",
-    "Comma-separated list of tokens symbols to validate"
+    '--tokens <tokens>',
+    'Comma-separated list of tokens symbols to validate'
   )
   .action(async (options) => {
-    const results = await validate(options.datadir, options.tokens.split(","));
+    const results = await validate(options.datadir, options.tokens.split(','))
 
-    const validationResultsFilePath = "validation_results.txt";
-    const errs = results.filter((r) => r.type === "error");
-    const warns = results.filter((r) => r.type === "warning");
+    const validationResultsFilePath = 'validation_results.txt'
+    const errs = results.filter((r) => r.type === 'error')
+    const warns = results.filter((r) => r.type === 'warning')
 
     if (errs.length > 0 || warns.length > 0) {
       fs.writeFileSync(
@@ -34,7 +34,7 @@ program
         `Below are the results from running validation for the token changes. To ` +
           `re-run the validation locally run: ` +
           `pnpm validate --datadir ./data --tokens ${options.tokens}\n\n`
-      );
+      )
     }
 
     if (errs.length > 0) {
@@ -42,15 +42,15 @@ program
         validationResultsFilePath,
         `These errors caused the validation to fail:\n${errs
           .map((err) => err.message)
-          .join("\r\n")}\n\n`
-      );
+          .join('\r\n')}\n\n`
+      )
       for (const err of errs) {
-        if (err.message.startsWith("final token list is invalid")) {
+        if (err.message.startsWith('final token list is invalid')) {
           // Message generated here is super long and doesn't really give more information than the
           // rest of the errors, so just print a short version of it instead.
-          console.error(`error: final token list is invalid`);
+          console.error(`error: final token list is invalid`)
         } else {
-          console.error(`error: ${err.message}`);
+          console.error(`error: ${err.message}`)
         }
       }
     }
@@ -60,27 +60,27 @@ program
         validationResultsFilePath,
         `These warnings were found during validation, but did not cause validation to fail:\n${warns
           .map((warn) => warn.message)
-          .join("\r\n")}\n`
-      );
+          .join('\r\n')}\n`
+      )
       for (const warn of warns) {
-        console.log(`warning: ${warn.message}`);
+        console.log(`warning: ${warn.message}`)
       }
     }
 
     if (errs.length > 0) {
       // Exit with error code so CI fails
-      process.exit(1);
+      process.exit(1)
     }
-  });
+  })
 
 program
-  .command("generate")
-  .description("Generates a tokenlist data file")
-  .requiredOption("--datadir <datadir>", "Directory containing data files")
-  .requiredOption("--outfile <outfile>", "Output file to write")
+  .command('generate')
+  .description('Generates a tokenlist data file')
+  .requiredOption('--datadir <datadir>', 'Directory containing data files')
+  .requiredOption('--outfile <outfile>', 'Output file to write')
   .action(async (options) => {
-    const list = generate(options.datadir);
-    fs.writeFileSync(options.outfile, JSON.stringify(list, null, 2));
-  });
+    const list = generate(options.datadir)
+    fs.writeFileSync(options.outfile, JSON.stringify(list, null, 2))
+  })
 
-program.parse();
+program.parse()

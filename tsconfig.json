@@ -21,7 +21,7 @@
     "titan.tokenlist.json",
     "tokamak.contractlist.json",
     "package.json",
-    "src/**/*",
+    "tokens/**/*",
     "bin/**/*",
     "contract/**/*"
   ]
