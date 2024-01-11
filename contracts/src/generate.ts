@@ -1,6 +1,12 @@
 import fs from 'fs'
 import path from 'path'
 
+type AnyObject = Record<string, any>
+const pickValues = <T extends AnyObject, K extends keyof T>(
+  obj: T,
+  keys: K[]
+): T[K][] => keys.map((key) => obj[key]).filter((value) => value !== undefined)
+
 // Function to traverse directories recursively
 const collectAddresses = () => {
   const contracts = {}
@@ -18,7 +24,9 @@ const collectAddresses = () => {
       return
     }
 
-    contracts[contractName] = data.address
+    Object.entries(data).map(([key]) => {
+      contracts[key] = { ...contracts[key], ...data[key] }
+    })
   })
 
   return contracts
@@ -31,7 +39,7 @@ const collectAddresses = () => {
  *
  * @returns Generated contract list JSON object.
  */
-const basePath = './data'
+const basePath = '../data'
 
 export const generate = () => {
   // Collect addresses based on provided directory path
