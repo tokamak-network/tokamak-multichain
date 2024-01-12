@@ -6,7 +6,8 @@ const trimAbis = () => {
   const contracts = fs.readdirSync(dir)
 
   for (const contract of contracts) {
-    const abiFiles = fs.readdirSync(path.join(dir, contract, 'abi'))
+    const thisAbiDirectory = path.join(dir, contract, 'abi')
+    const abiFiles = fs.readdirSync(thisAbiDirectory)
     for (const abiFileName of abiFiles) {
       const abiFilePath = path.join(dir, contract, 'abi', abiFileName)
       const abiFileContent = fs.readFileSync(abiFilePath, 'utf8')
@@ -17,7 +18,7 @@ const trimAbis = () => {
         console.log('test')
         console.log(JSON.stringify(abiObject.abi, null, 2))
         fs.writeFile(
-          path.join(abiFilePath, `${abiFileName}.json`),
+          path.join(thisAbiDirectory, abiFileName),
           JSON.stringify(abiObject.abi, null, 2),
           'utf8',
           (err) => {

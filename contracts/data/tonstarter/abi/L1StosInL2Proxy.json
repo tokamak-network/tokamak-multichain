@@ -1,678 +1,439 @@
-{
-  "address": "0xa12431D37095CA8e3C04Eb1a4e7cE235718F10bF",
-  "abi": [
-    {
-      "inputs": [],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "previousManager",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "newManager",
-          "type": "address"
-        }
-      ],
-      "name": "ManagershipTransferred",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "previousOwner",
-          "type": "address"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "OwnershipTransferred",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "impl",
-          "type": "address"
-        },
-        {
-          "indexed": false,
-          "internalType": "bool",
-          "name": "alive",
-          "type": "bool"
-        }
-      ],
-      "name": "SetAliveImplementation",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "bytes4",
-          "name": "selector",
-          "type": "bytes4"
-        },
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "impl",
-          "type": "address"
-        }
-      ],
-      "name": "SetSelectorImplementation",
-      "type": "event"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": true,
-          "internalType": "address",
-          "name": "implementation",
-          "type": "address"
-        }
-      ],
-      "name": "Upgraded",
-      "type": "event"
-    },
-    {
-      "stateMutability": "payable",
-      "type": "fallback"
-    },
-    {
-      "inputs": [],
-      "name": "_manager",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "_owner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "aliveImplementation",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes4",
-          "name": "_selector",
-          "type": "bytes4"
-        }
-      ],
-      "name": "getSelectorImplementation2",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "impl",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "implementation",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_index",
-          "type": "uint256"
-        }
-      ],
-      "name": "implementation2",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "l1Register",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "l2CrossDomainMessenger",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "lockIdNftForRegister",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "pauseProxy",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "proxyImplementation",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "renounceManagership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "renounceOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes4",
-          "name": "",
-          "type": "bytes4"
-        }
-      ],
-      "name": "selectorImplementation",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newImplementation",
-          "type": "address"
-        },
-        {
-          "internalType": "bool",
-          "name": "_alive",
-          "type": "bool"
-        }
-      ],
-      "name": "setAliveImplementation2",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newImplementation",
-          "type": "address"
-        },
-        {
-          "internalType": "uint256",
-          "name": "_index",
-          "type": "uint256"
-        },
-        {
-          "internalType": "bool",
-          "name": "_alive",
-          "type": "bool"
-        }
-      ],
-      "name": "setImplementation2",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bool",
-          "name": "_pause",
-          "type": "bool"
-        }
-      ],
-      "name": "setProxyPause",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes4[]",
-          "name": "_selectors",
-          "type": "bytes4[]"
-        },
-        {
-          "internalType": "address",
-          "name": "_imp",
-          "type": "address"
-        }
-      ],
-      "name": "setSelectorImplementations2",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newManager",
-          "type": "address"
-        }
-      ],
-      "name": "transferManagership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "newOwner",
-          "type": "address"
-        }
-      ],
-      "name": "transferOwnership",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "impl",
-          "type": "address"
-        }
-      ],
-      "name": "upgradeTo",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "_implementation",
-          "type": "address"
-        },
-        {
-          "internalType": "bytes",
-          "name": "_data",
-          "type": "bytes"
-        }
-      ],
-      "name": "upgradeToAndCall",
-      "outputs": [
-        {
-          "internalType": "bytes",
-          "name": "",
-          "type": "bytes"
-        }
-      ],
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "stateMutability": "payable",
-      "type": "receive"
-    }
-  ],
-  "transactionHash": "0x759b2fb2752faf230c09affc04e642cda3a1c5e4f6d04770ca9d69e547a77824",
-  "receipt": {
-    "to": null,
-    "from": "0xc1eba383D94c6021160042491A5dfaF1d82694E6",
-    "contractAddress": "0xa12431D37095CA8e3C04Eb1a4e7cE235718F10bF",
-    "transactionIndex": 0,
-    "gasUsed": "1192345",
-    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000800000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000001000000000000000000000000000000000000020000000000080000000800000000000000000000000008000000400400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
-    "blockHash": "0xf2d70f2d16dd7da7abd5a4ee74785d990cf06e9e2f4294b82c9580677b3c4d6b",
-    "transactionHash": "0x759b2fb2752faf230c09affc04e642cda3a1c5e4f6d04770ca9d69e547a77824",
-    "logs": [
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
       {
-        "transactionIndex": 0,
-        "blockNumber": 23626,
-        "transactionHash": "0x759b2fb2752faf230c09affc04e642cda3a1c5e4f6d04770ca9d69e547a77824",
-        "address": "0xa12431D37095CA8e3C04Eb1a4e7cE235718F10bF",
-        "topics": [
-          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
-          "0x0000000000000000000000000000000000000000000000000000000000000000",
-          "0x000000000000000000000000c1eba383d94c6021160042491a5dfaf1d82694e6"
-        ],
-        "data": "0x",
-        "logIndex": 0,
-        "blockHash": "0xf2d70f2d16dd7da7abd5a4ee74785d990cf06e9e2f4294b82c9580677b3c4d6b"
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousManager",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newManager",
+        "type": "address"
       }
     ],
-    "blockNumber": 23626,
-    "cumulativeGasUsed": "1192345",
-    "status": 1,
-    "byzantium": true
+    "name": "ManagershipTransferred",
+    "type": "event"
   },
-  "args": [],
-  "numDeployments": 1,
-  "solcInputHash": "922d4f58da819b2db212e67a166d96d6",
-  "metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousManager\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newManager\",\"type\":\"address\"}],\"name\":\"ManagershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"alive\",\"type\":\"bool\"}],\"name\":\"SetAliveImplementation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes4\",\"name\":\"selector\",\"type\":\"bytes4\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"}],\"name\":\"SetSelectorImplementation\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"implementation\",\"type\":\"address\"}],\"name\":\"Upgraded\",\"type\":\"event\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"_manager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"_owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"aliveImplementation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_selector\",\"type\":\"bytes4\"}],\"name\":\"getSelectorImplementation2\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"implementation2\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l1Register\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l2CrossDomainMessenger\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lockIdNftForRegister\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pauseProxy\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"proxyImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceManagership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"name\":\"selectorImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_alive\",\"type\":\"bool\"}],\"name\":\"setAliveImplementation2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newImplementation\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_alive\",\"type\":\"bool\"}],\"name\":\"setImplementation2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_pause\",\"type\":\"bool\"}],\"name\":\"setProxyPause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4[]\",\"name\":\"_selectors\",\"type\":\"bytes4[]\"},{\"internalType\":\"address\",\"name\":\"_imp\",\"type\":\"address\"}],\"name\":\"setSelectorImplementations2\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newManager\",\"type\":\"address\"}],\"name\":\"transferManagership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"impl\",\"type\":\"address\"}],\"name\":\"upgradeTo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_implementation\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"upgradeToAndCall\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getSelectorImplementation2(bytes4)\":{\"details\":\"view implementation address of selector of function\",\"params\":{\"_selector\":\"selector of function\"},\"returns\":{\"impl\":\"address of the implementation\"}},\"implementation()\":{\"details\":\"returns the implementation\"},\"implementation2(uint256)\":{\"details\":\"view implementation address of the proxy[index]\",\"params\":{\"_index\":\"index of proxy\"},\"returns\":{\"_0\":\"address of the implementation\"}},\"setAliveImplementation2(address,bool)\":{\"details\":\"set alive status of implementation\",\"params\":{\"_alive\":\"alive status\",\"newImplementation\":\"Address of the new implementation.\"}},\"setImplementation2(address,uint256,bool)\":{\"details\":\"set the implementation address and status of the proxy[index]\",\"params\":{\"_alive\":\"_alive\",\"_index\":\"index\",\"newImplementation\":\"Address of the new implementation.\"}},\"setProxyPause(bool)\":{\"params\":{\"_pause\":\"true:pause or false:resume\"}},\"setSelectorImplementations2(bytes4[],address)\":{\"details\":\"set selectors of Implementation\",\"params\":{\"_imp\":\"implementation address\",\"_selectors\":\"being added selectors\"}},\"upgradeTo(address)\":{\"params\":{\"impl\":\"New implementation contract address\"}},\"upgradeToAndCall(address,bytes)\":{\"params\":{\"_data\":\"Calldata to delegatecall the new implementation with.\",\"_implementation\":\"Address of the implementation contract.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"setProxyPause(bool)\":{\"notice\":\"Set pause state\"},\"upgradeTo(address)\":{\"notice\":\"Set implementation contract\"},\"upgradeToAndCall(address,bytes)\":{\"notice\":\"Set the implementation and call a function in a single transaction. Useful to ensure         atomic execution of initialization-based upgrades.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/L2/L1StosInL2Proxy.sol\":\"L1StosInL2Proxy\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":625},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/Address.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n// OpenZeppelin Contracts (last updated v4.8.0) (utils/Address.sol)\\n\\npragma solidity ^0.8.1;\\n\\n/**\\n * @dev Collection of functions related to the address type\\n */\\nlibrary Address {\\n    /**\\n     * @dev Returns true if `account` is a contract.\\n     *\\n     * [IMPORTANT]\\n     * ====\\n     * It is unsafe to assume that an address for which this function returns\\n     * false is an externally-owned account (EOA) and not a contract.\\n     *\\n     * Among others, `isContract` will return false for the following\\n     * types of addresses:\\n     *\\n     *  - an externally-owned account\\n     *  - a contract in construction\\n     *  - an address where a contract will be created\\n     *  - an address where a contract lived, but was destroyed\\n     * ====\\n     *\\n     * [IMPORTANT]\\n     * ====\\n     * You shouldn't rely on `isContract` to protect against flash loan attacks!\\n     *\\n     * Preventing calls from contracts is highly discouraged. It breaks composability, breaks support for smart wallets\\n     * like Gnosis Safe, and does not provide security since it can be circumvented by calling from a contract\\n     * constructor.\\n     * ====\\n     */\\n    function isContract(address account) internal view returns (bool) {\\n        // This method relies on extcodesize/address.code.length, which returns 0\\n        // for contracts in construction, since the code is only stored at the end\\n        // of the constructor execution.\\n\\n        return account.code.length > 0;\\n    }\\n\\n    /**\\n     * @dev Replacement for Solidity's `transfer`: sends `amount` wei to\\n     * `recipient`, forwarding all available gas and reverting on errors.\\n     *\\n     * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost\\n     * of certain opcodes, possibly making contracts go over the 2300 gas limit\\n     * imposed by `transfer`, making them unable to receive funds via\\n     * `transfer`. {sendValue} removes this limitation.\\n     *\\n     * https://diligence.consensys.net/posts/2019/09/stop-using-soliditys-transfer-now/[Learn more].\\n     *\\n     * IMPORTANT: because control is transferred to `recipient`, care must be\\n     * taken to not create reentrancy vulnerabilities. Consider using\\n     * {ReentrancyGuard} or the\\n     * https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].\\n     */\\n    function sendValue(address payable recipient, uint256 amount) internal {\\n        require(address(this).balance >= amount, \\\"Address: insufficient balance\\\");\\n\\n        (bool success, ) = recipient.call{value: amount}(\\\"\\\");\\n        require(success, \\\"Address: unable to send value, recipient may have reverted\\\");\\n    }\\n\\n    /**\\n     * @dev Performs a Solidity function call using a low level `call`. A\\n     * plain `call` is an unsafe replacement for a function call: use this\\n     * function instead.\\n     *\\n     * If `target` reverts with a revert reason, it is bubbled up by this\\n     * function (like regular Solidity function calls).\\n     *\\n     * Returns the raw returned data. To convert to the expected return value,\\n     * use https://solidity.readthedocs.io/en/latest/units-and-global-variables.html?highlight=abi.decode#abi-encoding-and-decoding-functions[`abi.decode`].\\n     *\\n     * Requirements:\\n     *\\n     * - `target` must be a contract.\\n     * - calling `target` with `data` must not revert.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(address target, bytes memory data) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0, \\\"Address: low-level call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`], but with\\n     * `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but also transferring `value` wei to `target`.\\n     *\\n     * Requirements:\\n     *\\n     * - the calling contract must have an ETH balance of at least `value`.\\n     * - the called Solidity function must be `payable`.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(\\n        address target,\\n        bytes memory data,\\n        uint256 value\\n    ) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, value, \\\"Address: low-level call with value failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCallWithValue-address-bytes-uint256-}[`functionCallWithValue`], but\\n     * with `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(\\n        address target,\\n        bytes memory data,\\n        uint256 value,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        require(address(this).balance >= value, \\\"Address: insufficient balance for call\\\");\\n        (bool success, bytes memory returndata) = target.call{value: value}(data);\\n        return verifyCallResultFromTarget(target, success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(address target, bytes memory data) internal view returns (bytes memory) {\\n        return functionStaticCall(target, data, \\\"Address: low-level static call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-string-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal view returns (bytes memory) {\\n        (bool success, bytes memory returndata) = target.staticcall(data);\\n        return verifyCallResultFromTarget(target, success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a delegate call.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function functionDelegateCall(address target, bytes memory data) internal returns (bytes memory) {\\n        return functionDelegateCall(target, data, \\\"Address: low-level delegate call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-string-}[`functionCall`],\\n     * but performing a delegate call.\\n     *\\n     * _Available since v3.4._\\n     */\\n    function functionDelegateCall(\\n        address target,\\n        bytes memory data,\\n        string memory errorMessage\\n    ) internal returns (bytes memory) {\\n        (bool success, bytes memory returndata) = target.delegatecall(data);\\n        return verifyCallResultFromTarget(target, success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Tool to verify that a low level call to smart-contract was successful, and revert (either by bubbling\\n     * the revert reason or using the provided one) in case of unsuccessful call or if target was not a contract.\\n     *\\n     * _Available since v4.8._\\n     */\\n    function verifyCallResultFromTarget(\\n        address target,\\n        bool success,\\n        bytes memory returndata,\\n        string memory errorMessage\\n    ) internal view returns (bytes memory) {\\n        if (success) {\\n            if (returndata.length == 0) {\\n                // only check isContract if the call was successful and the return data is empty\\n                // otherwise we already know that it was a contract\\n                require(isContract(target), \\\"Address: call to non-contract\\\");\\n            }\\n            return returndata;\\n        } else {\\n            _revert(returndata, errorMessage);\\n        }\\n    }\\n\\n    /**\\n     * @dev Tool to verify that a low level call was successful, and revert if it wasn't, either by bubbling the\\n     * revert reason or using the provided one.\\n     *\\n     * _Available since v4.3._\\n     */\\n    function verifyCallResult(\\n        bool success,\\n        bytes memory returndata,\\n        string memory errorMessage\\n    ) internal pure returns (bytes memory) {\\n        if (success) {\\n            return returndata;\\n        } else {\\n            _revert(returndata, errorMessage);\\n        }\\n    }\\n\\n    function _revert(bytes memory returndata, string memory errorMessage) private pure {\\n        // Look for revert reason and bubble it up if present\\n        if (returndata.length > 0) {\\n            // The easiest way to bubble the revert reason is using memory via assembly\\n            /// @solidity memory-safe-assembly\\n            assembly {\\n                let returndata_size := mload(returndata)\\n                revert(add(32, returndata), returndata_size)\\n            }\\n        } else {\\n            revert(errorMessage);\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1\",\"license\":\"MIT\"},\"contracts/L2/L1StosInL2Proxy.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.0;\\n\\nimport \\\"../proxy/Proxy2.sol\\\";\\nimport \\\"./L1StosInL2Storage.sol\\\";\\n\\ncontract L1StosInL2Proxy is Proxy2, L1StosInL2Storage\\n{\\n    event ManagershipTransferred(address indexed previousManager, address indexed newManager);\\n\\n    constructor() {\\n        _manager = msg.sender;\\n    }\\n\\n    function renounceManagership() external onlyManager {\\n        emit ManagershipTransferred(_manager, address(0));\\n        _manager = address(0);\\n    }\\n\\n    function transferManagership(address newManager) external onlyManager {\\n        require(newManager != address(0), \\\"new manager is the zero address\\\");\\n        emit ManagershipTransferred(_manager, newManager);\\n        _manager = newManager;\\n    }\\n\\n}\\n\",\"keccak256\":\"0xb6e051045a6b43860bc525cb6e7512616c3aa18e7508a17d602c0f955bc153a2\",\"license\":\"MIT\"},\"contracts/L2/L1StosInL2Storage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.9;\\n\\ncontract L1StosInL2Storage  {\\n    address public _manager;\\n    address public lockIdNftForRegister;\\n    address public l2CrossDomainMessenger;\\n    address public l1Register;\\n\\n    modifier onlyManager() {\\n        require(_manager == msg.sender, \\\"not manager\\\");\\n        _;\\n    }\\n\\n}\",\"keccak256\":\"0x6860161d1d3bbe291190d031629a5592a062b77505d5e19a78c3600b8cd698fa\",\"license\":\"MIT\"},\"contracts/interfaces/IProxyAction.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity ^0.8.4;\\n\\n\\n/// @title IProxyAction\\ninterface IProxyAction {\\n\\n    /// @dev set the implementation address and status of the proxy[index]\\n    /// @param newImplementation Address of the new implementation.\\n    /// @param _index index\\n    /// @param _alive _alive\\n    function setImplementation2(\\n        address newImplementation,\\n        uint256 _index,\\n        bool _alive\\n    ) external;\\n\\n\\n    /// @dev set alive status of implementation\\n    /// @param newImplementation Address of the new implementation.\\n    /// @param _alive alive status\\n    function setAliveImplementation2(address newImplementation, bool _alive)\\n        external;\\n\\n\\n    /// @dev set selectors of Implementation\\n    /// @param _selectors being added selectors\\n    /// @param _imp implementation address\\n    function setSelectorImplementations2(\\n        bytes4[] calldata _selectors,\\n        address _imp\\n    ) external  ;\\n\\n\\n\\n    /// onlyOwner\\n\\n    /// @notice Set pause state\\n    /// @param _pause true:pause or false:resume\\n    function setProxyPause(bool _pause) external ;\\n\\n\\n    /// anybody\\n\\n    /// @dev view implementation address of selector of function\\n    /// @param _selector selector of function\\n    /// @return impl address of the implementation\\n    function getSelectorImplementation2(bytes4 _selector)\\n        external\\n        view\\n        returns (address impl);\\n\\n\\n    /// @dev view implementation address of the proxy[index]\\n    /// @param _index index of proxy\\n    /// @return address of the implementation\\n    function implementation2(uint256 _index) external view returns (address) ;\\n}\\n\\n\",\"keccak256\":\"0x16ff956d9ccccadd56ce168390a7daa64883fda68f00dbf5110ae67bceaa6fcb\",\"license\":\"Unlicense\"},\"contracts/interfaces/IProxyEvent.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity ^0.8.4;\\n\\n\\n/// @title IProxyEvent\\ninterface IProxyEvent {\\n\\n    event Upgraded(address indexed implementation);\\n\\n    event SetAliveImplementation(address indexed impl, bool alive);\\n    event SetSelectorImplementation(bytes4 indexed selector, address indexed impl);\\n\\n\\n}\\n\",\"keccak256\":\"0x2a1e50808aa448c7a64fdea7ab2a7a2aa614e66ce974cc9e081bb70187716754\",\"license\":\"Unlicense\"},\"contracts/proxy/Proxy2.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity ^0.8.4;\\n\\nimport \\\"./ProxyStorage2.sol\\\";\\n\\nimport {Address} from \\\"@openzeppelin/contracts/utils/Address.sol\\\";\\n\\nimport \\\"../interfaces/IProxyEvent.sol\\\";\\nimport \\\"../interfaces/IProxyAction.sol\\\";\\n// import \\\"hardhat/console.sol\\\";\\n\\ncontract Proxy2 is ProxyStorage2, IProxyEvent, IProxyAction\\n{\\n\\n    /* ========== DEPENDENCIES ========== */\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    modifier onlyOwner() {\\n        require(_owner == msg.sender, \\\"not owner\\\");\\n        _;\\n    }\\n\\n    /* ========== CONSTRUCTOR ========== */\\n    constructor () {\\n        _owner = msg.sender;\\n        emit OwnershipTransferred(address(0), _owner);\\n    }\\n\\n    /* ========== onlyOwner ========== */\\n\\n    function renounceOwnership() external onlyOwner {\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n    }\\n\\n    function transferOwnership(address newOwner) external onlyOwner {\\n        require(newOwner != address(0), \\\"new owner is the zero address\\\");\\n        emit OwnershipTransferred(_owner, newOwner);\\n        _owner = newOwner;\\n    }\\n\\n    /// @inheritdoc IProxyAction\\n    function setProxyPause(bool _pause) external onlyOwner {\\n        pauseProxy = _pause;\\n    }\\n\\n    /// @notice Set implementation contract\\n    /// @param impl New implementation contract address\\n    function upgradeTo(address impl) external onlyOwner {\\n        require(impl != address(0), \\\"input is zero\\\");\\n        require(\\n            _implementation2(0) != impl,\\n            \\\"same addr\\\"\\n        );\\n        _setImplementation2(impl, 0, true);\\n        emit Upgraded(impl);\\n    }\\n\\n    /**\\n     * @notice Set the implementation and call a function in a single transaction. Useful to ensure\\n     *         atomic execution of initialization-based upgrades.\\n     *\\n     * @param _implementation Address of the implementation contract.\\n     * @param _data           Calldata to delegatecall the new implementation with.\\n     */\\n    function upgradeToAndCall(address _implementation, bytes calldata _data)\\n        public\\n        payable\\n        virtual\\n        onlyOwner\\n        returns (bytes memory)\\n    {\\n        // _setImplementation(_implementation);\\n        _setImplementation2(_implementation, 0, true);\\n\\n        (bool success, bytes memory returndata) = _implementation.delegatecall(_data);\\n        require(success, \\\"Proxy: delegatecall to new implementation contract failed\\\");\\n        return returndata;\\n    }\\n\\n    /// @inheritdoc IProxyAction\\n    function setImplementation2(\\n        address newImplementation,\\n        uint256 _index,\\n        bool _alive\\n    ) external override onlyOwner {\\n        _setImplementation2(newImplementation, _index, _alive);\\n    }\\n\\n    /// @inheritdoc IProxyAction\\n    function setAliveImplementation2(address newImplementation, bool _alive)\\n        public override onlyOwner\\n    {\\n        _setAliveImplementation2(newImplementation, _alive);\\n    }\\n\\n    /// @inheritdoc IProxyAction\\n    function setSelectorImplementations2(\\n        bytes4[] calldata _selectors,\\n        address _imp\\n    ) public override onlyOwner {\\n        require(\\n            _selectors.length > 0,\\n            \\\"Proxy: _selectors's size is zero\\\"\\n        );\\n        require(aliveImplementation[_imp], \\\"Proxy: _imp is not alive\\\");\\n\\n        for (uint256 i = 0; i < _selectors.length; i++) {\\n            require(\\n                selectorImplementation[_selectors[i]] != _imp,\\n                \\\"LiquidityVaultProxy: same imp\\\"\\n            );\\n            selectorImplementation[_selectors[i]] = _imp;\\n            emit SetSelectorImplementation(_selectors[i], _imp);\\n        }\\n    }\\n\\n    /* ========== Anyone can   ========== */\\n\\n\\n\\n    /* ========== VIEW ========== */\\n\\n    /// @dev returns the implementation\\n    function implementation() external view returns (address) {\\n        return _implementation2(0);\\n    }\\n\\n    /// @inheritdoc IProxyAction\\n    function implementation2(uint256 _index) external override view returns (address) {\\n        return _implementation2(_index);\\n    }\\n\\n\\n    /// @inheritdoc IProxyAction\\n    function getSelectorImplementation2(bytes4 _selector)\\n        public override\\n        view\\n        returns (address impl)\\n    {\\n        if (selectorImplementation[_selector] == address(0))\\n            return proxyImplementation[0];\\n        else if (aliveImplementation[selectorImplementation[_selector]]){\\n            return selectorImplementation[_selector];\\n        }\\n        else return proxyImplementation[0];\\n    }\\n\\n\\n    /// @dev receive ether\\n    receive() external payable {\\n        revert(\\\"cannot receive Ether\\\");\\n    }\\n\\n    /// @dev fallback function , execute on undefined function call\\n    fallback() external payable {\\n        _fallback();\\n    }\\n\\n    /* === ======= internal ========== */\\n\\n    /// @dev view implementation address of the proxy[index]\\n    /// @param _index index of proxy\\n    /// @return impl address of the implementation\\n    function _implementation2(uint256 _index)\\n        internal\\n        view\\n        returns (address impl)\\n    {\\n        return proxyImplementation[_index];\\n    }\\n\\n    /// @dev fallback function , execute on undefined function call\\n    function _fallback() internal {\\n        address _impl = getSelectorImplementation2(msg.sig);\\n\\n        require(\\n            _impl != address(0) && !pauseProxy,\\n            \\\"Proxy: impl OR proxy is false\\\"\\n        );\\n\\n        assembly {\\n            // Copy msg.data. We take full control of memory in this inline assembly\\n            // block because it will not return to Solidity code. We overwrite the\\n            // Solidity scratch pad at memory position 0.\\n            calldatacopy(0, 0, calldatasize())\\n\\n            // Call the implementation.\\n            // out and outsize are 0 because we don't know the size yet.\\n            let result := delegatecall(gas(), _impl, 0, calldatasize(), 0, 0)\\n\\n            // Copy the returned data.\\n            returndatacopy(0, 0, returndatasize())\\n\\n            switch result\\n                // delegatecall returns 0 on error.\\n                case 0 {\\n                    revert(0, returndatasize())\\n                }\\n                default {\\n                    return(0, returndatasize())\\n                }\\n        }\\n    }\\n\\n    /// @dev set the implementation address and status of the proxy[index]\\n    /// @param newImplementation Address of the new implementation.\\n    /// @param _index index of proxy\\n    /// @param _alive alive status\\n    function _setImplementation2(\\n        address newImplementation,\\n        uint256 _index,\\n        bool _alive\\n    ) internal {\\n        require(\\n            Address.isContract(newImplementation),\\n            \\\"Proxy: not contract address\\\"\\n        );\\n        if (_alive) proxyImplementation[_index] = newImplementation;\\n        _setAliveImplementation2(newImplementation, _alive);\\n    }\\n\\n    /// @dev set alive status of implementation\\n    /// @param newImplementation Address of the new implementation.\\n    /// @param _alive alive status\\n    function _setAliveImplementation2(address newImplementation, bool _alive)\\n        internal\\n    {\\n        aliveImplementation[newImplementation] = _alive;\\n        emit SetAliveImplementation(newImplementation, _alive);\\n    }\\n\\n}\",\"keccak256\":\"0x7d0a7c4411d5aba121d4afe73effde4df0c418aa2a3be22400058104ec1fab50\",\"license\":\"Unlicense\"},\"contracts/proxy/ProxyStorage2.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity ^0.8.4;\\n\\ncontract ProxyStorage2  {\\n\\n    address public _owner;\\n    bool public pauseProxy;\\n\\n    mapping(uint256 => address) public proxyImplementation;\\n    mapping(address => bool) public aliveImplementation;\\n    mapping(bytes4 => address) public selectorImplementation;\\n\\n\\n}\",\"keccak256\":\"0x143792b4a69ee77d8ac3bf521938acc34f9e6800751d4db9bae90333b4749a4a\",\"license\":\"Unlicense\"}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50600080546001600160a01b0319163390811782556040519091907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a3600480546001600160a01b031916331790556113c5806100716000396000f3fe6080604052600436106101795760003560e01c80637cb00d25116100cb578063b911135f1161007f578063f0329f6b11610059578063f0329f6b146104c9578063f2fde38b146104e9578063fbef005a14610509576101cb565b8063b911135f14610453578063ccc3990914610489578063d75bf0ce146104a9576101cb565b80638b8f4a65116100b05780638b8f4a65146103dd5780638d4fdb4014610413578063b2bdfa7b14610433576101cb565b80637cb00d251461039d5780637cd5f663146103bd576101cb565b80635c60da1b1161012d5780636b765aa6116101075780636b765aa6146103535780636c146d9b14610373578063715018a614610388576101cb565b80635c60da1b146102cc5780635cc797d81461031257806363a8fd8914610332576101cb565b80634f1ef2861161015e5780634f1ef2861461021557806350d2a2761461023e578063550d01a31461028c576101cb565b80633659cfe6146101d55780634a5df50f146101f5576101cb565b366101cb5760405162461bcd60e51b815260206004820152601460248201527f63616e6e6f74207265636569766520457468657200000000000000000000000060448201526064015b60405180910390fd5b6101d3610529565b005b3480156101e157600080fd5b506101d36101f0366004611120565b6105d9565b34801561020157600080fd5b506101d3610210366004611142565b61072a565b6102286102233660046111c6565b6109c2565b6040516102359190611249565b60405180910390f35b34801561024a57600080fd5b50610274610259366004611297565b6003602052600090815260409020546001600160a01b031681565b6040516001600160a01b039091168152602001610235565b34801561029857600080fd5b506102bc6102a7366004611120565b60026020526000908152604090205460ff1681565b6040519015158152602001610235565b3480156102d857600080fd5b506000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b0316610274565b34801561031e57600080fd5b506101d361032d3660046112d1565b610af6565b34801561033e57600080fd5b506000546102bc90600160a01b900460ff1681565b34801561035f57600080fd5b50600554610274906001600160a01b031681565b34801561037f57600080fd5b506101d3610b4a565b34801561039457600080fd5b506101d3610bdc565b3480156103a957600080fd5b506101d36103b8366004611304565b610c6c565b3480156103c957600080fd5b506101d36103d836600461131f565b610ce1565b3480156103e957600080fd5b506102746103f8366004611352565b6000908152600160205260409020546001600160a01b031690565b34801561041f57600080fd5b5061027461042e366004611297565b610d32565b34801561043f57600080fd5b50600054610274906001600160a01b031681565b34801561045f57600080fd5b5061027461046e366004611352565b6001602052600090815260409020546001600160a01b031681565b34801561049557600080fd5b506101d36104a4366004611120565b610e2e565b3480156104b557600080fd5b50600754610274906001600160a01b031681565b3480156104d557600080fd5b50600454610274906001600160a01b031681565b3480156104f557600080fd5b506101d3610504366004611120565b610f28565b34801561051557600080fd5b50600654610274906001600160a01b031681565b60006105406000356001600160e01b031916610d32565b90506001600160a01b038116158015906105645750600054600160a01b900460ff16155b6105b05760405162461bcd60e51b815260206004820152601d60248201527f50726f78793a20696d706c204f522070726f78792069732066616c736500000060448201526064016101c2565b3660008037600080366000845af43d6000803e8080156105cf573d6000f35b3d6000fd5b505050565b6000546001600160a01b0316331461061f5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b6001600160a01b0381166106755760405162461bcd60e51b815260206004820152600d60248201527f696e707574206973207a65726f0000000000000000000000000000000000000060448201526064016101c2565b6000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b038281169116036106e65760405162461bcd60e51b815260206004820152600960248201526839b0b6b29030b2323960b91b60448201526064016101c2565b6106f3816000600161101f565b6040516001600160a01b038216907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a250565b6000546001600160a01b031633146107705760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b816107bd5760405162461bcd60e51b815260206004820181905260248201527f50726f78793a205f73656c6563746f727327732073697a65206973207a65726f60448201526064016101c2565b6001600160a01b03811660009081526002602052604090205460ff166108255760405162461bcd60e51b815260206004820152601860248201527f50726f78793a205f696d70206973206e6f7420616c697665000000000000000060448201526064016101c2565b60005b828110156109bc57816001600160a01b0316600360008686858181106108505761085061136b565b90506020020160208101906108659190611297565b6001600160e01b03191681526020810191909152604001600020546001600160a01b0316036108d65760405162461bcd60e51b815260206004820152601d60248201527f4c69717569646974795661756c7450726f78793a2073616d6520696d7000000060448201526064016101c2565b81600360008686858181106108ed576108ed61136b565b90506020020160208101906109029190611297565b6001600160e01b0319168152602081019190915260400160002080546001600160a01b0319166001600160a01b03928316179055821684848381811061094a5761094a61136b565b905060200201602081019061095f9190611297565b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167f14ebc1c32aa68f4d766e89f3e546cee249f7df25183fc10ab1568d91c2ce9b7b60405160405180910390a3806109b481611381565b915050610828565b50505050565b6000546060906001600160a01b03163314610a0b5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b610a18846000600161101f565b600080856001600160a01b03168585604051610a359291906113a8565b600060405180830381855af49150503d8060008114610a70576040519150601f19603f3d011682016040523d82523d6000602084013e610a75565b606091505b509150915081610aed5760405162461bcd60e51b815260206004820152603960248201527f50726f78793a2064656c656761746563616c6c20746f206e657720696d706c6560448201527f6d656e746174696f6e20636f6e7472616374206661696c65640000000000000060648201526084016101c2565b95945050505050565b6000546001600160a01b03163314610b3c5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b610b4682826110aa565b5050565b6004546001600160a01b03163314610b925760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b60448201526064016101c2565b6004546040516000916001600160a01b0316907f697e4e68d3879b0dd3414a88905117bac8f0a54b0cd8e7779f909bf1a1cf5683908390a3600480546001600160a01b0319169055565b6000546001600160a01b03163314610c225760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b03163314610cb25760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b60008054911515600160a01b0274ff000000000000000000000000000000000000000019909216919091179055565b6000546001600160a01b03163314610d275760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b6105d483838361101f565b6001600160e01b031981166000908152600360205260408120546001600160a01b0316610d925750506000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b031690565b6001600160e01b031982166000908152600360209081526040808320546001600160a01b03168352600290915290205460ff1615610df057506001600160e01b0319166000908152600360205260409020546001600160a01b031690565b50506000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b031690565b919050565b6004546001600160a01b03163314610e765760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b60448201526064016101c2565b6001600160a01b038116610ecc5760405162461bcd60e51b815260206004820152601f60248201527f6e6577206d616e6167657220697320746865207a65726f20616464726573730060448201526064016101c2565b6004546040516001600160a01b038084169216907f697e4e68d3879b0dd3414a88905117bac8f0a54b0cd8e7779f909bf1a1cf568390600090a3600480546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b03163314610f6e5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b6001600160a01b038116610fc45760405162461bcd60e51b815260206004820152601d60248201527f6e6577206f776e657220697320746865207a65726f206164647265737300000060448201526064016101c2565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b6001600160a01b0383163b6110765760405162461bcd60e51b815260206004820152601b60248201527f50726f78793a206e6f7420636f6e74726163742061646472657373000000000060448201526064016101c2565b80156110a457600082815260016020526040902080546001600160a01b0319166001600160a01b0385161790555b6105d483825b6001600160a01b038216600081815260026020908152604091829020805460ff191685151590811790915591519182527f72558d9bfba4210f9ef095c782589484151f6d90f7a81bb3cb9b33efc695d324910160405180910390a25050565b80356001600160a01b0381168114610e2957600080fd5b60006020828403121561113257600080fd5b61113b82611109565b9392505050565b60008060006040848603121561115757600080fd5b833567ffffffffffffffff8082111561116f57600080fd5b818601915086601f83011261118357600080fd5b81358181111561119257600080fd5b8760208260051b85010111156111a757600080fd5b6020928301955093506111bd9186019050611109565b90509250925092565b6000806000604084860312156111db57600080fd5b6111e484611109565b9250602084013567ffffffffffffffff8082111561120157600080fd5b818601915086601f83011261121557600080fd5b81358181111561122457600080fd5b87602082850101111561123657600080fd5b6020830194508093505050509250925092565b600060208083528351808285015260005b818110156112765785810183015185820160400152820161125a565b506000604082860101526040601f19601f8301168501019250505092915050565b6000602082840312156112a957600080fd5b81356001600160e01b03198116811461113b57600080fd5b80358015158114610e2957600080fd5b600080604083850312156112e457600080fd5b6112ed83611109565b91506112fb602084016112c1565b90509250929050565b60006020828403121561131657600080fd5b61113b826112c1565b60008060006060848603121561133457600080fd5b61133d84611109565b9250602084013591506111bd604085016112c1565b60006020828403121561136457600080fd5b5035919050565b634e487b7160e01b600052603260045260246000fd5b6000600182016113a157634e487b7160e01b600052601160045260246000fd5b5060010190565b818382376000910190815291905056fea164736f6c6343000812000a",
-  "deployedBytecode": "0x6080604052600436106101795760003560e01c80637cb00d25116100cb578063b911135f1161007f578063f0329f6b11610059578063f0329f6b146104c9578063f2fde38b146104e9578063fbef005a14610509576101cb565b8063b911135f14610453578063ccc3990914610489578063d75bf0ce146104a9576101cb565b80638b8f4a65116100b05780638b8f4a65146103dd5780638d4fdb4014610413578063b2bdfa7b14610433576101cb565b80637cb00d251461039d5780637cd5f663146103bd576101cb565b80635c60da1b1161012d5780636b765aa6116101075780636b765aa6146103535780636c146d9b14610373578063715018a614610388576101cb565b80635c60da1b146102cc5780635cc797d81461031257806363a8fd8914610332576101cb565b80634f1ef2861161015e5780634f1ef2861461021557806350d2a2761461023e578063550d01a31461028c576101cb565b80633659cfe6146101d55780634a5df50f146101f5576101cb565b366101cb5760405162461bcd60e51b815260206004820152601460248201527f63616e6e6f74207265636569766520457468657200000000000000000000000060448201526064015b60405180910390fd5b6101d3610529565b005b3480156101e157600080fd5b506101d36101f0366004611120565b6105d9565b34801561020157600080fd5b506101d3610210366004611142565b61072a565b6102286102233660046111c6565b6109c2565b6040516102359190611249565b60405180910390f35b34801561024a57600080fd5b50610274610259366004611297565b6003602052600090815260409020546001600160a01b031681565b6040516001600160a01b039091168152602001610235565b34801561029857600080fd5b506102bc6102a7366004611120565b60026020526000908152604090205460ff1681565b6040519015158152602001610235565b3480156102d857600080fd5b506000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b0316610274565b34801561031e57600080fd5b506101d361032d3660046112d1565b610af6565b34801561033e57600080fd5b506000546102bc90600160a01b900460ff1681565b34801561035f57600080fd5b50600554610274906001600160a01b031681565b34801561037f57600080fd5b506101d3610b4a565b34801561039457600080fd5b506101d3610bdc565b3480156103a957600080fd5b506101d36103b8366004611304565b610c6c565b3480156103c957600080fd5b506101d36103d836600461131f565b610ce1565b3480156103e957600080fd5b506102746103f8366004611352565b6000908152600160205260409020546001600160a01b031690565b34801561041f57600080fd5b5061027461042e366004611297565b610d32565b34801561043f57600080fd5b50600054610274906001600160a01b031681565b34801561045f57600080fd5b5061027461046e366004611352565b6001602052600090815260409020546001600160a01b031681565b34801561049557600080fd5b506101d36104a4366004611120565b610e2e565b3480156104b557600080fd5b50600754610274906001600160a01b031681565b3480156104d557600080fd5b50600454610274906001600160a01b031681565b3480156104f557600080fd5b506101d3610504366004611120565b610f28565b34801561051557600080fd5b50600654610274906001600160a01b031681565b60006105406000356001600160e01b031916610d32565b90506001600160a01b038116158015906105645750600054600160a01b900460ff16155b6105b05760405162461bcd60e51b815260206004820152601d60248201527f50726f78793a20696d706c204f522070726f78792069732066616c736500000060448201526064016101c2565b3660008037600080366000845af43d6000803e8080156105cf573d6000f35b3d6000fd5b505050565b6000546001600160a01b0316331461061f5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b6001600160a01b0381166106755760405162461bcd60e51b815260206004820152600d60248201527f696e707574206973207a65726f0000000000000000000000000000000000000060448201526064016101c2565b6000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b038281169116036106e65760405162461bcd60e51b815260206004820152600960248201526839b0b6b29030b2323960b91b60448201526064016101c2565b6106f3816000600161101f565b6040516001600160a01b038216907fbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b90600090a250565b6000546001600160a01b031633146107705760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b816107bd5760405162461bcd60e51b815260206004820181905260248201527f50726f78793a205f73656c6563746f727327732073697a65206973207a65726f60448201526064016101c2565b6001600160a01b03811660009081526002602052604090205460ff166108255760405162461bcd60e51b815260206004820152601860248201527f50726f78793a205f696d70206973206e6f7420616c697665000000000000000060448201526064016101c2565b60005b828110156109bc57816001600160a01b0316600360008686858181106108505761085061136b565b90506020020160208101906108659190611297565b6001600160e01b03191681526020810191909152604001600020546001600160a01b0316036108d65760405162461bcd60e51b815260206004820152601d60248201527f4c69717569646974795661756c7450726f78793a2073616d6520696d7000000060448201526064016101c2565b81600360008686858181106108ed576108ed61136b565b90506020020160208101906109029190611297565b6001600160e01b0319168152602081019190915260400160002080546001600160a01b0319166001600160a01b03928316179055821684848381811061094a5761094a61136b565b905060200201602081019061095f9190611297565b7bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167f14ebc1c32aa68f4d766e89f3e546cee249f7df25183fc10ab1568d91c2ce9b7b60405160405180910390a3806109b481611381565b915050610828565b50505050565b6000546060906001600160a01b03163314610a0b5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b610a18846000600161101f565b600080856001600160a01b03168585604051610a359291906113a8565b600060405180830381855af49150503d8060008114610a70576040519150601f19603f3d011682016040523d82523d6000602084013e610a75565b606091505b509150915081610aed5760405162461bcd60e51b815260206004820152603960248201527f50726f78793a2064656c656761746563616c6c20746f206e657720696d706c6560448201527f6d656e746174696f6e20636f6e7472616374206661696c65640000000000000060648201526084016101c2565b95945050505050565b6000546001600160a01b03163314610b3c5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b610b4682826110aa565b5050565b6004546001600160a01b03163314610b925760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b60448201526064016101c2565b6004546040516000916001600160a01b0316907f697e4e68d3879b0dd3414a88905117bac8f0a54b0cd8e7779f909bf1a1cf5683908390a3600480546001600160a01b0319169055565b6000546001600160a01b03163314610c225760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b600080546040516001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a3600080546001600160a01b0319169055565b6000546001600160a01b03163314610cb25760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b60008054911515600160a01b0274ff000000000000000000000000000000000000000019909216919091179055565b6000546001600160a01b03163314610d275760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b6105d483838361101f565b6001600160e01b031981166000908152600360205260408120546001600160a01b0316610d925750506000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b031690565b6001600160e01b031982166000908152600360209081526040808320546001600160a01b03168352600290915290205460ff1615610df057506001600160e01b0319166000908152600360205260409020546001600160a01b031690565b50506000805260016020527fa6eef7e35abe7026729641147f7915573c7e97b47efa546f5f6e3230263bcb49546001600160a01b031690565b919050565b6004546001600160a01b03163314610e765760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b60448201526064016101c2565b6001600160a01b038116610ecc5760405162461bcd60e51b815260206004820152601f60248201527f6e6577206d616e6167657220697320746865207a65726f20616464726573730060448201526064016101c2565b6004546040516001600160a01b038084169216907f697e4e68d3879b0dd3414a88905117bac8f0a54b0cd8e7779f909bf1a1cf568390600090a3600480546001600160a01b0319166001600160a01b0392909216919091179055565b6000546001600160a01b03163314610f6e5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b60448201526064016101c2565b6001600160a01b038116610fc45760405162461bcd60e51b815260206004820152601d60248201527f6e6577206f776e657220697320746865207a65726f206164647265737300000060448201526064016101c2565b600080546040516001600160a01b03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b6001600160a01b0383163b6110765760405162461bcd60e51b815260206004820152601b60248201527f50726f78793a206e6f7420636f6e74726163742061646472657373000000000060448201526064016101c2565b80156110a457600082815260016020526040902080546001600160a01b0319166001600160a01b0385161790555b6105d483825b6001600160a01b038216600081815260026020908152604091829020805460ff191685151590811790915591519182527f72558d9bfba4210f9ef095c782589484151f6d90f7a81bb3cb9b33efc695d324910160405180910390a25050565b80356001600160a01b0381168114610e2957600080fd5b60006020828403121561113257600080fd5b61113b82611109565b9392505050565b60008060006040848603121561115757600080fd5b833567ffffffffffffffff8082111561116f57600080fd5b818601915086601f83011261118357600080fd5b81358181111561119257600080fd5b8760208260051b85010111156111a757600080fd5b6020928301955093506111bd9186019050611109565b90509250925092565b6000806000604084860312156111db57600080fd5b6111e484611109565b9250602084013567ffffffffffffffff8082111561120157600080fd5b818601915086601f83011261121557600080fd5b81358181111561122457600080fd5b87602082850101111561123657600080fd5b6020830194508093505050509250925092565b600060208083528351808285015260005b818110156112765785810183015185820160400152820161125a565b506000604082860101526040601f19601f8301168501019250505092915050565b6000602082840312156112a957600080fd5b81356001600160e01b03198116811461113b57600080fd5b80358015158114610e2957600080fd5b600080604083850312156112e457600080fd5b6112ed83611109565b91506112fb602084016112c1565b90509250929050565b60006020828403121561131657600080fd5b61113b826112c1565b60008060006060848603121561133457600080fd5b61133d84611109565b9250602084013591506111bd604085016112c1565b60006020828403121561136457600080fd5b5035919050565b634e487b7160e01b600052603260045260246000fd5b6000600182016113a157634e487b7160e01b600052601160045260246000fd5b5060010190565b818382376000910190815291905056fea164736f6c6343000812000a",
-  "devdoc": {
-    "kind": "dev",
-    "methods": {
-      "getSelectorImplementation2(bytes4)": {
-        "details": "view implementation address of selector of function",
-        "params": {
-          "_selector": "selector of function"
-        },
-        "returns": {
-          "impl": "address of the implementation"
-        }
-      },
-      "implementation()": {
-        "details": "returns the implementation"
-      },
-      "implementation2(uint256)": {
-        "details": "view implementation address of the proxy[index]",
-        "params": {
-          "_index": "index of proxy"
-        },
-        "returns": {
-          "_0": "address of the implementation"
-        }
-      },
-      "setAliveImplementation2(address,bool)": {
-        "details": "set alive status of implementation",
-        "params": {
-          "_alive": "alive status",
-          "newImplementation": "Address of the new implementation."
-        }
-      },
-      "setImplementation2(address,uint256,bool)": {
-        "details": "set the implementation address and status of the proxy[index]",
-        "params": {
-          "_alive": "_alive",
-          "_index": "index",
-          "newImplementation": "Address of the new implementation."
-        }
-      },
-      "setProxyPause(bool)": {
-        "params": {
-          "_pause": "true:pause or false:resume"
-        }
-      },
-      "setSelectorImplementations2(bytes4[],address)": {
-        "details": "set selectors of Implementation",
-        "params": {
-          "_imp": "implementation address",
-          "_selectors": "being added selectors"
-        }
-      },
-      "upgradeTo(address)": {
-        "params": {
-          "impl": "New implementation contract address"
-        }
-      },
-      "upgradeToAndCall(address,bytes)": {
-        "params": {
-          "_data": "Calldata to delegatecall the new implementation with.",
-          "_implementation": "Address of the implementation contract."
-        }
-      }
-    },
-    "version": 1
-  },
-  "userdoc": {
-    "kind": "user",
-    "methods": {
-      "setProxyPause(bool)": {
-        "notice": "Set pause state"
-      },
-      "upgradeTo(address)": {
-        "notice": "Set implementation contract"
-      },
-      "upgradeToAndCall(address,bytes)": {
-        "notice": "Set the implementation and call a function in a single transaction. Useful to ensure         atomic execution of initialization-based upgrades."
-      }
-    },
-    "version": 1
-  },
-  "storageLayout": {
-    "storage": [
+  {
+    "anonymous": false,
+    "inputs": [
       {
-        "astId": 1673,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "_owner",
-        "offset": 0,
-        "slot": "0",
-        "type": "t_address"
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
       },
       {
-        "astId": 1675,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "pauseProxy",
-        "offset": 20,
-        "slot": "0",
-        "type": "t_bool"
-      },
-      {
-        "astId": 1679,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "proxyImplementation",
-        "offset": 0,
-        "slot": "1",
-        "type": "t_mapping(t_uint256,t_address)"
-      },
-      {
-        "astId": 1683,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "aliveImplementation",
-        "offset": 0,
-        "slot": "2",
-        "type": "t_mapping(t_address,t_bool)"
-      },
-      {
-        "astId": 1687,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "selectorImplementation",
-        "offset": 0,
-        "slot": "3",
-        "type": "t_mapping(t_bytes4,t_address)"
-      },
-      {
-        "astId": 750,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "_manager",
-        "offset": 0,
-        "slot": "4",
-        "type": "t_address"
-      },
-      {
-        "astId": 752,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "lockIdNftForRegister",
-        "offset": 0,
-        "slot": "5",
-        "type": "t_address"
-      },
-      {
-        "astId": 754,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "l2CrossDomainMessenger",
-        "offset": 0,
-        "slot": "6",
-        "type": "t_address"
-      },
-      {
-        "astId": 756,
-        "contract": "contracts/L2/L1StosInL2Proxy.sol:L1StosInL2Proxy",
-        "label": "l1Register",
-        "offset": 0,
-        "slot": "7",
-        "type": "t_address"
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
       }
     ],
-    "types": {
-      "t_address": {
-        "encoding": "inplace",
-        "label": "address",
-        "numberOfBytes": "20"
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "impl",
+        "type": "address"
       },
-      "t_bool": {
-        "encoding": "inplace",
-        "label": "bool",
-        "numberOfBytes": "1"
-      },
-      "t_bytes4": {
-        "encoding": "inplace",
-        "label": "bytes4",
-        "numberOfBytes": "4"
-      },
-      "t_mapping(t_address,t_bool)": {
-        "encoding": "mapping",
-        "key": "t_address",
-        "label": "mapping(address => bool)",
-        "numberOfBytes": "32",
-        "value": "t_bool"
-      },
-      "t_mapping(t_bytes4,t_address)": {
-        "encoding": "mapping",
-        "key": "t_bytes4",
-        "label": "mapping(bytes4 => address)",
-        "numberOfBytes": "32",
-        "value": "t_address"
-      },
-      "t_mapping(t_uint256,t_address)": {
-        "encoding": "mapping",
-        "key": "t_uint256",
-        "label": "mapping(uint256 => address)",
-        "numberOfBytes": "32",
-        "value": "t_address"
-      },
-      "t_uint256": {
-        "encoding": "inplace",
-        "label": "uint256",
-        "numberOfBytes": "32"
+      {
+        "indexed": false,
+        "internalType": "bool",
+        "name": "alive",
+        "type": "bool"
       }
-    }
+    ],
+    "name": "SetAliveImplementation",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes4",
+        "name": "selector",
+        "type": "bytes4"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "impl",
+        "type": "address"
+      }
+    ],
+    "name": "SetSelectorImplementation",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "implementation",
+        "type": "address"
+      }
+    ],
+    "name": "Upgraded",
+    "type": "event"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
+  {
+    "inputs": [],
+    "name": "_manager",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "aliveImplementation",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "_selector",
+        "type": "bytes4"
+      }
+    ],
+    "name": "getSelectorImplementation2",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "impl",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "implementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_index",
+        "type": "uint256"
+      }
+    ],
+    "name": "implementation2",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "l1Register",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "l2CrossDomainMessenger",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "lockIdNftForRegister",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pauseProxy",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "proxyImplementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceManagership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "name": "selectorImplementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newImplementation",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "_alive",
+        "type": "bool"
+      }
+    ],
+    "name": "setAliveImplementation2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newImplementation",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_index",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_alive",
+        "type": "bool"
+      }
+    ],
+    "name": "setImplementation2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bool",
+        "name": "_pause",
+        "type": "bool"
+      }
+    ],
+    "name": "setProxyPause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4[]",
+        "name": "_selectors",
+        "type": "bytes4[]"
+      },
+      {
+        "internalType": "address",
+        "name": "_imp",
+        "type": "address"
+      }
+    ],
+    "name": "setSelectorImplementations2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newManager",
+        "type": "address"
+      }
+    ],
+    "name": "transferManagership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "impl",
+        "type": "address"
+      }
+    ],
+    "name": "upgradeTo",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_implementation",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes",
+        "name": "_data",
+        "type": "bytes"
+      }
+    ],
+    "name": "upgradeToAndCall",
+    "outputs": [
+      {
+        "internalType": "bytes",
+        "name": "",
+        "type": "bytes"
+      }
+    ],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
   }
-}
+]

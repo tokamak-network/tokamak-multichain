@@ -1,414 +1,260 @@
-{
-  "address": "0x5c8ee41536721D2e31352259D3A84419B09d716F",
-  "abi": [
-    {
-      "inputs": [],
-      "name": "_manager",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "_owner",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "aliveImplementation",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
-      "name": "decodeSyncPackets",
-      "outputs": [
-        {
-          "components": [
-            {
-              "internalType": "uint256",
-              "name": "lockId",
-              "type": "uint256"
-            },
-            {
-              "components": [
-                {
-                  "internalType": "int256",
-                  "name": "slope",
-                  "type": "int256"
-                },
-                {
-                  "internalType": "int256",
-                  "name": "bias",
-                  "type": "int256"
-                },
-                {
-                  "internalType": "uint32",
-                  "name": "timestamp",
-                  "type": "uint32"
-                },
-                {
-                  "internalType": "uint32",
-                  "name": "syncTime",
-                  "type": "uint32"
-                }
-              ],
-              "internalType": "struct LibLockId.SyncInfo",
-              "name": "packet",
-              "type": "tuple"
-            }
-          ],
-          "internalType": "struct LibLockId.SyncPacket[]",
-          "name": "packets",
-          "type": "tuple[]"
-        }
-      ],
-      "stateMutability": "pure",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "managerAddress",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
-          "name": "l2messanger_",
-          "type": "address"
-        }
-      ],
-      "name": "initialize",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "l1Register",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "l2CrossDomainMessenger",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "lockIdNftForRegister",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes[]",
-          "name": "datas",
-          "type": "bytes[]"
-        }
-      ],
-      "name": "multiRegister",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "pauseProxy",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "proxyImplementation",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes",
-          "name": "data",
-          "type": "bytes"
-        }
-      ],
-      "name": "register",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "bytes4",
-          "name": "",
-          "type": "bytes4"
-        }
-      ],
-      "name": "selectorImplementation",
-      "outputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "l1Register_",
-          "type": "address"
-        }
-      ],
-      "name": "setL1Register",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "lockIdNft_",
-          "type": "address"
-        }
-      ],
-      "name": "setLockIdNft",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    }
-  ],
-  "transactionHash": "0x01451ed2e75a24f5c982527eec0f94bf113a586e7ccd8001dc53340cf89a7ae4",
-  "receipt": {
-    "to": null,
-    "from": "0xc1eba383D94c6021160042491A5dfaF1d82694E6",
-    "contractAddress": "0x5c8ee41536721D2e31352259D3A84419B09d716F",
-    "transactionIndex": 0,
-    "gasUsed": "1002476",
-    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-    "blockHash": "0x3d81bbb04b85a7941f1a4d33f1ef97c87ceb3011296ad9ed04cc5317bbf6ca69",
-    "transactionHash": "0x01451ed2e75a24f5c982527eec0f94bf113a586e7ccd8001dc53340cf89a7ae4",
-    "logs": [],
-    "blockNumber": 23649,
-    "cumulativeGasUsed": "1002476",
-    "status": 1,
-    "byzantium": true
-  },
-  "args": [],
-  "numDeployments": 2,
-  "solcInputHash": "bea1fe67a15bb59d7ee22582278039ee",
-  "metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"_manager\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"_owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"aliveImplementation\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"decodeSyncPackets\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"lockId\",\"type\":\"uint256\"},{\"components\":[{\"internalType\":\"int256\",\"name\":\"slope\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"bias\",\"type\":\"int256\"},{\"internalType\":\"uint32\",\"name\":\"timestamp\",\"type\":\"uint32\"},{\"internalType\":\"uint32\",\"name\":\"syncTime\",\"type\":\"uint32\"}],\"internalType\":\"struct LibLockId.SyncInfo\",\"name\":\"packet\",\"type\":\"tuple\"}],\"internalType\":\"struct LibLockId.SyncPacket[]\",\"name\":\"packets\",\"type\":\"tuple[]\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"managerAddress\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"l2messanger_\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l1Register\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"l2CrossDomainMessenger\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lockIdNftForRegister\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"datas\",\"type\":\"bytes[]\"}],\"name\":\"multiRegister\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pauseProxy\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"proxyImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"register\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"name\":\"selectorImplementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"l1Register_\",\"type\":\"address\"}],\"name\":\"setL1Register\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"lockIdNft_\",\"type\":\"address\"}],\"name\":\"setLockIdNft\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/L2/L1StosInL2.sol\":\"L1StosInL2\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":625},\"remappings\":[]},\"sources\":{\"contracts/L2/L1StosInL2.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.9;\\nimport \\\"../libraries/BytesLib.sol\\\";\\nimport \\\"../libraries/LibLockId.sol\\\";\\n\\nimport \\\"../proxy/ProxyStorage2.sol\\\";\\nimport \\\"./L1StosInL2Storage.sol\\\";\\n\\n// import \\\"hardhat/console.sol\\\";\\n\\ninterface ILockIdNftForRegister {\\n    function register(\\n        address account,\\n        LibLockId.SyncPacket[] memory packets\\n    ) external;\\n}\\n\\ninterface IL2CrossDomainMessenger {\\n    function xDomainMessageSender() external view returns (address);\\n}\\n\\ncontract L1StosInL2 is ProxyStorage2, L1StosInL2Storage {\\n    using BytesLib for bytes;\\n\\n    modifier onlyMessengerAndL1Register() {\\n\\n        require(\\n            l2CrossDomainMessenger == msg.sender &&\\n            IL2CrossDomainMessenger(l2CrossDomainMessenger).xDomainMessageSender() == l1Register,\\n            \\\"not onlyMessengerAndL1Register\\\");\\n        _;\\n    }\\n\\n    modifier nonZero(uint256 _val) {\\n        require(_val != 0, \\\"zero value\\\");\\n        _;\\n    }\\n\\n    modifier onlyOwner() {\\n        require(_owner == msg.sender, \\\"not owner\\\");\\n        _;\\n    }\\n\\n    function initialize (\\n        address managerAddress,\\n        address l2messanger_\\n    ) external onlyOwner  {\\n        _manager = managerAddress;\\n        l2CrossDomainMessenger =l2messanger_;\\n    }\\n\\n    function setL1Register(address l1Register_) external onlyManager {\\n        require(l1Register != l1Register_, \\\"same\\\");\\n        l1Register = l1Register_;\\n    }\\n\\n    function setLockIdNft(address lockIdNft_) external onlyManager {\\n        require(lockIdNftForRegister != lockIdNft_, \\\"same\\\");\\n        lockIdNftForRegister = lockIdNft_;\\n    }\\n\\n    /*** Public ***/\\n    // function register(bytes memory data) public {\\n    //     console.log('IL1StosInL2 register in' );\\n    //     console.logBytes(data);\\n    //     console.log('IL1StosInL2 l2CrossDomainMessenger %s', l2CrossDomainMessenger);\\n    //     console.log('IL1StosInL2 msg.sender %s', msg.sender );\\n    //     address xDomainMessageSender = IL2CrossDomainMessenger(l2CrossDomainMessenger).xDomainMessageSender();\\n\\n    //     console.log('IL1StosInL2 xDomainMessageSender %s', xDomainMessageSender );\\n    //     console.log('IL1StosInL2 l1Register %s', l1Register );\\n\\n\\n    // }\\n\\n    function register(bytes memory data) public onlyMessengerAndL1Register {\\n\\n        // packet {address | 1st sync packet  2nd sync packet  .....}\\n        // address : 20 bytes\\n        // one sync packets : 104 bytes:  (32 byte) uint256 lockId, (32+32+4+4) syncInfo -> total 104\\n        require(data.length > 123, \\\"wrong bytes length\\\");\\n        address user = data.toAddress(0);\\n\\n        LibLockId.SyncPacket[] memory packets = decodeSyncPackets(data.slice(20,(data.length-20)));\\n\\n        require(packets.length != 0, \\\"no sync data\\\");\\n        ILockIdNftForRegister(lockIdNftForRegister).register(user, packets);\\n    }\\n\\n    function multiRegister(bytes[] memory datas) external onlyMessengerAndL1Register {\\n        require(datas.length != 0, \\\"no data\\\");\\n        for(uint256 i = 0; i < datas.length; i++) {\\n            register(datas[i]);\\n        }\\n    }\\n\\n\\n    function decodeSyncPackets(bytes memory data) public pure returns (LibLockId.SyncPacket[] memory packets) {\\n        uint256 packSize = 104;\\n        uint256 len = data.length / packSize;\\n        packets = new LibLockId.SyncPacket[](len);\\n        for(uint256 i = 0; i < len ; i++){\\n            bytes memory packet = data.slice(i, packSize);\\n            packets[i] = LibLockId.SyncPacket({\\n                lockId: packet.toUint256(0),\\n                packet: LibLockId.SyncInfo({\\n                    slope: packet.toInt256(32),\\n                    bias: packet.toInt256(64),\\n                    timestamp: packet.toUint32(96),\\n                    syncTime: packet.toUint32(100)\\n                })\\n            });\\n        }\\n    }\\n\\n}\\n\",\"keccak256\":\"0x2dfa794b2f320151530b3f309b1f7521e4507b83261d640d04a29c30ade02109\",\"license\":\"MIT\"},\"contracts/L2/L1StosInL2Storage.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.9;\\n\\ncontract L1StosInL2Storage  {\\n    address public _manager;\\n    address public lockIdNftForRegister;\\n    address public l2CrossDomainMessenger;\\n    address public l1Register;\\n\\n    modifier onlyManager() {\\n        require(_manager == msg.sender, \\\"not manager\\\");\\n        _;\\n    }\\n\\n}\",\"keccak256\":\"0x6860161d1d3bbe291190d031629a5592a062b77505d5e19a78c3600b8cd698fa\",\"license\":\"MIT\"},\"contracts/libraries/BytesLib.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\n/*\\n * @title Solidity Bytes Arrays Utils\\n * @author Gon\\u00e7alo S\\u00e1 <goncalo.sa@consensys.net>\\n *\\n * @dev Bytes tightly packed arrays utility library for ethereum contracts written in Solidity.\\n *      The library lets you concatenate, slice and type cast bytes arrays both in memory and storage.\\n */\\npragma solidity ^0.8.0;\\n// pragma solidity >=0.5.0 <0.8.0;\\n\\n\\nlibrary BytesLib {\\n    function slice(\\n        bytes memory _bytes,\\n        uint256 _start,\\n        uint256 _length\\n    ) internal pure returns (bytes memory) {\\n        require(_length + 31 >= _length, 'slice_overflow');\\n        require(_start + _length >= _start, 'slice_overflow');\\n        require(_bytes.length >= _start + _length, 'slice_outOfBounds');\\n\\n        bytes memory tempBytes;\\n\\n        assembly {\\n            switch iszero(_length)\\n                case 0 {\\n                    // Get a location of some free memory and store it in tempBytes as\\n                    // Solidity does for memory variables.\\n                    tempBytes := mload(0x40)\\n\\n                    // The first word of the slice result is potentially a partial\\n                    // word read from the original array. To read it, we calculate\\n                    // the length of that partial word and start copying that many\\n                    // bytes into the array. The first word we copy will start with\\n                    // data we don't care about, but the last `lengthmod` bytes will\\n                    // land at the beginning of the contents of the new array. When\\n                    // we're done copying, we overwrite the full first word with\\n                    // the actual length of the slice.\\n                    let lengthmod := and(_length, 31)\\n\\n                    // The multiplication in the next line is necessary\\n                    // because when slicing multiples of 32 bytes (lengthmod == 0)\\n                    // the following copy loop was copying the origin's length\\n                    // and then ending prematurely not copying everything it should.\\n                    let mc := add(add(tempBytes, lengthmod), mul(0x20, iszero(lengthmod)))\\n                    let end := add(mc, _length)\\n\\n                    for {\\n                        // The multiplication in the next line has the same exact purpose\\n                        // as the one above.\\n                        let cc := add(add(add(_bytes, lengthmod), mul(0x20, iszero(lengthmod))), _start)\\n                    } lt(mc, end) {\\n                        mc := add(mc, 0x20)\\n                        cc := add(cc, 0x20)\\n                    } {\\n                        mstore(mc, mload(cc))\\n                    }\\n\\n                    mstore(tempBytes, _length)\\n\\n                    //update free-memory pointer\\n                    //allocating the array padded to 32 bytes like the compiler does now\\n                    mstore(0x40, and(add(mc, 31), not(31)))\\n                }\\n                //if we want a zero-length slice let's just return a zero-length array\\n                default {\\n                    tempBytes := mload(0x40)\\n                    //zero out the 32 bytes slice we are about to return\\n                    //we need to do it because Solidity does not garbage collect\\n                    mstore(tempBytes, 0)\\n\\n                    mstore(0x40, add(tempBytes, 0x20))\\n                }\\n        }\\n\\n        return tempBytes;\\n    }\\n\\n    function toAddress(bytes memory _bytes, uint256 _start) internal pure returns (address) {\\n        require(_start + 20 >= _start, 'toAddress_overflow');\\n        require(_bytes.length >= _start + 20, 'toAddress_outOfBounds');\\n        address tempAddress;\\n\\n        assembly {\\n            tempAddress := div(mload(add(add(_bytes, 0x20), _start)), 0x1000000000000000000000000)\\n        }\\n\\n        return tempAddress;\\n    }\\n\\n    function toUint24(bytes memory _bytes, uint256 _start) internal pure returns (uint24) {\\n        require(_start + 3 >= _start, 'toUint24_overflow');\\n        require(_bytes.length >= _start + 3, 'toUint24_outOfBounds');\\n        uint24 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x3), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n\\n    function toUint8(bytes memory _bytes, uint256 _start) internal pure returns (uint8) {\\n        require(_start + 1 >= _start, 'toUint8_overflow');\\n        require(_bytes.length >= _start + 1, 'toUint8_outOfBounds');\\n        uint8 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x1), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n\\n    function toBool(bytes memory _bytes, uint256 _start) internal pure returns (bool) {\\n        require(_start + 1 >= _start, 'toBool_overflow');\\n        require(_bytes.length >= _start + 1, 'toBool_overflow');\\n        bool tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x1), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n\\n    function toUint16(bytes memory _bytes, uint256 _start) internal pure returns (uint16) {\\n        require(_start + 2 >= _start, 'toUint16_overflow');\\n        require(_bytes.length >= _start + 2, 'toUint16_outOfBounds');\\n        uint16 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x2), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n\\n    function toUint32(bytes memory _bytes, uint256 _start) internal pure returns (uint32) {\\n        require(_start + 4 >= _start, 'toUint32_overflow');\\n        require(_bytes.length >= _start + 4, 'toUint32_outOfBounds');\\n        uint32 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x4), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n\\n\\n    function toUint256(bytes memory _bytes, uint256 _start) internal pure returns (uint256) {\\n        require(_start + 32 >= _start, 'toUint256_overflow');\\n        require(_bytes.length >= _start + 32, 'toUint256_outOfBounds');\\n        uint256 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x20), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n\\n    function toInt256(bytes memory _bytes, uint256 _start) internal pure returns (int256) {\\n        require(_start + 32 >= _start, 'toUint256_overflow');\\n        require(_bytes.length >= _start + 32, 'toUint256_outOfBounds');\\n        int256 tempUint;\\n\\n        assembly {\\n            tempUint := mload(add(add(_bytes, 0x20), _start))\\n        }\\n\\n        return tempUint;\\n    }\\n}\\n\",\"keccak256\":\"0x064f1eac3145c434626e04bc0aa16776dbb3ef78104864587eab9ce56d9c1d66\",\"license\":\"GPL-2.0-or-later\"},\"contracts/libraries/LibLockId.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.4;\\n\\n/**\\n * @title LibLockId\\n */\\nlibrary LibLockId {\\n\\n    // LockId\\uc758 \\ud3ec\\uc778\\ud2b8 \\uc815\\ubcf4\\n    struct Point {\\n        int256 slope;\\n        int256 bias;\\n        uint256 timestamp; // \\ub4f1\\ub85d(\\uc2dc\\uc791)\\uc2dc\\uc810\\n    }\\n\\n    // LockId\\uc758 \\uc794\\uace0\\n    struct LockedInfo {\\n        uint256 start;\\n        uint256 end;\\n        uint256 amount;\\n        uint256 withdrawlTime;\\n    }\\n\\n    // SyncInfo\\n    struct SyncInfo {\\n        int256 slope;\\n        int256 bias;\\n        uint32 timestamp; // point \\uc815\\ubcf4\\uc5d0 \\uc788\\ub294 \\uc778\\ub371\\uc2a4\\uc5d0 \\ud574\\ub2f9\\ud558\\ub294 timestamp\\n        uint32 syncTime; // \\ub3d9\\uae30\\ud654 \\uc2dc\\uc810\\n    }\\n\\n    struct SyncPacket {\\n        uint256 lockId;\\n        SyncInfo packet;\\n    }\\n\\n    struct UnlimitedAmount {\\n        uint32 timestamp;\\n        uint256 amount;\\n    }\\n\\n}\",\"keccak256\":\"0xf1a7a0153b2bd0a20c1dd536adfa44e1c7c3dc7336a37eef2e3166c44285792e\",\"license\":\"MIT\"},\"contracts/proxy/ProxyStorage2.sol\":{\"content\":\"//SPDX-License-Identifier: Unlicense\\npragma solidity ^0.8.4;\\n\\ncontract ProxyStorage2  {\\n\\n    address public _owner;\\n    bool public pauseProxy;\\n\\n    mapping(uint256 => address) public proxyImplementation;\\n    mapping(address => bool) public aliveImplementation;\\n    mapping(bytes4 => address) public selectorImplementation;\\n\\n\\n}\",\"keccak256\":\"0x143792b4a69ee77d8ac3bf521938acc34f9e6800751d4db9bae90333b4749a4a\",\"license\":\"Unlicense\"}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b50611135806100206000396000f3fe608060405234801561001057600080fd5b50600436106100f55760003560e01c80636b765aa611610097578063c8d2f27c11610066578063c8d2f27c14610259578063d75bf0ce1461026c578063f0329f6b1461027f578063fbef005a1461029257600080fd5b80636b765aa6146101f757806382fbdc9c1461020a578063b2bdfa7b1461021d578063b911135f1461023057600080fd5b8063485cc955116100d3578063485cc9551461014b57806350d2a2761461015e578063550d01a31461019f57806363a8fd89146101d257600080fd5b806303a2948f146100fa5780632bd5a6a41461010f5780632c57035814610122575b600080fd5b61010d610108366004610e06565b6102a5565b005b61010d61011d366004610ee1565b61040a565b610135610130366004610f05565b6104ba565b6040516101429190610fb5565b60405180910390f35b61010d610159366004610fc8565b610609565b61018761016c366004611001565b6003602052600090815260409020546001600160a01b031681565b6040516001600160a01b039091168152602001610142565b6101c26101ad366004610ee1565b60026020526000908152604090205460ff1681565b6040519015158152602001610142565b6000546101c29074010000000000000000000000000000000000000000900460ff1681565b600554610187906001600160a01b031681565b61010d610218366004610f05565b61067d565b600054610187906001600160a01b031681565b61018761023e366004611043565b6001602052600090815260409020546001600160a01b031681565b61010d610267366004610ee1565b610898565b600754610187906001600160a01b031681565b600454610187906001600160a01b031681565b600654610187906001600160a01b031681565b6006546001600160a01b03163314801561033a575060075460065460408051636e296e4560e01b815290516001600160a01b039384169390921691636e296e45916004808201926020929091908290030181865afa15801561030b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061032f919061105c565b6001600160a01b0316145b61038b5760405162461bcd60e51b815260206004820152601e60248201527f6e6f74206f6e6c794d657373656e676572416e644c315265676973746572000060448201526064015b60405180910390fd5b80516000036103c65760405162461bcd60e51b81526020600482015260076024820152666e6f206461746160c81b6044820152606401610382565b60005b8151811015610406576103f48282815181106103e7576103e7611079565b602002602001015161067d565b806103fe816110a5565b9150506103c9565b5050565b6004546001600160a01b031633146104525760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b6044820152606401610382565b6007546001600160a01b038083169116036104985760405162461bcd60e51b81526004016103829060208082526004908201526373616d6560e01b604082015260600190565b600780546001600160a01b0319166001600160a01b0392909216919091179055565b606060006068905060008184516104d191906110be565b90508067ffffffffffffffff8111156104ec576104ec610d4f565b60405190808252806020026020018201604052801561052557816020015b610512610d01565b81526020019060019003908161050a5790505b50925060005b81811015610601576000610540868386610948565b90506040518060400160405280610561600084610aab90919063ffffffff16565b81526020016040518060800160405280610585602086610aab90919063ffffffff16565b8152602001610595856040610aab565b81526020016105a5856060610b71565b63ffffffff1681526020016105c4606486610b7190919063ffffffff16565b63ffffffff168152508152508583815181106105e2576105e2611079565b60200260200101819052505080806105f9906110a5565b91505061052b565b505050919050565b6000546001600160a01b0316331461064f5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b6044820152606401610382565b600480546001600160a01b039384166001600160a01b03199182161790915560068054929093169116179055565b6006546001600160a01b031633148015610712575060075460065460408051636e296e4560e01b815290516001600160a01b039384169390921691636e296e45916004808201926020929091908290030181865afa1580156106e3573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610707919061105c565b6001600160a01b0316145b61075e5760405162461bcd60e51b815260206004820152601e60248201527f6e6f74206f6e6c794d657373656e676572416e644c31526567697374657200006044820152606401610382565b607b8151116107af5760405162461bcd60e51b815260206004820152601260248201527f77726f6e67206279746573206c656e67746800000000000000000000000000006044820152606401610382565b60006107bb8282610c31565b905060006107dc61013060148086516107d491906110e0565b869190610948565b9050805160000361082f5760405162461bcd60e51b815260206004820152600c60248201527f6e6f2073796e63206461746100000000000000000000000000000000000000006044820152606401610382565b60055460405163743500ad60e01b81526001600160a01b039091169063743500ad9061086190859085906004016110f3565b600060405180830381600087803b15801561087b57600080fd5b505af115801561088f573d6000803e3d6000fd5b50505050505050565b6004546001600160a01b031633146108e05760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b6044820152606401610382565b6005546001600160a01b038083169116036109265760405162461bcd60e51b81526004016103829060208082526004908201526373616d6560e01b604082015260600190565b600580546001600160a01b0319166001600160a01b0392909216919091179055565b60608161095681601f611115565b10156109955760405162461bcd60e51b815260206004820152600e60248201526d736c6963655f6f766572666c6f7760901b6044820152606401610382565b826109a08382611115565b10156109df5760405162461bcd60e51b815260206004820152600e60248201526d736c6963655f6f766572666c6f7760901b6044820152606401610382565b6109e98284611115565b84511015610a395760405162461bcd60e51b815260206004820152601160248201527f736c6963655f6f75744f66426f756e64730000000000000000000000000000006044820152606401610382565b606082158015610a585760405191506000825260208201604052610aa2565b6040519150601f8416801560200281840101858101878315602002848b0101015b81831015610a91578051835260209283019201610a79565b5050858452601f01601f1916604052505b50949350505050565b600081610ab9816020611115565b1015610b075760405162461bcd60e51b815260206004820152601260248201527f746f55696e743235365f6f766572666c6f7700000000000000000000000000006044820152606401610382565b610b12826020611115565b83511015610b625760405162461bcd60e51b815260206004820152601560248201527f746f55696e743235365f6f75744f66426f756e647300000000000000000000006044820152606401610382565b50818101602001515b92915050565b600081610b7f816004611115565b1015610bcd5760405162461bcd60e51b815260206004820152601160248201527f746f55696e7433325f6f766572666c6f770000000000000000000000000000006044820152606401610382565b610bd8826004611115565b83511015610c285760405162461bcd60e51b815260206004820152601460248201527f746f55696e7433325f6f75744f66426f756e64730000000000000000000000006044820152606401610382565b50016004015190565b600081610c3f816014611115565b1015610c8d5760405162461bcd60e51b815260206004820152601260248201527f746f416464726573735f6f766572666c6f7700000000000000000000000000006044820152606401610382565b610c98826014611115565b83511015610ce85760405162461bcd60e51b815260206004820152601560248201527f746f416464726573735f6f75744f66426f756e647300000000000000000000006044820152606401610382565b5001602001516c01000000000000000000000000900490565b604051806040016040528060008152602001610d4a60405180608001604052806000815260200160008152602001600063ffffffff168152602001600063ffffffff1681525090565b905290565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff81118282101715610d8e57610d8e610d4f565b604052919050565b600082601f830112610da757600080fd5b813567ffffffffffffffff811115610dc157610dc1610d4f565b610dd4601f8201601f1916602001610d65565b818152846020838601011115610de957600080fd5b816020850160208301376000918101602001919091529392505050565b60006020808385031215610e1957600080fd5b823567ffffffffffffffff80821115610e3157600080fd5b818501915085601f830112610e4557600080fd5b813581811115610e5757610e57610d4f565b8060051b610e66858201610d65565b9182528381018501918581019089841115610e8057600080fd5b86860192505b83831015610ebc57823585811115610e9e5760008081fd5b610eac8b89838a0101610d96565b8352509186019190860190610e86565b9998505050505050505050565b6001600160a01b0381168114610ede57600080fd5b50565b600060208284031215610ef357600080fd5b8135610efe81610ec9565b9392505050565b600060208284031215610f1757600080fd5b813567ffffffffffffffff811115610f2e57600080fd5b610f3a84828501610d96565b949350505050565b600081518084526020808501945080840160005b83811015610faa57815180518852830151805184890152808401516040808a019190915281015163ffffffff9081166060808b01919091529091015116608088015260a09096019590820190600101610f56565b509495945050505050565b602081526000610efe6020830184610f42565b60008060408385031215610fdb57600080fd5b8235610fe681610ec9565b91506020830135610ff681610ec9565b809150509250929050565b60006020828403121561101357600080fd5b81357fffffffff0000000000000000000000000000000000000000000000000000000081168114610efe57600080fd5b60006020828403121561105557600080fd5b5035919050565b60006020828403121561106e57600080fd5b8151610efe81610ec9565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b6000600182016110b7576110b761108f565b5060010190565b6000826110db57634e487b7160e01b600052601260045260246000fd5b500490565b81810381811115610b6b57610b6b61108f565b6001600160a01b0383168152604060208201526000610f3a6040830184610f42565b80820180821115610b6b57610b6b61108f56fea164736f6c6343000812000a",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100f55760003560e01c80636b765aa611610097578063c8d2f27c11610066578063c8d2f27c14610259578063d75bf0ce1461026c578063f0329f6b1461027f578063fbef005a1461029257600080fd5b80636b765aa6146101f757806382fbdc9c1461020a578063b2bdfa7b1461021d578063b911135f1461023057600080fd5b8063485cc955116100d3578063485cc9551461014b57806350d2a2761461015e578063550d01a31461019f57806363a8fd89146101d257600080fd5b806303a2948f146100fa5780632bd5a6a41461010f5780632c57035814610122575b600080fd5b61010d610108366004610e06565b6102a5565b005b61010d61011d366004610ee1565b61040a565b610135610130366004610f05565b6104ba565b6040516101429190610fb5565b60405180910390f35b61010d610159366004610fc8565b610609565b61018761016c366004611001565b6003602052600090815260409020546001600160a01b031681565b6040516001600160a01b039091168152602001610142565b6101c26101ad366004610ee1565b60026020526000908152604090205460ff1681565b6040519015158152602001610142565b6000546101c29074010000000000000000000000000000000000000000900460ff1681565b600554610187906001600160a01b031681565b61010d610218366004610f05565b61067d565b600054610187906001600160a01b031681565b61018761023e366004611043565b6001602052600090815260409020546001600160a01b031681565b61010d610267366004610ee1565b610898565b600754610187906001600160a01b031681565b600454610187906001600160a01b031681565b600654610187906001600160a01b031681565b6006546001600160a01b03163314801561033a575060075460065460408051636e296e4560e01b815290516001600160a01b039384169390921691636e296e45916004808201926020929091908290030181865afa15801561030b573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061032f919061105c565b6001600160a01b0316145b61038b5760405162461bcd60e51b815260206004820152601e60248201527f6e6f74206f6e6c794d657373656e676572416e644c315265676973746572000060448201526064015b60405180910390fd5b80516000036103c65760405162461bcd60e51b81526020600482015260076024820152666e6f206461746160c81b6044820152606401610382565b60005b8151811015610406576103f48282815181106103e7576103e7611079565b602002602001015161067d565b806103fe816110a5565b9150506103c9565b5050565b6004546001600160a01b031633146104525760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b6044820152606401610382565b6007546001600160a01b038083169116036104985760405162461bcd60e51b81526004016103829060208082526004908201526373616d6560e01b604082015260600190565b600780546001600160a01b0319166001600160a01b0392909216919091179055565b606060006068905060008184516104d191906110be565b90508067ffffffffffffffff8111156104ec576104ec610d4f565b60405190808252806020026020018201604052801561052557816020015b610512610d01565b81526020019060019003908161050a5790505b50925060005b81811015610601576000610540868386610948565b90506040518060400160405280610561600084610aab90919063ffffffff16565b81526020016040518060800160405280610585602086610aab90919063ffffffff16565b8152602001610595856040610aab565b81526020016105a5856060610b71565b63ffffffff1681526020016105c4606486610b7190919063ffffffff16565b63ffffffff168152508152508583815181106105e2576105e2611079565b60200260200101819052505080806105f9906110a5565b91505061052b565b505050919050565b6000546001600160a01b0316331461064f5760405162461bcd60e51b81526020600482015260096024820152683737ba1037bbb732b960b91b6044820152606401610382565b600480546001600160a01b039384166001600160a01b03199182161790915560068054929093169116179055565b6006546001600160a01b031633148015610712575060075460065460408051636e296e4560e01b815290516001600160a01b039384169390921691636e296e45916004808201926020929091908290030181865afa1580156106e3573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610707919061105c565b6001600160a01b0316145b61075e5760405162461bcd60e51b815260206004820152601e60248201527f6e6f74206f6e6c794d657373656e676572416e644c31526567697374657200006044820152606401610382565b607b8151116107af5760405162461bcd60e51b815260206004820152601260248201527f77726f6e67206279746573206c656e67746800000000000000000000000000006044820152606401610382565b60006107bb8282610c31565b905060006107dc61013060148086516107d491906110e0565b869190610948565b9050805160000361082f5760405162461bcd60e51b815260206004820152600c60248201527f6e6f2073796e63206461746100000000000000000000000000000000000000006044820152606401610382565b60055460405163743500ad60e01b81526001600160a01b039091169063743500ad9061086190859085906004016110f3565b600060405180830381600087803b15801561087b57600080fd5b505af115801561088f573d6000803e3d6000fd5b50505050505050565b6004546001600160a01b031633146108e05760405162461bcd60e51b815260206004820152600b60248201526a3737ba1036b0b730b3b2b960a91b6044820152606401610382565b6005546001600160a01b038083169116036109265760405162461bcd60e51b81526004016103829060208082526004908201526373616d6560e01b604082015260600190565b600580546001600160a01b0319166001600160a01b0392909216919091179055565b60608161095681601f611115565b10156109955760405162461bcd60e51b815260206004820152600e60248201526d736c6963655f6f766572666c6f7760901b6044820152606401610382565b826109a08382611115565b10156109df5760405162461bcd60e51b815260206004820152600e60248201526d736c6963655f6f766572666c6f7760901b6044820152606401610382565b6109e98284611115565b84511015610a395760405162461bcd60e51b815260206004820152601160248201527f736c6963655f6f75744f66426f756e64730000000000000000000000000000006044820152606401610382565b606082158015610a585760405191506000825260208201604052610aa2565b6040519150601f8416801560200281840101858101878315602002848b0101015b81831015610a91578051835260209283019201610a79565b5050858452601f01601f1916604052505b50949350505050565b600081610ab9816020611115565b1015610b075760405162461bcd60e51b815260206004820152601260248201527f746f55696e743235365f6f766572666c6f7700000000000000000000000000006044820152606401610382565b610b12826020611115565b83511015610b625760405162461bcd60e51b815260206004820152601560248201527f746f55696e743235365f6f75744f66426f756e647300000000000000000000006044820152606401610382565b50818101602001515b92915050565b600081610b7f816004611115565b1015610bcd5760405162461bcd60e51b815260206004820152601160248201527f746f55696e7433325f6f766572666c6f770000000000000000000000000000006044820152606401610382565b610bd8826004611115565b83511015610c285760405162461bcd60e51b815260206004820152601460248201527f746f55696e7433325f6f75744f66426f756e64730000000000000000000000006044820152606401610382565b50016004015190565b600081610c3f816014611115565b1015610c8d5760405162461bcd60e51b815260206004820152601260248201527f746f416464726573735f6f766572666c6f7700000000000000000000000000006044820152606401610382565b610c98826014611115565b83511015610ce85760405162461bcd60e51b815260206004820152601560248201527f746f416464726573735f6f75744f66426f756e647300000000000000000000006044820152606401610382565b5001602001516c01000000000000000000000000900490565b604051806040016040528060008152602001610d4a60405180608001604052806000815260200160008152602001600063ffffffff168152602001600063ffffffff1681525090565b905290565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff81118282101715610d8e57610d8e610d4f565b604052919050565b600082601f830112610da757600080fd5b813567ffffffffffffffff811115610dc157610dc1610d4f565b610dd4601f8201601f1916602001610d65565b818152846020838601011115610de957600080fd5b816020850160208301376000918101602001919091529392505050565b60006020808385031215610e1957600080fd5b823567ffffffffffffffff80821115610e3157600080fd5b818501915085601f830112610e4557600080fd5b813581811115610e5757610e57610d4f565b8060051b610e66858201610d65565b9182528381018501918581019089841115610e8057600080fd5b86860192505b83831015610ebc57823585811115610e9e5760008081fd5b610eac8b89838a0101610d96565b8352509186019190860190610e86565b9998505050505050505050565b6001600160a01b0381168114610ede57600080fd5b50565b600060208284031215610ef357600080fd5b8135610efe81610ec9565b9392505050565b600060208284031215610f1757600080fd5b813567ffffffffffffffff811115610f2e57600080fd5b610f3a84828501610d96565b949350505050565b600081518084526020808501945080840160005b83811015610faa57815180518852830151805184890152808401516040808a019190915281015163ffffffff9081166060808b01919091529091015116608088015260a09096019590820190600101610f56565b509495945050505050565b602081526000610efe6020830184610f42565b60008060408385031215610fdb57600080fd5b8235610fe681610ec9565b91506020830135610ff681610ec9565b809150509250929050565b60006020828403121561101357600080fd5b81357fffffffff0000000000000000000000000000000000000000000000000000000081168114610efe57600080fd5b60006020828403121561105557600080fd5b5035919050565b60006020828403121561106e57600080fd5b8151610efe81610ec9565b634e487b7160e01b600052603260045260246000fd5b634e487b7160e01b600052601160045260246000fd5b6000600182016110b7576110b761108f565b5060010190565b6000826110db57634e487b7160e01b600052601260045260246000fd5b500490565b81810381811115610b6b57610b6b61108f565b6001600160a01b0383168152604060208201526000610f3a6040830184610f42565b80820180821115610b6b57610b6b61108f56fea164736f6c6343000812000a",
-  "devdoc": {
-    "kind": "dev",
-    "methods": {},
-    "version": 1
-  },
-  "userdoc": {
-    "kind": "user",
-    "methods": {},
-    "version": 1
-  },
-  "storageLayout": {
-    "storage": [
+[
+  {
+    "inputs": [],
+    "name": "_manager",
+    "outputs": [
       {
-        "astId": 1908,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "_owner",
-        "offset": 0,
-        "slot": "0",
-        "type": "t_address"
-      },
-      {
-        "astId": 1910,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "pauseProxy",
-        "offset": 20,
-        "slot": "0",
-        "type": "t_bool"
-      },
-      {
-        "astId": 1914,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "proxyImplementation",
-        "offset": 0,
-        "slot": "1",
-        "type": "t_mapping(t_uint256,t_address)"
-      },
-      {
-        "astId": 1918,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "aliveImplementation",
-        "offset": 0,
-        "slot": "2",
-        "type": "t_mapping(t_address,t_bool)"
-      },
-      {
-        "astId": 1922,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "selectorImplementation",
-        "offset": 0,
-        "slot": "3",
-        "type": "t_mapping(t_bytes4,t_address)"
-      },
-      {
-        "astId": 1000,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "_manager",
-        "offset": 0,
-        "slot": "4",
-        "type": "t_address"
-      },
-      {
-        "astId": 1002,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "lockIdNftForRegister",
-        "offset": 0,
-        "slot": "5",
-        "type": "t_address"
-      },
-      {
-        "astId": 1004,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "l2CrossDomainMessenger",
-        "offset": 0,
-        "slot": "6",
-        "type": "t_address"
-      },
-      {
-        "astId": 1006,
-        "contract": "contracts/L2/L1StosInL2.sol:L1StosInL2",
-        "label": "l1Register",
-        "offset": 0,
-        "slot": "7",
-        "type": "t_address"
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
     ],
-    "types": {
-      "t_address": {
-        "encoding": "inplace",
-        "label": "address",
-        "numberOfBytes": "20"
-      },
-      "t_bool": {
-        "encoding": "inplace",
-        "label": "bool",
-        "numberOfBytes": "1"
-      },
-      "t_bytes4": {
-        "encoding": "inplace",
-        "label": "bytes4",
-        "numberOfBytes": "4"
-      },
-      "t_mapping(t_address,t_bool)": {
-        "encoding": "mapping",
-        "key": "t_address",
-        "label": "mapping(address => bool)",
-        "numberOfBytes": "32",
-        "value": "t_bool"
-      },
-      "t_mapping(t_bytes4,t_address)": {
-        "encoding": "mapping",
-        "key": "t_bytes4",
-        "label": "mapping(bytes4 => address)",
-        "numberOfBytes": "32",
-        "value": "t_address"
-      },
-      "t_mapping(t_uint256,t_address)": {
-        "encoding": "mapping",
-        "key": "t_uint256",
-        "label": "mapping(uint256 => address)",
-        "numberOfBytes": "32",
-        "value": "t_address"
-      },
-      "t_uint256": {
-        "encoding": "inplace",
-        "label": "uint256",
-        "numberOfBytes": "32"
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "_owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
       }
-    }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "aliveImplementation",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "decodeSyncPackets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "lockId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "int256",
+                "name": "slope",
+                "type": "int256"
+              },
+              {
+                "internalType": "int256",
+                "name": "bias",
+                "type": "int256"
+              },
+              {
+                "internalType": "uint32",
+                "name": "timestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint32",
+                "name": "syncTime",
+                "type": "uint32"
+              }
+            ],
+            "internalType": "struct LibLockId.SyncInfo",
+            "name": "packet",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct LibLockId.SyncPacket[]",
+        "name": "packets",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "managerAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "l2messanger_",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "l1Register",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "l2CrossDomainMessenger",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "lockIdNftForRegister",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "datas",
+        "type": "bytes[]"
+      }
+    ],
+    "name": "multiRegister",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "pauseProxy",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "proxyImplementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "data",
+        "type": "bytes"
+      }
+    ],
+    "name": "register",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "",
+        "type": "bytes4"
+      }
+    ],
+    "name": "selectorImplementation",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "l1Register_",
+        "type": "address"
+      }
+    ],
+    "name": "setL1Register",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "lockIdNft_",
+        "type": "address"
+      }
+    ],
+    "name": "setLockIdNft",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   }
-}
+]
