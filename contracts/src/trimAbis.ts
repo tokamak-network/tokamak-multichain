@@ -23,23 +23,16 @@ const trimAbis = () => {
           'utf8',
           (err) => {
             if (err) {
-              console.error(`Error writing JSON file :`, err)
+              console.error(`Error writing JSON file : ${abiFileName}`, err)
             } else {
-              console.log(`JSON file  has been written successfully.`)
+              console.log(`${abiFileName}.json has been written successfully.`)
             }
           }
         )
       }
-      //   if (firstChar !== '[') {
-      //     fs.writeFile(
-      //       path.join(__dirname, `${abi}.json`),
-      //       JSON.stringify(abi.abi),
-      //       'utf8',
-      //       (err) => {}
-      //     )
-      //   }
     }
   }
+  console.log('****Process to trim abis is done.****')
 }
 
 trimAbis()

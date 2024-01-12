@@ -112,11 +112,11 @@ export const getAllContracts = (
   const addresses: L1Contracts | L2Contracts =
     CONTRACT_ADDRESSES[chainId] || undefined
 
-  console.log('addresses', addresses)
-
   // Attach all L1 contracts.
   const contracts = {} as L1Contracts | L2Contracts
   for (const [contractName, contractAddress] of Object.entries(addresses)) {
+    console.log('******************')
+    console.log(contractName, contractAddress)
     contracts[contractName] = getContract(
       contractName as keyof L1Contracts,
       chainId,
@@ -125,7 +125,6 @@ export const getAllContracts = (
         signerOrProvider: opts.signerOrProvider,
       }
     )
-    console.log(contracts)
   }
 
   return contracts

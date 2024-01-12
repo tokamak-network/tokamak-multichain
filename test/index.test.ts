@@ -19,8 +19,8 @@ const getABI = (fileType) => {
 
 const init = () => {
   // console.log(getABI('L1Bridge'))
-  const d = new TitanSDK({ chainId: 5050, signerOrProvider: '' })
-  console.log(d)
+  const sdk = new TitanSDK({ chainId: 5050, signerOrProvider: '' })
+  console.log(sdk.contracts)
 }
 
 init()

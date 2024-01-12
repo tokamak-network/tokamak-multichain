@@ -61,10 +61,10 @@ export const toNumber = (num: NumberLike): number => {
  */
 export const toAddress = (addr: AddressLike): string => {
   if (typeof addr === 'string') {
-    assert(ethers.utils.isAddress(addr), 'Invalid address')
+    assert(ethers.utils.isAddress(addr), `${addr} : Invalid address`)
     return ethers.utils.getAddress(addr)
   } else {
-    assert(ethers.utils.isAddress(addr.address), 'Invalid address')
+    assert(ethers.utils.isAddress(addr.address), `${addr} : Invalid address`)
     return ethers.utils.getAddress(addr.address)
   }
 }
