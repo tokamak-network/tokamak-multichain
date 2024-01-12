@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import titanGithub from '../dist/index'
+import { TitanSDK } from '../src'
 
 const getABI = (fileType) => {
   const filePath = path.join('./contracts/data/bridge/abi', `${fileType}.json`)
@@ -17,7 +18,9 @@ const getABI = (fileType) => {
 }
 
 const init = () => {
-  console.log(getABI('L1Bridge'))
+  // console.log(getABI('L1Bridge'))
+  const d = new TitanSDK({ chainId: 5050, signerOrProvider: '' })
+  console.log(d)
 }
 
 init()

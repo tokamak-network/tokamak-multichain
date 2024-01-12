@@ -27,6 +27,20 @@ const collectAddresses = () => {
     Object.entries(data).map(([key]) => {
       contracts[key] = { ...contracts[key], ...data[key] }
     })
+
+    // Object.entries(data).map(([key]) => {
+    //   if (!contracts[key]) {
+    //     contracts[key] = {}
+    //   }
+
+    //   if (!contracts[key][contractName]) {
+    //     contracts[key][contractName] = {}
+    //   }
+
+    //   console.log(contracts, key, contractName)
+    //   console.log(data[key])
+    //   contracts[key][contractName] = data[key]
+    // })
   })
 
   return contracts
@@ -39,7 +53,7 @@ const collectAddresses = () => {
  *
  * @returns Generated contract list JSON object.
  */
-const basePath = '../data'
+const basePath = path.join(__dirname, '../data')
 
 export const generate = () => {
   // Collect addresses based on provided directory path
@@ -49,7 +63,7 @@ export const generate = () => {
   const jsonData = JSON.stringify(collectedAddresses, null, 2)
 
   // Write the JSON data to a file
-  const outputFile = '../tokamak.contractlist.json' // Replace with the desired output file path
+  const outputFile = path.join(__dirname, '../tokamak.contractlist.json') // Replace with the desired output file path
 
   fs.writeFile(outputFile, jsonData, 'utf8', (err) => {
     if (err) {

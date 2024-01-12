@@ -61,10 +61,7 @@ export type L2Contracts = {
  * Convenience type for something that looks like the  contract interface but could be
  * addresses instead of actual contract objects.
  */
-export interface ContractsLike {
-  l1: L1Contracts
-  l2: L2Contracts
-}
+export type ContractsLike = L1Contracts | L2Contracts
 
 /**
  * Stuff that can be coerced into a provider.

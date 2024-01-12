@@ -1,11 +1,9 @@
 {
   "1": {
-    "L1StandardBridge": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
-    "L1Messenger": "0xfd76ef26315Ea36136dC40Aeafb5D276d37944AE"
+    "L1StandardBridge": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD"
   },
   "5": {
-    "L1StandardBridge": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
-    "L1Messenger": "0x2878373BA3Be0Ef2a93Ba5b3F7210D76cb222e63"
+    "L1StandardBridge": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD"
   },
   "55004": {
     "L2StandardBridge": "0x4200000000000000000000000000000000000010"

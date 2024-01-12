@@ -1,7 +1,6 @@
 {
   "1": {
     "L1StandardBridge": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
-    "L1Messenger": "0xfd76ef26315Ea36136dC40Aeafb5D276d37944AE",
     "SwapperV2Proxy": "0x580d3159adE0e95558d10A0Dc9d55A9Ee84F3E27",
     "BondDepository": "0xbBe7881cC14a509FD8F53Ce650fE065C385d98D7",
     "BondDepositoryProxy": "0x4d08d2113b75Bfd8B6C5D3Dd956165e1853dC6A4",
@@ -21,7 +20,6 @@
   },
   "5": {
     "L1StandardBridge": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
-    "L1Messenger": "0x2878373BA3Be0Ef2a93Ba5b3F7210D76cb222e63",
     "SwapperV2Proxy": "0xb99300e6650f2b40a5359D00396a6Ae17Bf1bc97",
     "LibProject": "0x998210596930Ec4A459c5611A7c151F4DA5a1b39",
     "L1ERC20A_TokenFactory": "0x8a664F47338419AA45859aE763dc4EEe61886b21",

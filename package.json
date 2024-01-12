@@ -37,7 +37,7 @@
   "scripts": {
     "validate": "tsx ./bin/cli.ts validate",
     "generate": "tsx ./bin/cli.ts generate",
-    "generate-contracts": "tsx ./contracts/generate.ts --datadir ./contracts",
+    "generate-contracts": "tsx ./contracts/src/generate.ts --datadir ./contracts",
     "generate:ci": "pnpm generate --datadir ./tokens/data --outfile titan.tokenlist.json",
     "build": "tsup",
     "build:ci": "pnpm generate:ci && pnpm tsup --dts",

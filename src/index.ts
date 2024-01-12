@@ -1,41 +1,32 @@
 import { Signer } from '@ethersproject/abstract-signer'
 import { Provider } from '@ethersproject/abstract-provider'
-import { Contract } from 'ethers'
 
 import {
   ContractsLike,
   L1ChainId,
+  L2ChainID,
   NumberLike,
   SignerOrProviderLike,
 } from './interface/types'
 import { DeepPartial } from './utils/type-utils'
 import { toNumber, toSignerOrProvider } from './utils/coercion'
+import { getAllContracts } from './utils/contract'
 
 export class TitanSDK {
   /**
-   * Provider connected to the L1 chain.
+   * Provider connected to the chain.
    */
-  public l1SignerOrProvider: Signer | Provider
-
-  /**
-   * Provider connected to the L2 chain.
-   */
-  public l2SignerOrProvider: Signer | Provider
-
-  /**
-   * Chain ID for the L1 network.
-   */
-  public l1ChainId: L1ChainId
+  public signerOrProvider: Signer | Provider
 
   /**
    * Chain ID for the L2 network.
    */
-  public l2ChainId: number
+  public chainId: L1ChainId | L2ChainID
 
   /**
    * Contract objects attached to their respective providers and addresses.
    */
-  public contracts: Contract
+  public contracts: ContractsLike
 
   /**
    * List of custom bridges for the given network.
@@ -46,50 +37,37 @@ export class TitanSDK {
    * Creates a new CrossChainProvider instance.
    *
    * @param opts Options for the provider.
-   * @param opts.l1SignerOrProvider Signer or Provider for the L1 chain, or a JSON-RPC url.
-   * @param opts.l2SignerOrProvider Signer or Provider for the L2 chain, or a JSON-RPC url.
-   * @param opts.l1ChainId Chain ID for the L1 chain.
-   * @param opts.l2ChainId Chain ID for the L2 chain.
+   * @param opts.signerOrProvider Signer or Provider for the chain, or a JSON-RPC url.
+   * @param opts.chainId Chain ID for the chain.
    * @param opts.depositConfirmationBlocks Optional number of blocks before a deposit is confirmed.
-   * @param opts.l1BlockTimeSeconds Optional estimated block time in seconds for the L1 chain.
    * @param opts.contracts Optional contract address overrides.
    * @param opts.bridges Optional bridge address list.
    */
   constructor(opts: {
-    l1SignerOrProvider: SignerOrProviderLike
-    l2SignerOrProvider: SignerOrProviderLike
-    l1ChainId: NumberLike
-    l2ChainId: NumberLike
+    signerOrProvider: SignerOrProviderLike
+    chainId: NumberLike
     depositConfirmationBlocks?: NumberLike
     l1BlockTimeSeconds?: NumberLike
     contracts?: DeepPartial<ContractsLike>
     // bridges?: BridgeAdapterData
     bedrock?: boolean
   }) {
-    this.l1SignerOrProvider = toSignerOrProvider(opts.l1SignerOrProvider)
-    this.l2SignerOrProvider = toSignerOrProvider(opts.l2SignerOrProvider)
+    this.signerOrProvider = toSignerOrProvider(opts.signerOrProvider)
 
     try {
-      this.l1ChainId = toNumber(opts.l1ChainId)
+      this.chainId = toNumber(opts.chainId)
     } catch (err) {
-      throw new Error(`L1 chain ID is missing or invalid: ${opts.l1ChainId}`)
+      throw new Error(`This chain ID is missing or invalid: ${opts.chainId}`)
     }
 
-    try {
-      this.l2ChainId = toNumber(opts.l2ChainId)
-    } catch (err) {
-      throw new Error(`L2 chain ID is missing or invalid: ${opts.l2ChainId}`)
-    }
-
-    this.contracts = getAllOEContracts(this.l2ChainId, {
-      l1SignerOrProvider: this.l1SignerOrProvider,
-      l2SignerOrProvider: this.l2SignerOrProvider,
+    this.contracts = getAllContracts(this.chainId, {
+      signerOrProvider: this.signerOrProvider,
       overrides: opts.contracts,
     })
 
-    this.bridges = getBridgeAdapters(this.l2ChainId, this, {
-      overrides: opts.bridges,
-      contracts: opts.contracts,
-    })
+    // this.bridges = getBridgeAdapters(this.l2ChainId, this, {
+    //   overrides: opts.bridges,
+    //   contracts: opts.contracts,
+    // })
   }
 }

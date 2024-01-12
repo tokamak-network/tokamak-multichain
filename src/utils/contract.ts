@@ -1,9 +1,13 @@
+import fs from 'fs'
+import path from 'path'
+
 import { Contract, ethers } from 'ethers'
 
 import { DeepPartial } from './type-utils'
 import {
   AddressLike,
   ContractsLike,
+  L1ChainId,
   L1Contracts,
   L2Contracts,
 } from '../interface/types'
@@ -11,17 +15,31 @@ import CONTRACT_ADDRESSES from '../../dist/tokamak.contractlist.mjs'
 import { toAddress } from './coercion'
 
 /**
- * We've changed some contract names in this SDK to be a bit nicer. Here we remap these nicer names
- * back to the original contract names so we can look them up.
+ * Caching abi files
  */
-const NAME_REMAPPING = {
-  AddressManager: 'Lib_AddressManager' as const,
-  OVM_L1BlockNumber: 'iOVM_L1BlockNumber' as const,
-  WETH: 'WETH9' as const,
-  BedrockMessagePasser: 'L2ToL1MessagePasser' as const,
-}
+const cache = new Map()
+const dir = path.join(__dirname, '../../contracts/data')
+const getContractInterface = (contractName: string) => {
+  try {
+    if (cache.has(contractName)) {
+      return cache.get(contractName)
+    }
+    const files = fs.readdirSync(dir)
 
-const getContractInterface = () => {}
+    for (const contract of files) {
+      const filePath = path.join(dir, contract, 'abi', `${contractName}.json`)
+
+      if (fs.existsSync(filePath)) {
+        const abi = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+        cache.set(contractName, abi)
+        return abi
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading ABI for _${contractName}:`, error)
+    return null
+  }
+}
 
 /**
  * Returns an ethers.Contract object for the given name, connected to the appropriate address for
@@ -53,8 +71,8 @@ export const getContract = (
 
   // Bedrock interfaces are backwards compatible. We can prefer Bedrock interfaces over legacy
   // interfaces if they exist.
-  const name = NAME_REMAPPING[contractName] || contractName
-  const iface: ethers.utils.Interface = getContractInterface(name)
+  // const name = NAME_REMAPPING[contractName] || contractName
+  const iface: ethers.utils.Interface = getContractInterface(contractName)
   //   try {
   //     iface = getContractInterfaceBedrock(name)
   //   } catch (err) {
@@ -87,41 +105,28 @@ export const getContract = (
 export const getAllContracts = (
   chainId: number,
   opts: {
-    l1SignerOrProvider?: ethers.Signer | ethers.providers.Provider
-    l2SignerOrProvider?: ethers.Signer | ethers.providers.Provider
+    signerOrProvider?: ethers.Signer | ethers.providers.Provider
     overrides?: DeepPartial<ContractsLike>
   } = {}
 ): ContractsLike => {
-  const addresses = CONTRACT_ADDRESSES[chainId] || undefined
+  const addresses: L1Contracts | L2Contracts =
+    CONTRACT_ADDRESSES[chainId] || undefined
+
+  console.log('addresses', addresses)
 
   // Attach all L1 contracts.
-  const l1Contracts = {} as L1Contracts
-  for (const [contractName, contractAddress] of Object.entries(addresses.l1)) {
-    l1Contracts[contractName] = getContract(
+  const contracts = {} as L1Contracts | L2Contracts
+  for (const [contractName, contractAddress] of Object.entries(addresses)) {
+    contracts[contractName] = getContract(
       contractName as keyof L1Contracts,
       chainId,
       {
-        address: opts.overrides?.l1?.[contractName] || contractAddress,
-        signerOrProvider: opts.l1SignerOrProvider,
+        address: opts.overrides?.[contractName] || contractAddress,
+        signerOrProvider: opts.signerOrProvider,
       }
     )
+    console.log(contracts)
   }
 
-  // Attach all L2 contracts.
-  const l2Contracts = {} as L2Contracts
-  for (const [contractName, contractAddress] of Object.entries(addresses.l2)) {
-    l2Contracts[contractName] = getContract(
-      contractName as keyof L2Contracts,
-      chainId,
-      {
-        address: opts.overrides?.l2?.[contractName] || contractAddress,
-        signerOrProvider: opts.l2SignerOrProvider,
-      }
-    )
-  }
-
-  return {
-    l1: l1Contracts,
-    l2: l2Contracts,
-  }
+  return contracts
 }
