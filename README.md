@@ -95,8 +95,8 @@ This CodeSandbox project includes a basic setup with the @titan/sdk package. You
 
 ## Contributing
 
-- If you want to add a token or change to the token list, refer to [the contracts documentation]("https://github.com/tokamak-network/titan.github.io/blob/main/tokens/README.md).
-- If you want to add a contract or change to the contract list, refer to [the tokens documentation]("https://github.com/tokamak-network/titan.github.io/blob/main/contracts/README.md).
+- If you want to add a token or change to the token list, refer to [the contracts documentation](https://github.com/tokamak-network/titan.github.io/blob/main/tokens/README.md).
+- If you want to add a contract or change to the contract list, refer to [the tokens documentation](https://github.com/tokamak-network/titan.github.io/blob/main/contracts/README.md).
 
 ## Directory Structure
 
