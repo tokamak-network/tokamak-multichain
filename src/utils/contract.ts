@@ -7,6 +7,7 @@ import { DeepPartial } from './type-utils'
 import {
   AddressLike,
   ContractsLike,
+  ERC20ContractsList,
   L1Contracts,
   L2Contracts,
 } from '../interface/types'
@@ -88,6 +89,15 @@ export const getContract = (
   //   iface = getContractInterface(name)
   //   }
 
+  console.log('**')
+  console.log(
+    new Contract(
+      toAddress(opts.address || addresses[contractName] || [contractName]),
+      iface,
+      opts.signerOrProvider
+    )
+  )
+
   return new Contract(
     toAddress(opts.address || addresses[contractName] || [contractName]),
     iface,
@@ -146,7 +156,7 @@ export const getAllERC20Contracts = (
     signerOrProvider?: ethers.Signer | ethers.providers.Provider
     overrides?: DeepPartial<ContractsLike>
   } = {}
-): Record<string, Contract> => {
+): ERC20ContractsList => {
   // Attach all erc20 contracts.
   const contracts = {}
   for (const [, value] of Object.entries(tokenList)) {

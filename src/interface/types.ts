@@ -1,12 +1,8 @@
-import {
-  Provider,
-  TransactionReceipt,
-  TransactionResponse,
-} from '@ethersproject/abstract-provider'
+import { Provider } from '@ethersproject/abstract-provider'
 import { Signer } from '@ethersproject/abstract-signer'
 import { Contract, BigNumber } from 'ethers'
 
-import TokamakContractList from '../../dist/tokamak.contractlist'
+import { TokamakContractList } from '../utils/getList'
 
 /*
  * Supported chains for the tokenlist and contractlist
@@ -64,6 +60,8 @@ export type L2Contracts = {
  * addresses instead of actual contract objects.
  */
 export type ContractsLike = L1Contracts | L2Contracts
+
+export type ERC20ContractsList = Record<keyof ContractsLike, Contract>
 
 /**
  * Stuff that can be coerced into a provider.

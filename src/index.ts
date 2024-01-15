@@ -4,8 +4,11 @@ import { Contract } from 'ethers'
 
 import {
   ContractsLike,
+  ERC20ContractsList,
   L1ChainId,
+  L1Contracts,
   L2ChainID,
+  L2Contracts,
   NumberLike,
   SignerOrProviderLike,
 } from './interface/types'
@@ -37,8 +40,14 @@ export class TitanSDK {
    */
   public contracts: ContractsLike
 
+  /**
+   * ERC20 Tokens objects from Tokens folder
+   */
   public tokens: TokamakTokenListT
-  public erc20contracts
+  /**
+   * ERC20 Tokens contract objects attached to their respective providers and addresses.
+   */
+  public erc20contracts: ERC20ContractsList
 
   /**
    * List of custom bridges for the given network.
@@ -62,7 +71,7 @@ export class TitanSDK {
     l1BlockTimeSeconds?: NumberLike
     contracts?: DeepPartial<ContractsLike>
     // bridges?: BridgeAdapterData
-    bedrock?: boolean
+    // bedrock?: boolean
   }) {
     // this.signerOrProvider = toSignerOrProvider(opts.signerOrProvider)
     try {
@@ -111,6 +120,12 @@ export class TitanSDK {
     }
   }
 
+  public getContract(contractName: keyof L1Contracts | keyof L2Contracts) {
+    return getContract(contractName, this.chainId, {
+      signerOrProvider: this.signerOrProvider,
+    })
+  }
+
   public getToken(symbol: string) {
     const result = this.tokens.filter((token) => token.symbol === symbol)
     if (!result || result.length > 1) {
@@ -132,8 +147,8 @@ export class TitanSDK {
         `${symbol} token doesn't exist on this chain(id : ${this.chainId})`
       )
     } else {
-      const [test] = Object.values(result)
-      return test
+      const [tokenContract] = Object.values(result)
+      return tokenContract as Contract
     }
   }
 }
