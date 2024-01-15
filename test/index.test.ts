@@ -1,6 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 
+import { ethers } from 'ethers'
+
 import titanGithub from '../dist/index'
 import { TitanSDK } from '../src'
 
@@ -17,10 +19,12 @@ const getABI = (fileType) => {
   }
 }
 
-const init = () => {
+const init = async () => {
   // console.log(getABI('L1Bridge'))
-  const sdk = new TitanSDK({ chainId: 5050, signerOrProvider: '' })
-  console.log(sdk.contracts)
+  const sdk = new TitanSDK({ chainId: 55004 })
+  const contract = sdk.getTokenContract('TON')
+  // console.log(sdk.signer)
+  console.log(sdk.getTokenContract('TON'))
 }
 
 init()

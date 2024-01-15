@@ -39,6 +39,8 @@ export enum L2ChainID {
   TITAN_SEPOLIA = 0,
 }
 
+export type SupportedChainID = L1ChainId | L2ChainID
+
 /**
  * Convenience type for something that looks like the L1  contract interface but could be
  * addresses instead of actual contract objects.

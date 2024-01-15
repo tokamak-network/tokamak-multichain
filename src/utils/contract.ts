@@ -7,12 +7,19 @@ import { DeepPartial } from './type-utils'
 import {
   AddressLike,
   ContractsLike,
-  L1ChainId,
   L1Contracts,
   L2Contracts,
 } from '../interface/types'
-import CONTRACT_ADDRESSES from '../../dist/tokamak.contractlist.mjs'
 import { toAddress } from './coercion'
+import ERC20ABI from '../constants/abis/erc20.json'
+import {
+  TokamakContractList,
+  TokamakTokenList,
+  TokamakTokenListT,
+} from './getList'
+
+const TOKEN_LIST = TokamakTokenList
+const CONTRACT_ADDRESSES = TokamakContractList
 
 /**
  * Caching abi files
@@ -60,6 +67,7 @@ export const getContract = (
   opts: {
     address?: AddressLike
     signerOrProvider?: ethers.Signer | ethers.providers.Provider
+    iface?: ethers.utils.Interface
   } = {}
 ): Contract => {
   const addresses = CONTRACT_ADDRESSES[chainId]
@@ -72,7 +80,8 @@ export const getContract = (
   // Bedrock interfaces are backwards compatible. We can prefer Bedrock interfaces over legacy
   // interfaces if they exist.
   // const name = NAME_REMAPPING[contractName] || contractName
-  const iface: ethers.utils.Interface = getContractInterface(contractName)
+  const iface: ethers.utils.Interface =
+    opts.iface ?? getContractInterface(contractName)
   //   try {
   //     iface = getContractInterfaceBedrock(name)
   //   } catch (err) {
@@ -80,9 +89,7 @@ export const getContract = (
   //   }
 
   return new Contract(
-    toAddress(
-      opts.address || addresses.l1[contractName] || addresses.l2[contractName]
-    ),
+    toAddress(opts.address || addresses[contractName] || [contractName]),
     iface,
     opts.signerOrProvider
   )
@@ -96,8 +103,7 @@ export const getContract = (
  *
  * @param l2ChainId Chain ID for the L2 network.
  * @param opts Additional options for connecting to the contracts.
- * @param opts.l1SignerOrProvider: Signer or provider to connect to the L1 contracts.
- * @param opts.l2SignerOrProvider: Signer or provider to connect to the L2 contracts.
+ * @param opts.l1SignerOrProvider: Signer or provider to connect to the contracts.
  * @param opts.overrides Custom contract address overrides for L1 or L2 contracts.
  * @returns An object containing ethers.Contract objects connected to the appropriate addresses on
  * both L1 and L2.
@@ -109,21 +115,45 @@ export const getAllContracts = (
     overrides?: DeepPartial<ContractsLike>
   } = {}
 ): ContractsLike => {
-  const addresses: L1Contracts | L2Contracts =
-    CONTRACT_ADDRESSES[chainId] || undefined
+  const addresses: L1Contracts | L2Contracts = CONTRACT_ADDRESSES[
+    chainId
+  ] as ContractsLike
 
-  // Attach all L1 contracts.
+  // Attach all contracts.
   const contracts = {} as L1Contracts | L2Contracts
   for (const [contractName, contractAddress] of Object.entries(addresses)) {
-    console.log('******************')
-    console.log(contractName, contractAddress)
     contracts[contractName] = getContract(
       contractName as keyof L1Contracts,
       chainId,
       {
-        address: opts.overrides?.[contractName] || contractAddress,
+        address:
+          (opts.overrides?.[contractName] as AddressLike) || contractAddress,
         signerOrProvider: opts.signerOrProvider,
       }
+    )
+  }
+
+  return contracts
+}
+
+export const getAllERC20Tokens = (chainId: number): TokamakTokenListT => {
+  return TOKEN_LIST.filter((token) => token.chainId === chainId)
+}
+
+export const getAllERC20Contracts = (
+  tokenList: TokamakTokenListT,
+  opts: {
+    signerOrProvider?: ethers.Signer | ethers.providers.Provider
+    overrides?: DeepPartial<ContractsLike>
+  } = {}
+): Record<string, Contract> => {
+  // Attach all erc20 contracts.
+  const contracts = {}
+  for (const [, value] of Object.entries(tokenList)) {
+    contracts[value.symbol] = new Contract(
+      toAddress(value.address as AddressLike),
+      ERC20ABI,
+      opts.signerOrProvider
     )
   }
 
