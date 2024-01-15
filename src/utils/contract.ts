@@ -89,15 +89,6 @@ export const getContract = (
   //   iface = getContractInterface(name)
   //   }
 
-  console.log('**')
-  console.log(
-    new Contract(
-      toAddress(opts.address || addresses[contractName] || [contractName]),
-      iface,
-      opts.signerOrProvider
-    )
-  )
-
   return new Contract(
     toAddress(opts.address || addresses[contractName] || [contractName]),
     iface,
@@ -125,12 +116,10 @@ export const getAllContracts = (
     overrides?: DeepPartial<ContractsLike>
   } = {}
 ): ContractsLike => {
-  const addresses: L1Contracts | L2Contracts = CONTRACT_ADDRESSES[
-    chainId
-  ] as ContractsLike
+  const addresses: ContractsLike = CONTRACT_ADDRESSES[chainId] as ContractsLike
 
   // Attach all contracts.
-  const contracts = {} as L1Contracts | L2Contracts
+  const contracts = {} as ContractsLike
   for (const [contractName, contractAddress] of Object.entries(addresses)) {
     contracts[contractName] = getContract(
       contractName as keyof L1Contracts,

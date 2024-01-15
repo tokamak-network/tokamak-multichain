@@ -60,8 +60,9 @@ export type L2Contracts = {
  * addresses instead of actual contract objects.
  */
 export type ContractsLike = L1Contracts | L2Contracts
+export type KeyOfContractsLike = keyof ContractsLike
 
-export type ERC20ContractsList = Record<keyof ContractsLike, Contract>
+export type ERC20ContractsList = Record<KeyOfContractsLike, Contract>
 
 /**
  * Stuff that can be coerced into a provider.

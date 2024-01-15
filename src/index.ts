@@ -5,6 +5,7 @@ import { Contract } from 'ethers'
 import {
   ContractsLike,
   ERC20ContractsList,
+  KeyOfContractsLike,
   L1ChainId,
   L1Contracts,
   L2ChainID,
@@ -120,7 +121,7 @@ export class TitanSDK {
     }
   }
 
-  public getContract(contractName: keyof L1Contracts | keyof L2Contracts) {
+  public getContract(contractName: KeyOfContractsLike) {
     return getContract(contractName, this.chainId, {
       signerOrProvider: this.signerOrProvider,
     })
