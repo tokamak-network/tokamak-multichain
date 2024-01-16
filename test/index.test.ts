@@ -3,10 +3,10 @@
 
 // import { ethers } from 'ethers'
 
-// import { TitanSDK } from '../dist/packages'
+import { TitanSDK } from '../dist/packages'
 // import { TitanSDK } from '../packages'
 // import {TitanSDK} from "@titan/github"
-import { TitanSDK } from '../packages'
+// import { TitanSDK } from '../packages'
 
 const init = async () => {
   const sdk = new TitanSDK({

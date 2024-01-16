@@ -17,6 +17,7 @@ import {
   TokamakTokenList,
   TokamakTokenListT,
 } from './getList'
+import { contractsDataPath } from '../constants/config'
 
 const TOKEN_LIST = TokamakTokenList
 const CONTRACT_ADDRESSES = TokamakContractList
@@ -25,7 +26,7 @@ const CONTRACT_ADDRESSES = TokamakContractList
  * Caching abi files
  */
 const cache = new Map()
-const dir = path.resolve(__dirname, '../../../contracts/data')
+const dir = path.resolve(__dirname, contractsDataPath)
 const getContractInterface = (contractName: string) => {
   try {
     if (cache.has(contractName)) {
