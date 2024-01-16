@@ -6,11 +6,10 @@ import { BigNumber, ethers } from 'ethers'
 
 import {
   AddressLike,
-  ContractsLike,
+  L2ChainID,
   NumberLike,
   SignerOrProviderLike,
 } from '../interface/types'
-import { DeepPartial } from './type-utils'
 
 /**
  * Converts a SignerOrProviderLike into a Signer or a Provider. Assumes that if the input is a
@@ -67,4 +66,14 @@ export const toAddress = (addr: AddressLike): string => {
     assert(ethers.utils.isAddress(addr.address), `${addr} : Invalid address`)
     return ethers.utils.getAddress(addr.address)
   }
+}
+
+/**
+ * Check this chain is belong to L2
+ *
+ * @param chainId chain-id from the contructor
+ * @returns Boolean to make sure this chain in on supported L2ChainIDs
+ */
+export const isL2ChainID = (chainId: number): chainId is L2ChainID => {
+  return Object.values(L2ChainID).includes(chainId as L2ChainID)
 }

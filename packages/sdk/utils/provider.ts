@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 
-import { NumberLike, SupportedChainID } from '../interface/types'
+import { SupportedChainID } from '../interface/types'
 
 const EthereumProvider = new ethers.providers.JsonRpcProvider('')
 const SepoliaProvider = new ethers.providers.JsonRpcProvider('')

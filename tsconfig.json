@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es2019",
     "sourceMap": true,
     "esModuleInterop": true,
     "composite": true,
@@ -23,6 +23,8 @@
     "package.json",
     "tokens/**/*",
     "bin/**/*",
-    "contract/**/*"
+    "contract/**/*",
+    "packages",
+    "packages/**/**/*.json"
   ]
 }

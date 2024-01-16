@@ -7,14 +7,12 @@ import {
   ERC20ContractsList,
   KeyOfContractsLike,
   L1ChainId,
-  L1Contracts,
   L2ChainID,
-  L2Contracts,
   NumberLike,
   SignerOrProviderLike,
 } from './interface/types'
 import { DeepPartial } from './utils/type-utils'
-import { toNumber, toSignerOrProvider } from './utils/coercion'
+import { isL2ChainID, toNumber, toSignerOrProvider } from './utils/coercion'
 import {
   getAllContracts,
   getAllERC20Contracts,
@@ -22,7 +20,6 @@ import {
   getContract,
 } from './utils/contract'
 import { getProvider } from './utils/provider'
-import TokenList from '../dist/titan.tokenlist'
 import { TokamakTokenListT } from './utils/getList'
 
 export class TitanSDK {
@@ -32,9 +29,14 @@ export class TitanSDK {
   public signerOrProvider: Signer | Provider
 
   /**
-   * Chain ID for the L2 network.
+   * Chain ID for the network.
    */
   public chainId: L1ChainId | L2ChainID
+
+  /**
+   * Boolean value to check this chain is on L2
+   */
+  public isL2: boolean
 
   /**
    * Contract objects attached to their respective providers and addresses.
@@ -48,7 +50,7 @@ export class TitanSDK {
   /**
    * ERC20 Tokens contract objects attached to their respective providers and addresses.
    */
-  public erc20contracts: ERC20ContractsList
+  public erc20contracts: Record<string, Contract>
 
   /**
    * List of custom bridges for the given network.
@@ -80,6 +82,8 @@ export class TitanSDK {
     } catch (err) {
       throw new Error(`This chain ID is missing or invalid: ${opts.chainId}`)
     }
+
+    this.isL2 = isL2ChainID(this.chainId)
 
     this.signerOrProvider = opts.signerOrProvider
       ? toSignerOrProvider(opts.signerOrProvider)

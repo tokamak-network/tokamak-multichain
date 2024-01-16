@@ -1,4 +1,4 @@
-import titanList from '../../dist/index'
+import titanList from '../../../index'
 
 export const TokamakTokenList = titanList.tokens.tokens
 export const TokamakContractList = titanList.contracts

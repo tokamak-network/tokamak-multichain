@@ -60,7 +60,7 @@ export type L2Contracts = {
  * addresses instead of actual contract objects.
  */
 export type ContractsLike = L1Contracts | L2Contracts
-export type KeyOfContractsLike = keyof ContractsLike
+export type KeyOfContractsLike = keyof L1Contracts | keyof L2Contracts
 
 export type ERC20ContractsList = Record<KeyOfContractsLike, Contract>
 

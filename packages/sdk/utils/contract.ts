@@ -7,7 +7,6 @@ import { DeepPartial } from './type-utils'
 import {
   AddressLike,
   ContractsLike,
-  ERC20ContractsList,
   L1Contracts,
   L2Contracts,
 } from '../interface/types'
@@ -26,7 +25,7 @@ const CONTRACT_ADDRESSES = TokamakContractList
  * Caching abi files
  */
 const cache = new Map()
-const dir = path.join(__dirname, '../../contracts/data')
+const dir = path.resolve(__dirname, '../../../contracts/data')
 const getContractInterface = (contractName: string) => {
   try {
     if (cache.has(contractName)) {
@@ -72,6 +71,7 @@ export const getContract = (
   } = {}
 ): Contract => {
   const addresses = CONTRACT_ADDRESSES[chainId]
+
   if (addresses === undefined && opts.address === undefined) {
     throw new Error(
       `cannot get contract ${contractName} for unknown chain ID ${chainId}, you must provide an address`
@@ -145,7 +145,7 @@ export const getAllERC20Contracts = (
     signerOrProvider?: ethers.Signer | ethers.providers.Provider
     overrides?: DeepPartial<ContractsLike>
   } = {}
-): ERC20ContractsList => {
+): Record<string, Contract> => {
   // Attach all erc20 contracts.
   const contracts = {}
   for (const [, value] of Object.entries(tokenList)) {

@@ -1,17 +1,9 @@
 {
   "name": "titan.github.io",
   "description": "Unified token and contract list for Titan Mainnet and other Titan Chains.",
-  "version": "1.0.8",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "types": "dist/index.d.ts",
+  "version": "1.1.01",
+  "main": "dist/packages/index.js",
+  "types": "dist/packages/index.d.ts",
   "homepage": "https://github.com/tokamak-network/titan.github.io#readme",
   "license": "MIT",
   "author": "Tokamak-network",
