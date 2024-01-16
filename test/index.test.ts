@@ -3,7 +3,7 @@
 
 // import { ethers } from 'ethers'
 
-import { TitanSDK } from '../dist/packages'
+import { TitanSDK } from '../dist/packages/index.js'
 // import { TitanSDK } from '../packages'
 // import {TitanSDK} from "@titan/github"
 // import { TitanSDK } from '../packages'
