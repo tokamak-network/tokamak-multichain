@@ -22,7 +22,7 @@ import {
 import { getProvider } from './utils/provider'
 import { TokamakTokenListT } from './utils/getList'
 
-export class TitanSDK {
+export class MultiChainSDK {
   /**
    * Provider connected to the chain.
    */

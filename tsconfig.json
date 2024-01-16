@@ -24,6 +24,7 @@
     "bin/**/*",
     "contracts/data/**/abi/*.json",
     "packages",
-    "packages/**/**/*.json"
+    "packages/**/**/*.json",
+    "tokens/**/*"
   ]
 }

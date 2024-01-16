@@ -1,5 +1,5 @@
 {
-  "name": "titan.github.io",
+  "name": "@tokamak/multi-chain",
   "description": "Unified token and contract list for Titan Mainnet and other Titan Chains.",
   "version": "1.1.02",
   "main": "dist/packages/index.js",
