@@ -12,8 +12,7 @@
     "removeComments": true,
     "noLib": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "typeRoots": ["node_modules/@types"]
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules/**/*", "dist"],
   "include": [

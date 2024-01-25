@@ -15,7 +15,7 @@ import { defaultTokenDataFolders } from './defaultTokens'
 /**
  * Base URL where static assets are hosted.
  */
-const BASE_URL = 'https://titan.github.io'
+const BASE_URL = 'https://tokamak-multichain'
 
 /**
  * Generates a token list from the data in the data folder.
