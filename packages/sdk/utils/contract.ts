@@ -1,4 +1,5 @@
-import fs from 'fs'
+/* eslint-disable */
+import fs from 'browserify-fs'
 import path from 'path'
 
 import { Contract, ethers } from 'ethers'

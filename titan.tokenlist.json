@@ -1,12 +1,12 @@
 {
   "name": "Multi chain Token List",
-  "logoURI": "https://titan.github.io/titan.svg",
+  "logoURI": "https://tokamak-multichain/titan.svg",
   "keywords": [
     "scaling",
     "layer2",
     "infrastructure"
   ],
-  "timestamp": "2024-01-16T09:31:41.462Z",
+  "timestamp": "2024-01-25T07:34:33.791Z",
   "tokens": [
     {
       "chainId": 1,
@@ -14,7 +14,7 @@
       "name": "Ether",
       "symbol": "ETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/ETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/ETH/logo.svg",
       "extensions": {
         "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
         "titanListId": "default",
@@ -27,7 +27,7 @@
       "name": "Ether",
       "symbol": "ETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/ETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/ETH/logo.svg",
       "extensions": {
         "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
         "titanListId": "default",
@@ -40,7 +40,7 @@
       "name": "Ether",
       "symbol": "ETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/ETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/ETH/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "ETH"
@@ -52,7 +52,7 @@
       "name": "Ether",
       "symbol": "ETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/ETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/ETH/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -65,7 +65,7 @@
       "name": "Ether",
       "symbol": "ETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/ETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/ETH/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -78,7 +78,7 @@
       "name": "Tokamak Network Token",
       "symbol": "TON",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TON/logo.svg",
       "extensions": {
         "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
         "titanListId": "default",
@@ -91,7 +91,7 @@
       "name": "Tokamak Network Token",
       "symbol": "TON",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TON/logo.svg",
       "extensions": {
         "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
         "titanListId": "default",
@@ -104,7 +104,7 @@
       "name": "Tokamak Network Token",
       "symbol": "TON",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TON/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "TON"
@@ -116,7 +116,7 @@
       "name": "Tokamak Network Token",
       "symbol": "TON",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TON/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -129,7 +129,7 @@
       "name": "Tokamak Network Token",
       "symbol": "TON",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/TON/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TON/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -142,7 +142,7 @@
       "name": "TON Starter",
       "symbol": "TOS",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TOS/logo.svg",
       "extensions": {
         "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
         "titanListId": "default",
@@ -155,7 +155,7 @@
       "name": "TON Starter",
       "symbol": "TOS",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TOS/logo.svg",
       "extensions": {
         "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
         "titanListId": "default",
@@ -168,7 +168,7 @@
       "name": "TON Starter",
       "symbol": "TOS",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TOS/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "TOS"
@@ -180,7 +180,7 @@
       "name": "TON Starter",
       "symbol": "TOS",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TOS/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -193,7 +193,7 @@
       "name": "TON Starter",
       "symbol": "TOS",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/TOS/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/TOS/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -206,7 +206,7 @@
       "name": "USD Coin",
       "symbol": "USDC",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDC/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "USDC"
@@ -218,7 +218,7 @@
       "name": "USD Coin",
       "symbol": "USDC",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDC/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "USDC"
@@ -230,7 +230,7 @@
       "name": "USD Coin",
       "symbol": "USDC",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDC/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "USDC"
@@ -242,7 +242,7 @@
       "name": "USD Coin",
       "symbol": "USDC",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDC/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "USDC"
@@ -254,7 +254,7 @@
       "name": "USD Coin",
       "symbol": "USDC",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDC/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDC/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "USDC"
@@ -266,7 +266,7 @@
       "name": "Tether USD",
       "symbol": "USDT",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDT/logo.svg",
       "extensions": {
         "bridgeAddress": "0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD",
         "titanListId": "default",
@@ -279,7 +279,7 @@
       "name": "Tether USD",
       "symbol": "USDT",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDT/logo.svg",
       "extensions": {
         "bridgeAddress": "0x7377F3D0F64d7a54Cf367193eb74a052ff8578FD",
         "titanListId": "default",
@@ -292,7 +292,7 @@
       "name": "Tether USD",
       "symbol": "USDT",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDT/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "USDT"
@@ -304,7 +304,7 @@
       "name": "Tether USD",
       "symbol": "USDT",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDT/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -317,7 +317,7 @@
       "name": "Tether USD",
       "symbol": "USDT",
       "decimals": 6,
-      "logoURI": "https://titan.github.io/data/USDT/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/USDT/logo.svg",
       "extensions": {
         "bridgeAddress": "0x4200000000000000000000000000000000000010",
         "titanListId": "default",
@@ -330,7 +330,7 @@
       "name": "Wrapped Ether",
       "symbol": "WETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/WETH/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "WETH"
@@ -341,7 +341,7 @@
       "name": "Wrapped Ether",
       "symbol": "WETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/WETH/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "WETH"
@@ -353,7 +353,7 @@
       "name": "Wrapped Ether",
       "symbol": "WETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/WETH/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "WETH"
@@ -365,7 +365,7 @@
       "name": "Wrapped Ether",
       "symbol": "WETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/WETH/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "WETH"
@@ -377,7 +377,7 @@
       "name": "Wrapped Ether",
       "symbol": "WETH",
       "decimals": 18,
-      "logoURI": "https://titan.github.io/data/WETH/logo.svg",
+      "logoURI": "https://tokamak-multichain/data/WETH/logo.svg",
       "extensions": {
         "titanListId": "default",
         "titanTokenId": "WETH"
@@ -386,7 +386,7 @@
   ],
   "version": {
     "major": 1,
-    "minor": 1,
-    "patch": 5
+    "minor": 0,
+    "patch": 0
   }
 }
