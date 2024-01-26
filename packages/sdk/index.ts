@@ -4,7 +4,6 @@ import { Contract } from 'ethers'
 
 import {
   ContractsLike,
-  ERC20ContractsList,
   KeyOfContractsLike,
   L1ChainId,
   L2ChainID,

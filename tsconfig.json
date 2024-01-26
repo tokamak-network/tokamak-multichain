@@ -21,7 +21,7 @@
     "tokamak.contractlist.json",
     "package.json",
     "bin/**/*",
-    "contracts/data/**/abi/*.json",
+    "contracts/abis.ts",
     "packages",
     "packages/**/**/*.json",
     "tokens/**/*"

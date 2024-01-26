@@ -1,15 +1,10 @@
-/* eslint-disable */
-import fs from 'browserify-fs'
-import path from 'path'
-
 import { Contract, ethers } from 'ethers'
 
 import { DeepPartial } from './type-utils'
 import {
   AddressLike,
   ContractsLike,
-  L1Contracts,
-  L2Contracts,
+  KeyOfContractsLike,
 } from '../interface/types'
 import { toAddress } from './coercion'
 import ERC20ABI from '../constants/abis/erc20.json'
@@ -18,7 +13,7 @@ import {
   TokamakTokenList,
   TokamakTokenListT,
 } from './getList'
-import { contractsDataPath } from '../constants/config'
+import abis from '../../../contracts/abis'
 
 const TOKEN_LIST = TokamakTokenList
 const CONTRACT_ADDRESSES = TokamakContractList
@@ -27,23 +22,29 @@ const CONTRACT_ADDRESSES = TokamakContractList
  * Caching abi files
  */
 const cache = new Map()
-const dir = path.resolve(__dirname, contractsDataPath)
 const getContractInterface = (contractName: string) => {
   try {
+    // if (cache.has(contractName)) {
+    //   return cache.get(contractName)
+    // }
+    // const files = fs.readdirSync(dir)
+
+    // for (const contract of files) {
+    //   const filePath = path.join(dir, contract, 'abi', `${contractName}.json`)
+
+    //   if (fs.existsSync(filePath)) {
+    //     const abi = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    //     cache.set(contractName, abi)
+    //     return abi
+    //   }
+    // }
     if (cache.has(contractName)) {
       return cache.get(contractName)
     }
-    const files = fs.readdirSync(dir)
-
-    for (const contract of files) {
-      const filePath = path.join(dir, contract, 'abi', `${contractName}.json`)
-
-      if (fs.existsSync(filePath)) {
-        const abi = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-        cache.set(contractName, abi)
-        return abi
-      }
-    }
+    const abi = abis[contractName]
+    console.log('test', abi)
+    cache.set(contractName, abi)
+    return abi
   } catch (error) {
     console.error(`Error reading ABI for _${contractName}:`, error)
     return null
@@ -64,7 +65,7 @@ const getContractInterface = (contractName: string) => {
  * @returns An ethers.Contract object connected to the appropriate address and interface.
  */
 export const getContract = (
-  contractName: keyof L1Contracts | keyof L2Contracts,
+  contractName: KeyOfContractsLike,
   chainId: number,
   opts: {
     address?: AddressLike
@@ -90,6 +91,10 @@ export const getContract = (
   //   } catch (err) {
   //   iface = getContractInterface(name)
   //   }
+
+  console.log('******')
+  console.log(addresses)
+  console.log(opts.address, addresses[contractName])
 
   return new Contract(
     toAddress(opts.address || addresses[contractName] || [contractName]),
@@ -124,7 +129,7 @@ export const getAllContracts = (
   const contracts = {} as ContractsLike
   for (const [contractName, contractAddress] of Object.entries(addresses)) {
     contracts[contractName] = getContract(
-      contractName as keyof L1Contracts,
+      contractName as KeyOfContractsLike,
       chainId,
       {
         address:
