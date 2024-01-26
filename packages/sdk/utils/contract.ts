@@ -42,7 +42,6 @@ const getContractInterface = (contractName: string) => {
       return cache.get(contractName)
     }
     const abi = abis[contractName]
-    console.log('test', abi)
     cache.set(contractName, abi)
     return abi
   } catch (error) {
@@ -91,10 +90,6 @@ export const getContract = (
   //   } catch (err) {
   //   iface = getContractInterface(name)
   //   }
-
-  console.log('******')
-  console.log(addresses)
-  console.log(opts.address, addresses[contractName])
 
   return new Contract(
     toAddress(opts.address || addresses[contractName] || [contractName]),
