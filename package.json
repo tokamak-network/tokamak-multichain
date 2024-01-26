@@ -1,7 +1,7 @@
 {
   "name": "tokamak-multichain",
   "description": "Unified token and contract list for Titan Mainnet and other Chains.",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "main": "dist/packages/index.js",
   "types": "dist/packages/index.d.ts",
   "homepage": "https://github.com/tokamak-network/tokamak-multichain#readme",

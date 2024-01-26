@@ -1,12 +1,12 @@
-# @titan/github
+# tokamak-multichain
 
-The `@titan/github` package provides a collection of tools for efficiently interacting with the Titan network.  
+The `tokamak-multichain` package provides a collection of tools for efficiently interacting with the Titan network.  
 It achieves this by providing a unified token and contract list for Titan and other chains.
 
 ## Installation
 
 ```
-npm install @titan/github
+npm install tokamak-multichain
 ```
 
 ## Quickstart Recipes
@@ -14,9 +14,9 @@ npm install @titan/github
 - Get all token data on each network
 
 ```javascript
-import { TitanSDK } from '@titan/github'
+import { MultiChainSDK } from 'tokamak-multichain'
 
-const sdk = new TitanSDK({
+const sdk = new MultiChainSDK({
   chainId: 55004,
 })
 const tokenList = sdk.tokens
@@ -60,9 +60,9 @@ tokenList =  [
 - Get a token contract
 
 ```javascript
-import { TitanSDK } from '@titan/github'
+import { MultiChainSDK } from 'tokamak-multichain'
 
-const sdk = new TitanSDK({
+const sdk = new MultiChainSDK({
   chainId: 55004,
 })
 const TON_CONTRACT = sdk.getTokenContract('TON')
@@ -74,9 +74,9 @@ console.log('totalSupply :', totalSupply)
 - Get a contract instance
 
 ```javascript
-import { TitanSDK } from '@titan/github'
+import { MultiChainSDK } from 'tokamak-multichain'
 
-const sdk = new TitanSDK({
+const sdk = new MultiChainSDK({
   chainId: 55004,
 })
 const L2StandardBridge = sdk.getContract('L2StandardBridge')
@@ -87,7 +87,7 @@ console.log('L2Messenger : ', L2Messenger)
 
 ## Example using CodeSandbox
 
-You can try out the @titan/github package in an online environment using CodeSandbox. Click the button below to open the project in CodeSandbox:
+You can try out the tokamak-multichain package in an online environment using CodeSandbox. Click the button below to open the project in CodeSandbox:
 
 [![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/your-username/your-titan-sdk-project)
 

@@ -5,7 +5,6 @@
 
 // import { MultiChainSDK } from '../dist/packages'
 // import { TitanSDK } from '../packages'
-// import {TitanSDK} from "@titan/github"
 
 import { MultiChainSDK } from '../packages'
 import dd from '../contracts/abis'
