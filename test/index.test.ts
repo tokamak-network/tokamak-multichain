@@ -12,12 +12,15 @@ import { generateAbisPath } from '../contracts/src/generate'
 import abis from '../contracts/abis'
 const init = async () => {
   const sdk = new MultiChainSDK({
-    chainId: 5050,
+    chainId: 5,
   })
-  const test = sdk.getContract('L2ProjectManagerProxy')
-  const d = await test.projects('0x17904851ee325d35bbe511fd437b21dbbaf33d06')
-  console.log(d)
+  const test = sdk.getContract('L1ProjectManager')
+  sdk.contracts
+  sdk.tokens
   // generateAbisPath()
 }
 
-init()
+init().catch((e) => {
+  console.log('**e**')
+  console.log(e)
+})

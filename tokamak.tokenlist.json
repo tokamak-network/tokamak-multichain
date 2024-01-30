@@ -6,7 +6,7 @@
     "layer2",
     "infrastructure"
   ],
-  "timestamp": "2024-01-26T06:25:54.929Z",
+  "timestamp": "2024-01-30T08:27:41.535Z",
   "tokens": [
     {
       "chainId": 1,
@@ -338,6 +338,7 @@
     },
     {
       "chainId": 5,
+      "address": "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
       "name": "Wrapped Ether",
       "symbol": "WETH",
       "decimals": 18,
@@ -387,6 +388,6 @@
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 3
+    "patch": 5
   }
 }

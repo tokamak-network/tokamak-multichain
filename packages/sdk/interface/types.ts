@@ -23,6 +23,7 @@ export const l2Chains = ['titan', 'titan-goerli', 'titan-sepolia'] as const
  */
 export enum L1ChainId {
   MAINNET = 1,
+  GOERLI = 5,
   SEPOLIA = 11155111,
 }
 
@@ -32,7 +33,7 @@ export enum L1ChainId {
 export enum L2ChainID {
   TITAN = 55004,
   TITAN_GOERLI = 5050,
-  TITAN_SEPOLIA = 0,
+  TITAN_SEPOLIA = 111551115050,
 }
 
 export type SupportedChainID = L1ChainId | L2ChainID
@@ -43,7 +44,8 @@ export type SupportedChainID = L1ChainId | L2ChainID
  */
 export type L1Contracts = {
   [K in keyof ((typeof TokamakContractList)[L1ChainId.MAINNET] &
-    (typeof TokamakContractList)[L1ChainId.SEPOLIA])]: AddressLike
+    (typeof TokamakContractList)[L1ChainId.SEPOLIA] &
+    (typeof TokamakContractList)[L1ChainId.GOERLI])]: AddressLike
 }
 
 /**
@@ -53,6 +55,8 @@ export type L1Contracts = {
 export type L2Contracts = {
   [K in keyof ((typeof TokamakContractList)[L2ChainID.TITAN] &
     (typeof TokamakContractList)[L2ChainID.TITAN_GOERLI])]: AddressLike
+  // &
+  // (typeof TokamakContractList)[L2ChainID.TITAN_SEPOLIA]
 }
 
 /**
