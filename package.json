@@ -1,7 +1,7 @@
 {
   "name": "tokamak-multichain",
   "description": "Unified token and contract list for Titan Mainnet and other Chains.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/packages/index.js",
   "types": "dist/packages/index.d.ts",
   "homepage": "https://github.com/tokamak-network/tokamak-multichain#readme",
@@ -30,7 +30,7 @@
     "validate": "tsx ./bin/cli.ts validate",
     "generate": "tsx ./bin/cli.ts generate",
     "generate-contracts": "tsx ./contracts/src/generate.ts --datadir ./contracts",
-    "generate:sdk": "",
+    "generate:sdk": "tsc ./packages",
     "generate:ci": "pnpm generate --datadir ./tokens/data --outfile tokamak.tokenlist.json",
     "build": "tsup",
     "build:ci": "pnpm generate:ci && pnpm tsup --dts",
@@ -41,7 +41,8 @@
     "lint:fix": "eslint --fix .",
     "lint": "pnpm lint:fix && pnpm lint:check",
     "start-bot": "tsx ./src/bot.ts",
-    "typecheck": "tsc -p ./tsconfig.json --noEmit"
+    "typecheck": "tsc -p ./tsconfig.json --noEmit",
+    "trim-abis": "tsx ./contracts/src/trim"
   },
   "files": [
     "dist"
