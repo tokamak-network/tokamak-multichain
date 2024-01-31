@@ -14,9 +14,10 @@ const init = async () => {
   const sdk = new MultiChainSDK({
     chainId: 5,
   })
-  const test = sdk.getContract('L1ProjectManager')
-  sdk.contracts
-  sdk.tokens
+  const test = sdk.getContract('L1ProjectManagerProxy')
+  console.log(test.address)
+  // sdk.contracts
+  // sdk.tokens
   // generateAbisPath()
 }
 
