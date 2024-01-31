@@ -101,7 +101,7 @@ const readDirectory = (directoryPath: any) => {
 export const generateAbisPath = () => {
   try {
     const baseDirectory = '../data' // Base directory containing nested folders
-    const outputFilePath = './abis.ts' // Output file path
+    const outputFilePath = path.resolve(__dirname, '../abis.ts') // Output file path
     // Generate code to export the nested object
     // Generate nested object structure from base directory
     const abiData = readDirectory(baseDirectory)

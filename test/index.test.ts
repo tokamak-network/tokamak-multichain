@@ -6,7 +6,9 @@
 // import { MultiChainSDK } from '../dist/packages'
 // import { TitanSDK } from '../packages'
 
-import { MultiChainSDK } from '../packages'
+// import { MultiChainSDK } from '../packages'
+import { MultiChainSDK } from '../dist/packages'
+
 import dd from '../contracts/abis'
 import { generateAbisPath } from '../contracts/src/generate'
 import abis from '../contracts/abis'
