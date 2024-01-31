@@ -1,7 +1,7 @@
 {
   "name": "tokamak-multichain",
   "description": "Unified token and contract list for Titan Mainnet and other Chains.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/packages/index.js",
   "types": "dist/packages/index.d.ts",
   "homepage": "https://github.com/tokamak-network/tokamak-multichain#readme",
@@ -42,7 +42,7 @@
     "lint": "pnpm lint:fix && pnpm lint:check",
     "start-bot": "tsx ./src/bot.ts",
     "typecheck": "tsc -p ./tsconfig.json --noEmit",
-    "trim-abis": "tsx ./contracts/src/trim"
+    "trim-abis": "tsx ./contracts/src/trimAbis"
   },
   "files": [
     "dist"

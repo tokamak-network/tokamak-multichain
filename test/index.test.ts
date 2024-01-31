@@ -2,12 +2,8 @@
 // import path from 'path'
 
 // import { ethers } from 'ethers'
-
+import { MultiChainSDK } from '../packages'
 // import { MultiChainSDK } from '../dist/packages'
-// import { TitanSDK } from '../packages'
-
-// import { MultiChainSDK } from '../packages'
-import { MultiChainSDK } from '../dist/packages'
 
 import dd from '../contracts/abis'
 import { generateAbisPath } from '../contracts/src/generate'
