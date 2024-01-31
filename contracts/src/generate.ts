@@ -82,7 +82,9 @@ const readDirectory = (directoryPath: any) => {
 
   for (const file of files) {
     const filePath = path.join(dir, file, 'abi')
+
     const abiFiles = fs.readdirSync(filePath)
+
     for (const abiFile of abiFiles) {
       const abiPath = path.join(filePath, abiFile)
       const contractName = path.parse(abiFile).name
@@ -99,15 +101,12 @@ const readDirectory = (directoryPath: any) => {
 export const generateAbisPath = () => {
   try {
     const baseDirectory = '../data' // Base directory containing nested folders
-    const outputFilePath = '../abis.ts' // Output file path
+    const outputFilePath = './abis.ts' // Output file path
     // Generate code to export the nested object
     // Generate nested object structure from base directory
     const abiData = readDirectory(baseDirectory)
     const exportCode = `${JSON.stringify(abiData, null, 2)};\n`
 
-    readDirectory(baseDirectory)
-
-    console.log()
     fs.writeFileSync(outputFilePath, exportCode)
     console.log(`Abi List JSON data has been written to ${outputFilePath}`)
   } catch (e) {

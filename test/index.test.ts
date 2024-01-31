@@ -15,7 +15,7 @@ const init = async () => {
     chainId: 5,
   })
   const test = sdk.getContract('L1ProjectManagerProxy')
-  console.log(test.address)
+  console.log(test)
   // sdk.contracts
   // sdk.tokens
   // generateAbisPath()
