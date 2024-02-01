@@ -86,7 +86,7 @@ export class MultiChainSDK {
 
     this.signerOrProvider = opts.signerOrProvider
       ? toSignerOrProvider(opts.signerOrProvider)
-      : getProvider(toNumber(opts.chainId))
+      : getProvider(toNumber(this.chainId))
 
     this.contracts = getAllContracts(this.chainId, {
       signerOrProvider: this.signerOrProvider,

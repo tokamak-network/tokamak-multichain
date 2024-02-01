@@ -80,7 +80,6 @@ export const getContract = (
     )
   }
 
-  // Bedrock interfaces are backwards compatible. We can prefer Bedrock interfaces over legacy
   // interfaces if they exist.
   // const name = NAME_REMAPPING[contractName] || contractName
   const iface: ethers.utils.Interface =
