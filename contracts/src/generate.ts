@@ -7,6 +7,8 @@ import path from 'path'
 //   keys: K[]
 // ): T[K][] => keys.map((key) => obj[key]).filter((value) => value !== undefined)
 
+const basePath = path.join(__dirname, '../data')
+
 // Function to traverse directories recursively
 const collectAddresses = () => {
   const contracts = {}
@@ -27,20 +29,6 @@ const collectAddresses = () => {
     Object.entries(data).map(([key]) => {
       contracts[key] = { ...contracts[key], ...data[key] }
     })
-
-    // Object.entries(data).map(([key]) => {
-    //   if (!contracts[key]) {
-    //     contracts[key] = {}
-    //   }
-
-    //   if (!contracts[key][contractName]) {
-    //     contracts[key][contractName] = {}
-    //   }
-
-    //   console.log(contracts, key, contractName)
-    //   console.log(data[key])
-    //   contracts[key][contractName] = data[key]
-    // })
   })
 
   return contracts
@@ -53,8 +41,6 @@ const collectAddresses = () => {
  *
  * @returns Generated contract list JSON object.
  */
-const basePath = path.join(__dirname, '../data')
-
 export const generate = () => {
   // Collect addresses based on provided directory path
   const collectedAddresses = collectAddresses()
@@ -63,7 +49,7 @@ export const generate = () => {
   const jsonData = JSON.stringify(collectedAddresses, null, 2)
 
   // Write the JSON data to a file
-  const outputFile = path.join(__dirname, '../tokamak.contractlist.json') // Replace with the desired output file path
+  const outputFile = path.join(__dirname, '../../tokamak.contractlist.json') // Replace with the desired output file path
 
   fs.writeFile(outputFile, jsonData, 'utf8', (err) => {
     if (err) {
@@ -114,9 +100,7 @@ export const generateAbisPath = () => {
   }
 }
 
-const init = () => {
+export const generateContractList = () => {
   generate()
   generateAbisPath()
 }
-
-init()

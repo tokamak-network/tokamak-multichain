@@ -1,4 +1,4 @@
-export default {
+{
   "L1StandardBridge": [
     {
       "inputs": [],

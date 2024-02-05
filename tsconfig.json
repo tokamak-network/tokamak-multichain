@@ -22,6 +22,8 @@
     "package.json",
     "bin/**/*",
     "contracts/abis.ts",
+    "contracts/src/validate.ts",
+    "contracts/src/generate.ts",
     "packages",
     "packages/**/**/*.json",
     "tokens/**/*"
