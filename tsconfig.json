@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "module": "commonjs",
-    "target": "es2017",
+    "target": "es2019",
     "sourceMap": true,
     "esModuleInterop": true,
     "composite": true,
@@ -12,17 +12,20 @@
     "removeComments": true,
     "noLib": false,
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "typeRoots": ["node_modules/@types"]
+    "experimentalDecorators": true
   },
   "exclude": ["node_modules/**/*", "dist"],
   "include": [
     "index.ts",
-    "titan.tokenlist.json",
+    "tokamak.tokenlist.json",
     "tokamak.contractlist.json",
     "package.json",
-    "src/**/*",
     "bin/**/*",
-    "contract/**/*"
+    "contracts/abis.ts",
+    "contracts/src/validate.ts",
+    "contracts/src/generate.ts",
+    "packages",
+    "packages/**/**/*.json",
+    "tokens/**/*"
   ]
 }

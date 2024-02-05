@@ -1,0 +1,21 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "role",
+        "type": "uint256"
+      }
+    ],
+    "name": "getSatatus",
+    "outputs": [
+      {
+        "internalType": "enum LibTreasury.STATUS",
+        "name": "_status",
+        "type": "LibTreasury.STATUS"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  }
+]
