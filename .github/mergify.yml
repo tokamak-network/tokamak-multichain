@@ -6,7 +6,7 @@ pull_request_rules:
   - name: Automatic merge on approval
     conditions:
       - and:
-          - 'base==master'
+          - 'base==main'
           - '#review-threads-unresolved=0'
           - '#changes-requested-reviews-by=0'
           - 'label!=do-not-merge'
@@ -19,7 +19,7 @@ pull_request_rules:
   - name: remove outdated reviews for non trusted authors
     conditions:
       - and:
-          - base=master
+          - base=main
           - author!=@ecopod
     actions:
       dismiss_reviews: {}
