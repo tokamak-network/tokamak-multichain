@@ -75,6 +75,10 @@ program
       // Exit with error code so CI fails
       process.exit(1)
     }
+
+    if (errs.length === 0) {
+      console.log('data for the tokenlist is valid')
+    }
   })
 
 program
@@ -129,6 +133,9 @@ program
     if (errs.length > 0) {
       // Exit with error code so CI fails
       process.exit(1)
+    }
+    if (errs.length === 0) {
+      console.log('data for the contractlist is valid')
     }
   })
 
