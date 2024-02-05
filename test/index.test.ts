@@ -21,9 +21,6 @@ const init = async () => {
     chainId: 5050,
   })
   console.log(sdk4.getContract('L2AirdropTonVault'))
-  // sdk.contracts
-  // sdk.tokens
-  // generateAbisPath()
 }
 
 init().catch((e) => {
