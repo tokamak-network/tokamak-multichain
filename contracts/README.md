@@ -47,6 +47,7 @@ Tokamak/
 ├── abi/
 │   ├── L1Bridge.json
 │   ├── L1Messenger.json
+│   ├── L2Bridge.json
 ```
 
 These keys are representing chains supported. We currently accept chains on the following:  
