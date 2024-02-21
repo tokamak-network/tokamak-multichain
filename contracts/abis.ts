@@ -18990,6 +18990,48 @@ export default {
       "inputs": [
         {
           "internalType": "address",
+          "name": "l2Token",
+          "type": "address"
+        },
+        {
+          "internalType": "string[]",
+          "name": "scheduleVaultNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "availableClaimAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "l2Token",
+          "type": "address"
+        },
+        {
+          "internalType": "string[]",
+          "name": "scheduleVaultNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "claimAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
           "name": "projectOwner",
           "type": "address"
         },
@@ -19146,11 +19188,6 @@ export default {
                       "internalType": "uint256",
                       "name": "end2roundTime",
                       "type": "uint256"
-                    },
-                    {
-                      "internalType": "uint256",
-                      "name": "claimCounts",
-                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleVault",
@@ -19160,18 +19197,75 @@ export default {
                 {
                   "components": [
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimTimes",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "claimCounts",
+                      "type": "uint256"
                     },
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimPercents",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundInterval",
+                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleClaim",
                   "name": "claimParams",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "receiveAddress",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "totalClaimCount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundIntervalTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint24",
+                      "name": "fee",
+                      "type": "uint24"
+                    }
+                  ],
+                  "internalType": "struct LibProject.InitalParameterVestingFundVault",
+                  "name": "vestingParams",
                   "type": "tuple"
                 }
               ],
@@ -19661,11 +19755,6 @@ export default {
                       "internalType": "uint256",
                       "name": "end2roundTime",
                       "type": "uint256"
-                    },
-                    {
-                      "internalType": "uint256",
-                      "name": "claimCounts",
-                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleVault",
@@ -19675,18 +19764,75 @@ export default {
                 {
                   "components": [
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimTimes",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "claimCounts",
+                      "type": "uint256"
                     },
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimPercents",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundInterval",
+                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleClaim",
                   "name": "claimParams",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "receiveAddress",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "totalClaimCount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundIntervalTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint24",
+                      "name": "fee",
+                      "type": "uint24"
+                    }
+                  ],
+                  "internalType": "struct LibProject.InitalParameterVestingFundVault",
+                  "name": "vestingParams",
                   "type": "tuple"
                 }
               ],
@@ -20216,6 +20362,19 @@ export default {
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "poolFee",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "address",
@@ -20384,6 +20543,39 @@ export default {
       "inputs": [
         {
           "internalType": "address",
+          "name": "_l2TokenFactory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2CrossDomainMessenger",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2Wton",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2tos",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "_poolFee",
+          "type": "uint24"
+        }
+      ],
+      "name": "setL2Addresses",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
           "name": "_l2CrossDomainMessenger",
           "type": "address"
         }
@@ -20502,6 +20694,19 @@ export default {
     },
     {
       "inputs": [],
+      "name": "tos",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
       "name": "tosAirdropVault",
       "outputs": [
         {
@@ -20567,6 +20772,19 @@ export default {
           "internalType": "struct LibProject.L2ProjectInfo",
           "name": "",
           "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wton",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
         }
       ],
       "stateMutability": "view",
@@ -20791,6 +21009,48 @@ export default {
       "inputs": [
         {
           "internalType": "address",
+          "name": "l2Token",
+          "type": "address"
+        },
+        {
+          "internalType": "string[]",
+          "name": "scheduleVaultNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "availableClaimAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "l2Token",
+          "type": "address"
+        },
+        {
+          "internalType": "string[]",
+          "name": "scheduleVaultNames",
+          "type": "string[]"
+        }
+      ],
+      "name": "claimAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
           "name": "projectOwner",
           "type": "address"
         },
@@ -20947,11 +21207,6 @@ export default {
                       "internalType": "uint256",
                       "name": "end2roundTime",
                       "type": "uint256"
-                    },
-                    {
-                      "internalType": "uint256",
-                      "name": "claimCounts",
-                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleVault",
@@ -20961,18 +21216,75 @@ export default {
                 {
                   "components": [
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimTimes",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "claimCounts",
+                      "type": "uint256"
                     },
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimPercents",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundInterval",
+                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleClaim",
                   "name": "claimParams",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "receiveAddress",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "totalClaimCount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundIntervalTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint24",
+                      "name": "fee",
+                      "type": "uint24"
+                    }
+                  ],
+                  "internalType": "struct LibProject.InitalParameterVestingFundVault",
+                  "name": "vestingParams",
                   "type": "tuple"
                 }
               ],
@@ -21462,11 +21774,6 @@ export default {
                       "internalType": "uint256",
                       "name": "end2roundTime",
                       "type": "uint256"
-                    },
-                    {
-                      "internalType": "uint256",
-                      "name": "claimCounts",
-                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleVault",
@@ -21476,18 +21783,75 @@ export default {
                 {
                   "components": [
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimTimes",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "claimCounts",
+                      "type": "uint256"
                     },
                     {
-                      "internalType": "uint256[]",
-                      "name": "claimPercents",
-                      "type": "uint256[]"
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundInterval",
+                      "type": "uint256"
                     }
                   ],
                   "internalType": "struct LibProject.InitalParameterPublicSaleClaim",
                   "name": "claimParams",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "receiveAddress",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "totalClaimCount",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimPercent",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "firstClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "secondClaimTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "roundIntervalTime",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "uint24",
+                      "name": "fee",
+                      "type": "uint24"
+                    }
+                  ],
+                  "internalType": "struct LibProject.InitalParameterVestingFundVault",
+                  "name": "vestingParams",
                   "type": "tuple"
                 }
               ],
@@ -22017,6 +22381,19 @@ export default {
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "poolFee",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [
         {
           "internalType": "address",
@@ -22185,6 +22562,39 @@ export default {
       "inputs": [
         {
           "internalType": "address",
+          "name": "_l2TokenFactory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2CrossDomainMessenger",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2Wton",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_l2tos",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "_poolFee",
+          "type": "uint24"
+        }
+      ],
+      "name": "setL2Addresses",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
           "name": "_l2CrossDomainMessenger",
           "type": "address"
         }
@@ -22303,6 +22713,19 @@ export default {
     },
     {
       "inputs": [],
+      "name": "tos",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
       "name": "tosAirdropVault",
       "outputs": [
         {
@@ -22368,6 +22791,19 @@ export default {
           "internalType": "struct LibProject.L2ProjectInfo",
           "name": "",
           "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "wton",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
         }
       ],
       "stateMutability": "view",

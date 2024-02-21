@@ -20,7 +20,8 @@ const init = async () => {
   const sdk4 = new MultiChainSDK({
     chainId: 5050,
   })
-  console.log(sdk4.getContract('L2AirdropTonVault'))
+  console.log(sdk1, sdk2, sdk3, sdk4)
+
   // sdk.contracts
   // sdk.tokens
   // generateAbisPath()
