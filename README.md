@@ -115,4 +115,4 @@ The production branch is "main". This branch holds the codebase for the most rec
 
 ## Development branch
 
-The primary development branch is "develop". The develop branch includes the latest software version that remains compatible with the most recent experimental network deployments. If you're implementing a change that maintains backward compatibility, please submit your pull request to the develop branch.
+The primary development branch is "dev". The develop branch includes the latest software version that remains compatible with the most recent experimental network deployments. If you're implementing a change that maintains backward compatibility, please submit your pull request to the develop branch.
