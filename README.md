@@ -62,10 +62,10 @@ Token List : [
 ```javascript
 import { MultiChainSDK } from 'tokamak-multichain'
 
-const sdk = new MultiChainSDK({
+const TokamakSDK = new MultiChainSDK({
   chainId: 55004,
 })
-const TON_CONTRACT = sdk.getTokenContract('TON')
+const TON_CONTRACT = TokamakSDK.getTokenContract('TON')
 const totalSupply = await TON_CONTRACT.totalSupply()
 console.log('totalSupply :', totalSupply)
 // totalSupply : BigNumber { _hex: '0x24d826680754da71d432', _isBigNumber: true }
@@ -76,10 +76,10 @@ console.log('totalSupply :', totalSupply)
 ```javascript
 import { MultiChainSDK } from 'tokamak-multichain'
 
-const sdk = new MultiChainSDK({
+const TokamakSDK = new MultiChainSDK({
   chainId: 55004,
 })
-const L2StandardBridge = sdk.getContract('L2StandardBridge')
+const L2StandardBridge = TokamakSDK.getContract('L2StandardBridge')
 const L2Messenger = await L2StandardBridge.messenger()
 console.log('L2Messenger : ', L2Messenger)
 // L2Messenger : 0x4200000000000000000000000000000000000007
