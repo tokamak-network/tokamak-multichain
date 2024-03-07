@@ -18,7 +18,11 @@ import { MultiChainSDK } from 'tokamak-multichain'
 
 const TokamakSDK = new MultiChainSDK({
   chainId: 55004,
+  // If you want to initialize with a network other than Titan or Titan Testnet,
+  // you should pass it for signerOrProvider.
+  // Example - signerOrProvider: `https://infura.io/v3/${YOUR_KEY}`
 })
+
 const tokenList = TokamakSDK.tokens
 // Output the structure of the tokenList
 console.log('Token List : ', tokenList)
