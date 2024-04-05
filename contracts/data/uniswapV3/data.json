@@ -1,0 +1,45 @@
+{
+    "55007": {
+        "UniswapV3Factory":"0x31BCECA13c5be57b3677Ec116FB38fEde7Fe1217",
+        "UniswapInterfaceMulticall":"0x07877fa4e98D4e38585c5f0955f1C1785276228a",
+        "ProxyAdmin":"0x18299EEc35afb6f18284c6d927FDDf57CA6cffCF",
+        "TickLens":"0xf981019fF4dcBe05EdfEB0CF25a29b28D9961fA9",
+        "NFTDescriptor":"0x760996dD29F2154a9C52f798d1F760383D991847",
+        "NonfungibleTokenPositionDescriptor":"0x5CAd93cdC22B7B5A7Cc81CaA374520944505Af8d",
+        "DescriptorProxy":"0x898250afef5611fB9D16B992fA0cABb12966e978",
+        "NonfungiblePositionManager":"0x0B4695D5EB7C4e207D1b86cfFA9Eb39db56413f2",
+        "QuoterV2":"0xd3B37DE679D1F558e0CD4Bb81FaD54C436d10acf",
+        "SwapRouter02":"0x709C67488edC9fd8BdAf267BFA276B49CD62c217",
+        "Permit2":"0xE266Fd68AEf7CC3bb24B20f22cFDe493F7eEBed8",
+        "UnsupportedProtocol":"0x819B9E61F02Bdb8841e90Af300d5064AD1a30D84",
+        "UniversalRouter":"0x17b3E73833880AB6E8A632220968f9371cB533Bf"
+    },
+    "111551118080": {
+        "UniswapV3Factory":"0x31BCECA13c5be57b3677Ec116FB38fEde7Fe1217",
+        "UniswapInterfaceMulticall":"0x07877fa4e98D4e38585c5f0955f1C1785276228a",
+        "ProxyAdmin":"0x18299EEc35afb6f18284c6d927FDDf57CA6cffCF",
+        "TickLens":"0xf981019fF4dcBe05EdfEB0CF25a29b28D9961fA9",
+        "NFTDescriptor":"0x760996dD29F2154a9C52f798d1F760383D991847",
+        "NonfungibleTokenPositionDescriptor":"0x5CAd93cdC22B7B5A7Cc81CaA374520944505Af8d",
+        "DescriptorProxy":"0x898250afef5611fB9D16B992fA0cABb12966e978",
+        "NonfungiblePositionManager":"0x0B4695D5EB7C4e207D1b86cfFA9Eb39db56413f2",
+        "QuoterV2":"0xd3B37DE679D1F558e0CD4Bb81FaD54C436d10acf",
+        "SwapRouter02":"0x709C67488edC9fd8BdAf267BFA276B49CD62c217",
+        "Permit2":"0xE266Fd68AEf7CC3bb24B20f22cFDe493F7eEBed8",
+        "UnsupportedProtocol":"0x819B9E61F02Bdb8841e90Af300d5064AD1a30D84",
+        "UniversalRouter":"0x17b3E73833880AB6E8A632220968f9371cB533Bf"
+    },
+    "55004": {
+        "UniswapV3Factory": "0x755Ba335013C07CE35C9A2dd5746617Ac4c6c799",
+        "UniswapInterfaceMulticall": "0x4c17954bE91b5A5FeE66d4779CE91f9b62Cb3401",
+        "TickLens": "0xCcD40170Ad931A47a92Be55d618DbdD1E4A82BDA",
+        "NFTDescriptor": "0x79371645168768978c0e6a883af58dF3BF4be216",
+        "NonfungibleTokenPositionDescriptor": "0xf8DEF522293cDcc8E92CE301A38D18DbEd51b4bb",
+        "NonfungiblePositionManager": "0xfAFc55Bcdc6e7a74C21DD51531D14e5DD9f29613",
+        "QuoterV2": "0x2999FeC85115a42d96682b9Fa0233Fe0De03aC49",
+        "SwapRouter02": "0x758FD95dCEc6F7DbA6A957C9eEaa1d8859D0B3dF",
+        "Permit2": "0x6feb2EF9631649fE6e8B676D6c606410f2e1dbb7",
+        "UnsupportedProtocol": "0x0DD8EA3A5A8900CE36A7302E600C4B8A3ef23B8d",
+        "UniversalRouter": "0x5731FFdA58ff57F5211a675FD4709Da5Fd6B9775"      
+    }
+}
