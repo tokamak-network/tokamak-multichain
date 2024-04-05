@@ -104,3 +104,5 @@ export const generateContractList = () => {
   generate()
   generateAbisPath()
 }
+
+generateContractList()

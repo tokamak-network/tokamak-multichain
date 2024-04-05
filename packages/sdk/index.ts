@@ -73,7 +73,6 @@ export class MultiChainSDK {
     l1BlockTimeSeconds?: NumberLike
     contracts?: DeepPartial<ContractsLike>
     // bridges?: BridgeAdapterData
-    // bedrock?: boolean
   }) {
     // this.signerOrProvider = toSignerOrProvider(opts.signerOrProvider)
     try {

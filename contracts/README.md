@@ -15,7 +15,7 @@ The Multi Chain Tokamak contract list is a list of contracts managed by Tokamak 
 **Create a folder for your contract**  
 
 Create a folder inside of the data folder with your contract name(contract unit).  
-For example, if you are trying to add a contract with name "Tokamak", you must create a folder called Tokamak.
+For example, if you are trying to add a contract with name ```"bridge"```, you must create a folder called ```bridge```.
 
 **Create a data file**  
 Add a file to your folder called ```data.json``` with the following format:
@@ -37,31 +37,24 @@ Add a file to your folder called ```data.json``` with the following format:
       "L2Bridge": "0x4200000000000000000000000000000000000010"
     }
   }
-  <!-- WIP --!>
-  <!-- Need to be decided --!>
-  <!-- "abi: {
-     "1": {
-      "L1Bridge": "",
-      "L1Messenger": ""
-    },
-    "11155111": 
-      "L1Bridge": "",
-      "L1Messenger": ""
-    },
-    "55004": {
-      "L2Bridge": ""
-    },
-    "5050": {
-      "L2Bridge": ""
-    }
-  } -->
 }
+```
+Then you need to create a JSON file with the same name as the key you entered in the data file under the abi folder.
+```
+Tokamak/
+│
+├── data.json
+├── abi/
+│   ├── L1Bridge.json
+│   ├── L1Messenger.json
+│   ├── L2Bridge.json
 ```
 
 These keys are representing chains supported. We currently accept chains on the following:  
 - ```Titan (55004)```
 - ```Titan-goerli (5050)```
 - ```Ethereum (1)```
+- ```Goerli (5)```
 - ```Sepolia (11155111)```
 
 
@@ -72,15 +65,12 @@ Our Ci conducts a sequence of automated verifications for each pull request. The
 * contract address does not match to the hash type(Keccak-256)  
 
 **Debugging Amutomated checks failures**  
-If the automated checks didn't pass, you can review the cause of the failure by downloading and extracting the validation-artifacts.zip file. Inside, you'll find a validation_results.txt file containing details on the reasons for the failure. Follow these steps to locate the validation-artifacts:  
+If the automated checks didn't pass, you can review the cause of the failure by validating on your local. you'll find a validation_results.txt file containing details on the reasons for the failure. Follow these steps to validate your change:  
 
-``` 
-<!-- WIP --!>
-1.
-2.
-3.
-```
-```npx tsx ./bin/cli.ts validate --datadir ./data --contracts <data folder name (e.g. bridge)>```
+1. Run ```"npm run validate-contracts"``` or ```tsx ./bin/cli.ts validate-contracts``` command 
+2. It will make validation_result.txt in root directory where it's located after validation.
+3. Open ```validation_result.txt``` to view the validation results. 
+
 
 **Final approval**  
 Every pull request undergoes a final lightweight approval process, regardless of whether it's marked as requiring manual review or not.

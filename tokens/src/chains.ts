@@ -72,6 +72,9 @@ export const L2_STANDARD_BRIDGE_INFORMATION: Record<
   'titan-sepolia': {
     l2StandardBridgeAddress: '0x4200000000000000000000000000000000000010',
   },
+  'thanos-sepolia': {
+    l2StandardBridgeAddress: '0x4200000000000000000000000000000000000010',
+  },
   'titan-goerli': {
     l2StandardBridgeAddress: '0x4200000000000000000000000000000000000010',
   },

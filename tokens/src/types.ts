@@ -25,7 +25,13 @@ export type Chain =
   | 'titan'
   | 'titan-goerli'
   | 'titan-sepolia'
-export const l2Chains = ['titan', 'titan-goerli', 'titan-sepolia'] as const
+  | 'thanos-sepolia'
+export const l2Chains = [
+  'titan',
+  'titan-goerli',
+  'titan-sepolia',
+  'thanos-sepolia',
+] as const
 export type L2Chain = (typeof l2Chains)[number]
 export const isL2Chain = (chain: string): chain is L2Chain => {
   return l2Chains.includes(chain as L2Chain)

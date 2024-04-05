@@ -37,7 +37,7 @@ jobs:
         with:
           dir_names: true
           files: |
-            data/**
+            tokens/data/**
 
       - name: List all changed tokens
         id: changed_tokens
@@ -52,7 +52,10 @@ jobs:
       - name: Validate token list
         if: ${{ steps.changed_tokens.outputs.result != '' }}
         run: |
-          pnpm validate --datadir ./data --tokens "${{ steps.changed_tokens.outputs.result }}" 2> err.txt 1> std.txt
+          pnpm validate --datadir ./tokens/data --tokens "${{ steps.changed_tokens.outputs.result }}" 2> err.txt 1> std.txt
+
+      - name: Validate contract list
+        run: pnpm validate-contracts
 
       - name: Print output
         if: ${{ always() && steps.changed_tokens.outputs.result != '' }}

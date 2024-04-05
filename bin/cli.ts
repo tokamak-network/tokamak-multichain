@@ -84,7 +84,7 @@ program
 program
   .command('validate-contracts')
   .description('Validate contractlist data files')
-  .action(async (options) => {
+  .action(async () => {
     const results = await validateContractsList()
 
     const validationResultsFilePath = 'validation_results.txt'
@@ -95,8 +95,7 @@ program
       fs.writeFileSync(
         validationResultsFilePath,
         `Below are the results from running validation for the contract changes. To ` +
-          `re-run the validation locally run: ` +
-          `pnpm validate --datadir ./data --tokens ${options.tokens}\n\n`
+          `re-run the validation locally run: `
       )
     }
 
