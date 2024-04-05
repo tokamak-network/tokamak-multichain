@@ -23,6 +23,9 @@
     },
     "titan-sepolia": {
       "address": "0x79E0d92670106c85E9067b56B8F674340dCa0Bbd"
+    },
+    "thanos-sepolia": {
+      "address": "0xb2d344984f92130AF8925eD283018d21673Bd17d"
     }
   }
 }

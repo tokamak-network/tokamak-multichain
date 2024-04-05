@@ -4,22 +4,16 @@
   "decimals": 18,
   "tokens": {
     "ethereum": {
-      "address": ""
-    },
-    "goerli": {
-      "address": ""
+      "address": "0xE1B0630D7649CdF503eABc2b6423227Be9605247"
     },
     "sepolia": {
       "address": "0x3d752de8ec40b655f21d11b02fa7438ae18687fc"
     },
-    "titan": {
-      "address": ""
-    },
-    "titan-goerli": {
-      "address": ""
-    },
     "titan-sepolia": {
       "address": "0x9e5aac1ba1a2e6aed6b32689dfcf62a509ca96f3"
+    },
+    "thanos-sepolia": {
+      "address": "0xc44f68197e9e8bd59e08b522ad688b412a22df5d"
     }
   }
 }
