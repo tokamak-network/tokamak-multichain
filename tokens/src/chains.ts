@@ -51,6 +51,14 @@ export const NETWORK_DATA: Record<Chain, Network> = {
     ),
     layer: 2,
   },
+  'thanos-sepolia': {
+    id: 111551118080,
+    name: 'Thanos-sepolia',
+    provider: new ethers.providers.StaticJsonRpcProvider(
+      'https://rpc.thanos-sepolia-test.tokamak.network'
+    ),
+    layer: 2,
+  },
 }
 
 interface L2BridgeInformation {
