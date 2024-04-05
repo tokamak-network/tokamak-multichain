@@ -1,0 +1,11 @@
+[
+    {
+      "inputs": [],
+      "name": "UnsupportedProtocolError",
+      "type": "error"
+    },
+    {
+      "stateMutability": "nonpayable",
+      "type": "fallback"
+    }
+  ]
