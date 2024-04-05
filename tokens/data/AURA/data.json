@@ -1,0 +1,25 @@
+{
+  "name": "AURA",
+  "symbol": "AURA",
+  "decimals": 18,
+  "tokens": {
+    "ethereum": {
+      "address": ""
+    },
+    "goerli": {
+      "address": ""
+    },
+    "sepolia": {
+      "address": "0xf8474c2a90b9035e0b431e1789fe76f54d4ce708"
+    },
+    "titan": {
+      "address": ""
+    },
+    "titan-goerli": {
+      "address": ""
+    },
+    "titan-sepolia": {
+      "address": "0xe7798f023fc62146e8aa1b36da45fb70855a77ea"
+    }
+  }
+}

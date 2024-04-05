@@ -1,0 +1,25 @@
+{
+  "name": "Dooropen",
+  "symbol": "DOC",
+  "decimals": 18,
+  "tokens": {
+    "ethereum": {
+      "address": ""
+    },
+    "goerli": {
+      "address": ""
+    },
+    "sepolia": {
+      "address": "0x8c4c0fc89382f96e435527d39c9ec69dded34e77"
+    },
+    "titan": {
+      "address": ""
+    },
+    "titan-goerli": {
+      "address": ""
+    },
+    "titan-sepolia": {
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+    }
+  }
+}

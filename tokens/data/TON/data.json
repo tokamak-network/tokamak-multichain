@@ -17,6 +17,9 @@
     },
     "titan-goerli": {
       "address": "0xFa956eB0c4b3E692aD5a6B2f08170aDE55999ACa"
+    },
+    "titan-sepolia": {
+      "address": "0x7c6b91d9be155a6db01f749217d76ff02a7227f2"
     }
   }
 }
