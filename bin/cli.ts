@@ -84,7 +84,7 @@ program
 program
   .command('validate-contracts')
   .description('Validate contractlist data files')
-  .action(async (options) => {
+  .action(async () => {
     const results = await validateContractsList()
 
     const validationResultsFilePath = 'validation_results.txt'
@@ -95,8 +95,7 @@ program
       fs.writeFileSync(
         validationResultsFilePath,
         `Below are the results from running validation for the contract changes. To ` +
-          `re-run the validation locally run: ` +
-          `pnpm validate --datadir ./data --tokens ${options.tokens}\n\n`
+          `re-run the validation locally run: `
       )
     }
 
@@ -142,8 +141,8 @@ program
 program
   .command('generate')
   .description('Generates a tokenlist and contractlist data file')
-  .requiredOption('--datadir <datadir>', 'Directory containing data files')
-  .requiredOption('--outfile <outfile>', 'Output file to write')
+  // .requiredOption('--datadir <datadir>', 'Directory containing data files')
+  // .requiredOption('--outfile <outfile>', 'Output file to write')
   .action(async (options) => {
     const list = generate(options.datadir)
     fs.writeFileSync(options.outfile, JSON.stringify(list, null, 2))
