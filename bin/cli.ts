@@ -141,8 +141,8 @@ program
 program
   .command('generate')
   .description('Generates a tokenlist and contractlist data file')
-  // .requiredOption('--datadir <datadir>', 'Directory containing data files')
-  // .requiredOption('--outfile <outfile>', 'Output file to write')
+  .requiredOption('--datadir <datadir>', 'Directory containing data files')
+  .requiredOption('--outfile <outfile>', 'Output file to write')
   .action(async (options) => {
     const list = generate(options.datadir)
     fs.writeFileSync(options.outfile, JSON.stringify(list, null, 2))
