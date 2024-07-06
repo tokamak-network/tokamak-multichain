@@ -14,7 +14,7 @@
       "address": "0x07865c6E87B9F70255377e024ace6630C1Eaa37F"
     },
     "sepolia": {
-      "address": "0x693a591A27750eED2A0e14BC73bB1F313116a1cb"
+      "address": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238U"
     },
     "titan": {
       "address": "0x46BbbC5f20093cB53952127c84F1Fbc9503bD6D9"
@@ -23,7 +23,7 @@
       "address": "0x9c53338c48181035D96884946C34ea81818F743C"
     },
     "titan-sepolia": {
-      "address": "0xFF3Ef745D9878AfE5934Ff0b130868AFDDbc58e8"
+      "address": "0xB79DcFE624D0A69c5c2a206a99F240f1d2Ca1D80"
     },
     "thanos-sepolia": {
       "address": "0x69CC158F7E0103880aBC4f7d27daC22C1B62fFe5"
