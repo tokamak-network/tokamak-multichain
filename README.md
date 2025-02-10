@@ -97,6 +97,17 @@ You can try out the tokamak-multichain package in an online environment using Co
 
 This CodeSandbox project includes a basic setup with the @titan/sdk package. You can explore and experiment with the functionalities in a live environment.
 
+## 🌏  Open in other Cloud IDEs
+
+Click any of the buttons below to start a new development environment to demo or contribute to the codebase without having to install anything on your machine:
+
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/tokamak-network/tokamak-multichain)
+[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/tokamak-network/tokamak-multichain)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tokamak-network/tokamak-multichain)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/tokamak-network/tokamak-multichain)
+[![Open in Repl.it](https://replit.com/badge/github/withastro/astro)](https://replit.com/github/tokamak-network/tokamak-multichain)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/tokamak-network/tokamak-multichain)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/tokamak-network/tokamak-multichain)
 ## Contributing
 
 - If you want to add a token or change to the token list, refer to [the contracts documentation](https://github.com/tokamak-network/tokamak-multichain/blob/main/tokens/README.md).
